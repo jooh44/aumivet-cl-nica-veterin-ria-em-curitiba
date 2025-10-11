@@ -38,7 +38,7 @@
             "Cirurgias veterinárias",
             "Banho e tosa",
             "Odontologia veterinária",
-            "Coworking veterinário",
+            "Parceria para médicos veterinários",
             "Anestesista volante",
             "Cirurgiã volante"
         ]
@@ -46,14 +46,21 @@
     </script>
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/aumivet_clinica_veterinaria_em_curitiba.jpg" as="image">
+    <link rel="preload" href="images/logo-aumivet.png" as="image">
+
+    <!-- Font preconnect and preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Alan+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
-    <!-- =================================================
+        <!-- =================================================
          HEADER SECTION
          Fixed navigation with brand and call-to-action
          ================================================= -->
@@ -107,7 +114,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-image-container">
-                        <img src="images/aumivet_clinica_veterinaria_em_curitiba.jpg" alt="Aumivet - Clínica Veterinária em Curitiba" class="hero-image">
+                        <img src="images/aumivet_clinica_veterinaria_em_curitiba.jpg" alt="Aumivet - Clínica Veterinária em Curitiba" class="hero-image" loading="eager">
                     </div>
                 </div>
             </div>
@@ -138,7 +145,7 @@
                         </div>
                         <div class="ticker-badge">
                             <i data-lucide="users" width="16" height="16"></i>
-                            <span>Coworking Veterinário</span>
+                            <span>Parceria para Veterinários</span>
                         </div>
                         <div class="ticker-badge">
                             <i data-lucide="briefcase" width="16" height="16"></i>
@@ -154,7 +161,7 @@
                         </div>
                         <div class="ticker-badge">
                             <i data-lucide="car" width="16" height="16"></i>
-                            <span>Taxi Pet</span>
+                            <span>Leva e Traz</span>
                         </div>
                         <!-- Duplicate for seamless loop -->
                         <div class="ticker-badge">
@@ -179,7 +186,7 @@
                         </div>
                         <div class="ticker-badge">
                             <i data-lucide="users" width="16" height="16"></i>
-                            <span>Coworking Veterinário</span>
+                            <span>Parceria para Veterinários</span>
                         </div>
                         <div class="ticker-badge">
                             <i data-lucide="briefcase" width="16" height="16"></i>
@@ -195,7 +202,7 @@
                         </div>
                         <div class="ticker-badge">
                             <i data-lucide="car" width="16" height="16"></i>
-                            <span>Taxi Pet</span>
+                            <span>Leva e Traz</span>
                         </div>
                     </div>
                 </div>
@@ -233,7 +240,7 @@
                                 <span>Prevenção</span>
                             </div>
                             <h3>Consultas e <em class="destaque">Vacinas</em></h3>
-                            <p>Cuidar da saúde do seu pet começa com prevenção. Realizamos consultas clínicas completas e aplicamos vacinas essenciais com toda a segurança, carinho e atenção que eles merecem.</p>
+                            <p>Cuidar da saúde do seu pet começa com prevenção. Realizamos consultas clínicas completas e aplicamos vacinas essenciais com toda a segurança, carinho e atenção que eles merecem. Também oferecemos <strong>atendimento domiciliar</strong> para maior comodidade.</p>
                         </div>
                         <div class="service-actions">
                             <a href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." class="service-button secondary" target="_blank" rel="noopener">Agendar</a>
@@ -253,7 +260,7 @@
                                 <span>Cirurgia</span>
                             </div>
                             <h3>Cirurgias <em class="destaque">Especializadas</em></h3>
-                            <p>Aqui, seu pet está em boas mãos. Nossa equipe realiza procedimentos cirúrgicos com técnica, segurança e todo o cuidado que ele merece — desde os mais simples até os mais delicados.</p>
+                            <p>Aqui, seu pet está em boas mãos. Nossa equipe realiza procedimentos cirúrgicos com técnica, segurança e todo o cuidado que ele merece — desde os mais simples até os mais delicados. Todas as nossas cirurgias são realizadas com anestesia inalatória por médico veterinário especialista.</p>
                         </div>
                         <div class="service-actions">
                             <a href="https://wa.me/5541988604202?text=Olá! Preciso de informações sobre cirurgias." class="service-button secondary" target="_blank" rel="noopener">Consultar</a>
@@ -296,32 +303,6 @@
                     <div class="service-content">
                         <div class="service-content-top">
                             <div class="service-tagline">
-                                <span>Estética</span>
-                            </div>
-                            <h3>Banho, Tosa e <em class="destaque">Estética Pet</em></h3>
-                            <p>Mais que higiene: momentos de cuidado e bem-estar. Seu pet sai limpo, cheiroso e ainda mais bonito com nossos serviços de banho e tosa pensados para o conforto dele.</p>
-                        </div>
-                        <div class="service-actions">
-                            <a href="https://wa.me/5541988604202?text=Olá! Quero agendar banho e tosa." class="service-button secondary" target="_blank" rel="noopener">Agendar</a>
-                            <a href="https://wa.me/5541988604202?text=Olá! Tenho dúvidas sobre banho e tosa." class="service-button link" target="_blank" rel="noopener">
-                                Saber Mais
-                                <i data-lucide="chevron-right" width="16" height="16"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="service-image">
-                        <img src="images/aumivet-banho-tosa-e-estetica-pet-em-curitiba.png" alt="Banho, Tosa e Estética Pet" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- Service Card 5 - Image Left, Content Right -->
-                <div class="service-card-figma" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/aumivet-odotonlogia-veterinaria-em-curitiba.png" alt="Odontologia Veterinária" loading="lazy">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-content-top">
-                            <div class="service-tagline">
                                 <span>Saúde Bucal</span>
                             </div>
                             <h3>Odontologia <em class="destaque">Veterinária</em></h3>
@@ -335,10 +316,16 @@
                             </a>
                         </div>
                     </div>
+                    <div class="service-image">
+                        <img src="images/aumivet-odotonlogia-veterinaria-em-curitiba.png" alt="Odontologia Veterinária" loading="lazy">
+                    </div>
                 </div>
 
-                <!-- Service Card 6 - Content Left, Image Right -->
-                <div class="service-card-figma reverse" data-aos="fade-up">
+                <!-- Service Card 5 - Image Left, Content Right -->
+                <div class="service-card-figma" data-aos="fade-up">
+                    <div class="service-image">
+                        <img src="images/aumivet-adrestramento-em-curitiba.png" alt="Adestramento Pet" loading="lazy">
+                    </div>
                     <div class="service-content">
                         <div class="service-content-top">
                             <div class="service-tagline">
@@ -355,8 +342,28 @@
                             </a>
                         </div>
                     </div>
+                </div>
+
+                <!-- Service Card 6 - Content Left, Image Right -->
+                <div class="service-card-figma reverse" data-aos="fade-up">
+                    <div class="service-content">
+                        <div class="service-content-top">
+                            <div class="service-tagline">
+                                <span>Estética</span>
+                            </div>
+                            <h3>Banho, Tosa e <em class="destaque">Estética Pet</em></h3>
+                            <p>Mais que higiene: momentos de cuidado e bem-estar. Seu pet sai limpo, cheiroso e ainda mais bonito com nossos serviços de banho e tosa pensados para o conforto dele.</p>
+                        </div>
+                        <div class="service-actions">
+                            <a href="https://wa.me/5541985332493?text=Olá! Quero agendar banho e tosa." class="service-button secondary" target="_blank" rel="noopener">Agendar</a>
+                            <a href="https://wa.me/5541985332493?text=Olá! Tenho dúvidas sobre banho e tosa." class="service-button link" target="_blank" rel="noopener">
+                                Saber Mais
+                                <i data-lucide="chevron-right" width="16" height="16"></i>
+                            </a>
+                        </div>
+                    </div>
                     <div class="service-image">
-                        <img src="images/aumivet-adrestramento-em-curitiba.png" alt="Adestramento Pet" loading="lazy">
+                        <img src="images/aumivet-banho-tosa-e-estetica-pet-em-curitiba.png" alt="Banho, Tosa e Estética Pet" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -364,49 +371,115 @@
     </section>
 
     <!-- =================================================
-         SPECIALIZED SERVICES SECTION
-         New specialized offerings
+         PARTNERSHIP SECTION
+         Veterinary partnership and coworking
          ================================================= -->
-    <section id="specialized" class="specialized-section">
+    <section id="parcerias" class="partnership-section">
+        <div class="container">
+            <div class="partnership-container">
+                <!-- Left: Content -->
+                <div class="partnership-content" data-aos="fade-right">
+                    <div class="section-badge">
+                        <i data-lucide="handshake" width="16" height="16"></i>
+                        <span>Parcerias</span>
+                    </div>
+                    <h2 class="section-title">Parceria para <em class="destaque">Médicos Veterinários</em></h2>
+                    <h3 class="partnership-subtitle">Espaço Colaborativo para Veterinários</h3>
+                    <p class="partnership-description">Oferecemos infraestrutura completa para médicos veterinários que precisam de cirurgias e internamento, utilizando equipamentos modernos e suporte técnico para colegas da área.</p>
+
+                    <div class="partnership-target">
+                        <strong>Para quem:</strong>
+                        <ul>
+                            <li>Veterinários autônomos</li>
+                            <li>Especialistas</li>
+                            <li>Profissionais em transição</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5541988604202?text=Olá! Tenho interesse na parceria para médicos veterinários." class="service-button secondary" target="_blank" rel="noopener">
+                        Saber Mais
+                        <i data-lucide="arrow-right" width="20" height="20"></i>
+                    </a>
+                </div>
+
+                <!-- Right: Photo Grid (Desktop) / Slider (Mobile) -->
+                <div class="partnership-photos" data-aos="fade-left">
+                    <div class="partnership-slider">
+                        <div class="partnership-photo-item">
+                            <img src="images/aumivet-clinica-veterinaria-em-curitiba (1).jpg" alt="Infraestrutura da Aumivet - ambiente de atendimento" loading="lazy">
+                        </div>
+                        <div class="partnership-photo-item">
+                            <img src="images/aumivet-clinica-veterinaria-em-curitiba (2).jpg" alt="Infraestrutura da Aumivet - sala de procedimentos" loading="lazy">
+                        </div>
+                        <div class="partnership-photo-item">
+                            <img src="images/aumivet-clinica-veterinaria-em-curitiba (3).jpg" alt="Infraestrutura da Aumivet - equipamentos veterinários" loading="lazy">
+                        </div>
+                        <div class="partnership-photo-item">
+                            <img src="images/aumivet-clinica-veterinaria-em-curitiba (4).jpg" alt="Infraestrutura da Aumivet - área de recepção" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Mobile Slider Navigation -->
+                    <button class="partnership-slider-arrow partnership-slider-prev" aria-label="Foto anterior">
+                        <i data-lucide="chevron-left" width="24" height="24"></i>
+                    </button>
+                    <button class="partnership-slider-arrow partnership-slider-next" aria-label="Próxima foto">
+                        <i data-lucide="chevron-right" width="24" height="24"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================
+         SERVIÇOS ESPECIALIZADOS
+         Consultas com especialistas e serviços volantes
+         ================================================= -->
+    <section id="servicos-especializados" class="specialized-section" style="background: var(--branco);">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <div class="section-badge">
-                    <i data-lucide="zap" width="16" height="16"></i>
+                    <i data-lucide="stethoscope" width="16" height="16"></i>
                     <span>Serviços Especializados</span>
                 </div>
                 <h2 class="section-title">Serviços <em class="destaque">Especializados</em></h2>
                 <p class="section-description">
-                    Soluções inovadoras e especializadas para necessidades específicas
+                    Consultas com especialistas e serviços volantes para cuidados avançados.
                 </p>
             </div>
 
             <div class="specialized-grid">
+                <!-- Consulta com Especialistas -->
                 <div class="specialized-card" data-aos="fade-up">
                     <div class="specialized-icon">
-                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Aumivet - Coworking Veterinário" class="specialized-image">
+                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Aumivet - Consulta com Especialistas" class="specialized-image" loading="lazy">
                     </div>
                     <div class="specialized-content">
-                        <h3>Coworking Veterinário</h3>
-                        <h4>Espaço Colaborativo para Veterinários</h4>
-                        <p>Oferecemos infraestrutura completa para médicos veterinários que precisam de consultório equipado. Ambiente profissional, equipamentos modernos e suporte técnico para colegas da área.</p>
+                        <h3>Consulta com Especialistas</h3>
+                        <h4>Atendimento com Veterinários Especializados</h4>
+                        <p>Oferecemos consultas com médicos veterinários especialistas para diagnósticos e tratamentos mais complexos. Seu pet recebe o cuidado especializado que merece.</p>
                         <div class="specialized-target">
-                            <strong>Para quem:</strong>
+                            <strong>Especialidades:</strong>
                             <ul>
-                                <li>Veterinários autônomos</li>
-                                <li>Especialistas</li>
-                                <li>Profissionais em transição</li>
+                                <li>Oncologia</li>
+                                <li>Ortopedia</li>
+                                <li>Cardiologia</li>
+                                <li>Oftalmologia</li>
+                                <li>Odontologia</li>
+                                <li>Dermatologia</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/5541988604202?text=Olá! Tenho interesse no coworking veterinário." class="specialized-link" target="_blank" rel="noopener">
-                            <span>Saber Mais</span>
-                            <i data-lucide="arrow-right" width="16" height="16"></i>
+                        <a href="https://wa.me/5541988604202?text=Olá! Preciso de consulta com especialista." class="specialized-link" target="_blank" rel="noopener">
+                            <span>Agendar Consulta</span>
+                            <i data-lucide="calendar" width="16" height="16"></i>
                         </a>
                     </div>
                 </div>
 
+                <!-- Anestesista Volante -->
                 <div class="specialized-card" data-aos="fade-up">
                     <div class="specialized-icon">
-                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Aumivet - Anestesista Volante" class="specialized-image">
+                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Aumivet - Anestesista Volante" class="specialized-image" loading="lazy">
                     </div>
                     <div class="specialized-content">
                         <h3>Anestesista Volante</h3>
@@ -427,14 +500,15 @@
                     </div>
                 </div>
 
+                <!-- Cirurgiã Volante -->
                 <div class="specialized-card" data-aos="fade-up">
                     <div class="specialized-icon">
-                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Aumivet - Cirurgiã Volante" class="specialized-image">
+                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Aumivet - Cirurgiã Volante" class="specialized-image" loading="lazy">
                     </div>
                     <div class="specialized-content">
                         <h3>Cirurgiã Volante</h3>
                         <h4>Expertise Cirúrgica em Sua Clínica</h4>
-                        <p>Serviço de cirurgiã especializada para procedimentos complexos. Levamos nossa experiência até você, com técnica apurada e cuidado excepcional.</p>
+                        <p>Serviço de cirurgia especializada para procedimentos complexos. Levamos nossa experiência até você, com técnica apurada e cuidado excepcional.</p>
                         <div class="specialized-target">
                             <strong>Especialidades:</strong>
                             <ul>
@@ -443,7 +517,7 @@
                                 <li>Emergências cirúrgicas</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/5541988604202?text=Olá! Preciso de cirurgiã para procedimento." class="specialized-link" target="_blank" rel="noopener">
+                        <a href="https://wa.me/5541988604202?text=Olá! Preciso de cirurgia para procedimento." class="specialized-link" target="_blank" rel="noopener">
                             <span>Consultar</span>
                             <i data-lucide="message-circle" width="16" height="16"></i>
                         </a>
@@ -462,9 +536,9 @@
             <div class="section-header" data-aos="fade-up">
                 <div class="section-badge">
                     <i data-lucide="car" width="16" height="16"></i>
-                    <span>Taxi Pet</span>
+                    <span>Leva e Traz</span>
                 </div>
-                <h2 class="section-title">Taxi Pet - Transporte <em class="destaque">Seguro</em> e Confortável</h2>
+                <h2 class="section-title">Leva e Traz - Transporte <em class="destaque">Seguro</em> e Confortável</h2>
                 <p class="section-description">
                     Buscamos e levamos seu pet em segurança e muito cuidado!
                 </p>
@@ -473,7 +547,7 @@
             <!-- Carro com badges dos benefícios -->
             <div class="taxi-pet-showcase" data-aos="fade-up">
                 <div class="taxi-pet-image-container">
-                    <img src="images/carro-aumivet.jpg" alt="Carro da Aumivet - Taxi Pet Transporte Seguro para Pets" class="taxi-pet-image">
+                    <img src="images/carro-aumivet.jpg" alt="Carro da Aumivet - Leva e Traz Transporte Seguro para Pets" class="taxi-pet-image" loading="lazy">
 
                     <!-- Badges lado esquerdo -->
                     <div class="benefit-badge left-1" data-aos="fade-right">
@@ -499,10 +573,61 @@
 
             <!-- CTA centralizado -->
             <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
-                <a href="https://wa.me/5541988604202?text=Olá! Preciso do serviço de Taxi Pet." class="service-button secondary taxi-pet-button" target="_blank" rel="noopener">
-                    Solicitar Taxi Pet
+                <a href="https://wa.me/5541988604202?text=Olá! Preciso do serviço de Leva e Traz." class="service-button secondary taxi-pet-button" target="_blank" rel="noopener">
+                    Solicitar Leva e Traz
                     <i data-lucide="car" width="20" height="20"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================
+         HEALTH INSURANCE SECTION
+         Pet health insurance plans
+         ================================================= -->
+    <section id="planos" class="specialized-section" style="background: var(--branco);">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i data-lucide="heart-pulse" width="16" height="16"></i>
+                    <span>Planos de Saúde</span>
+                </div>
+                <h2 class="section-title">Planos de <em class="destaque">Saúde</em> para Pets</h2>
+                <p class="section-description">
+                    Oferecemos planos de saúde para garantir o melhor cuidado contínuo para seu pet
+                </p>
+            </div>
+
+            <div class="health-plans-grid">
+                <div class="specialized-card" data-aos="fade-up">
+                    <div class="specialized-icon">
+                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Pet Health" class="specialized-image" loading="lazy">
+                    </div>
+                    <div class="specialized-content">
+                        <h3>Pet Health</h3>
+                        <h4>Plano de Saúde Completo</h4>
+                        <p>Cobertura ampla para consultas, exames e procedimentos. Garanta tranquilidade e economia nos cuidados com seu pet.</p>
+                        <a href="https://wa.me/5541988604202?text=Olá! Quero saber mais sobre o plano Pet Health." class="specialized-link" target="_blank" rel="noopener">
+                            <span>Saiba Mais</span>
+                            <i data-lucide="arrow-right" width="16" height="16"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="specialized-card" data-aos="fade-up">
+                    <div class="specialized-icon">
+                        <img src="images/aumivet-clinica-veterinaria-em-curitiba-cruz.png" alt="Dog Life" class="specialized-image" loading="lazy">
+                    </div>
+                    <div class="specialized-content">
+                        <h3>Dog Life</h3>
+                        <h4>Plano de Saúde para Cães</h4>
+                        <p>Plano específico para cães com cobertura personalizada. Cuidado contínuo com o melhor custo-benefício.</p>
+                        <a href="https://wa.me/5541988604202?text=Olá! Quero saber mais sobre o plano Dog Life." class="specialized-link" target="_blank" rel="noopener">
+                            <span>Saiba Mais</span>
+                            <i data-lucide="arrow-right" width="16" height="16"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -539,6 +664,21 @@
                 </div>
 
                 <div class="tour-iframe-container">
+                    <!-- Tour Overlay -->
+                    <div class="tour-overlay" id="tour-overlay">
+                        <div class="tour-overlay-content">
+                            <div class="tour-overlay-icon">
+                                <i data-lucide="play-circle" width="64" height="64"></i>
+                            </div>
+                            <h4>Tour Virtual 360°</h4>
+                            <p>Clique para explorar nossa clínica</p>
+                            <button class="tour-start-button" id="tour-start-button">
+                                <i data-lucide="mouse-pointer-click" width="20" height="20"></i>
+                                Iniciar Tour
+                            </button>
+                        </div>
+                    </div>
+
                     <iframe id="tour-embeded" name="Aumivet" src="https://tour.panoee.net/iframe/68d25781074e3db4ac87ab20" frameBorder="0" width="100%" height="720px" scrolling="no" allowvr="yes" allow="vr; xr; accelerometer; gyroscope; autoplay;" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" loading="lazy"></iframe>
                     <script>
                         var pano_iframe_name = "tour-embeded";
@@ -578,6 +718,10 @@
                         <i data-lucide="stethoscope" width="18" height="18"></i>
                         <span>Dr. Gustavo</span>
                     </button>
+                    <button class="team-tab" onclick="switchTeamTab(2)" data-tab="2">
+                        <i data-lucide="sparkles" width="18" height="18"></i>
+                        <span>Dra. Renata</span>
+                    </button>
                 </div>
 
                 <!-- Tab Content (Folder Style) -->
@@ -587,7 +731,7 @@
                             <!-- Photo Section -->
                             <div class="team-photo-section">
                                 <div class="team-photo-container">
-                                    <img src="images/dra-thaise.jpg" alt="Foto da Dra. Thaise" class="team-photo">
+                                    <img src="images/dra-thaise.jpg" alt="Foto da Dra. Thaise" class="team-photo" loading="lazy">
                                 </div>
                             </div>
 
@@ -595,8 +739,8 @@
                             <div class="team-info-section">
                                 <div class="team-info-content">
                                     <h3>Dra. Thaise</h3>
-                                    <h4>Médica Veterinária - CRMV-PR 12345</h4>
-                                    <p>Fundadora da Aumivet, graduada pela PUCPR e pós-graduanda em Clínica Médica e Cirúrgica de Pequenos Animais. Especialista em odontologia veterinária e cuidados preventivos.</p>
+                                    <h4>Médica Veterinária - CRMV-PR 16704</h4>
+                                    <p>Fundadora da Aumivet, graduada pela PUCPR e pos-graduanda em Clinica Medica e Cirurgica de Pequenos Animais. Atua em cirurgia de tecidos moles, procedimentos ortopedicos e emergencias cirurgicas, oferecendo acompanhamento completo para cada paciente.</p>
 
                                     <button class="team-cta-button">
                                         Agendar Horário
@@ -627,7 +771,7 @@
                             <!-- Photo Section -->
                             <div class="team-photo-section">
                                 <div class="team-photo-container">
-                                    <img src="images/dr-gustavo-trevisan.jpg" alt="Foto do Dr. Gustavo Trevisan" class="team-photo">
+                                    <img src="images/dr-gustavo-trevisan.jpg" alt="Foto do Dr. Gustavo Trevisan" class="team-photo" loading="lazy">
                                 </div>
                             </div>
 
@@ -655,6 +799,46 @@
                                         <div class="attribute-item">
                                             <i data-lucide="star" width="20" height="20"></i>
                                             <span>ATENÇÃO</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-folder-content hidden" id="team-content-2">
+                        <div class="team-content-grid">
+                            <!-- Photo Section -->
+                            <div class="team-photo-section">
+                                <div class="team-photo-container">
+                                    <img src="images/Dra Renata.jpg" alt="Foto da Dra. Renata" class="team-photo" loading="lazy">
+                                </div>
+                            </div>
+
+                            <!-- Info Section -->
+                            <div class="team-info-section">
+                                <div class="team-info-content">
+                                    <h3>Dra. Renata</h3>
+                                    <h4>Médica Veterinária Especialista em Odontologia</h4>
+                                    <p>Formada em Medicina Veterinária pela PUC Paraná (2009), após 12 anos atuando exclusivamente na clínica médica, especializou-se em odontologia veterinária. Curso teórico-prático em Doença Periodontal pelo CTEOV-SP (2019) e especialização pela Anclivepa-SP (2021-2023). Dedicada a oferecer atendimento especializado e humanizado, garantindo a saúde bucal e o bem-estar dos pets.</p>
+
+                                    <button class="team-cta-button">
+                                        Agendar Horário
+                                        <i data-lucide="calendar" width="16" height="16"></i>
+                                    </button>
+
+                                    <div class="team-attributes">
+                                        <div class="attribute-item">
+                                            <i data-lucide="heart" width="20" height="20"></i>
+                                            <span>ODONTOLOGIA</span>
+                                        </div>
+                                        <div class="attribute-item">
+                                            <i data-lucide="award" width="20" height="20"></i>
+                                            <span>ESPECIALIZAÇÃO</span>
+                                        </div>
+                                        <div class="attribute-item">
+                                            <i data-lucide="star" width="20" height="20"></i>
+                                            <span>HUMANIZAÇÃO</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1110,36 +1294,221 @@
         // TESTIMONIALS TICKER MOBILE PAUSE/PLAY
         // =================================================
         document.addEventListener('DOMContentLoaded', function() {
-            function isMobile() {
-                return window.innerWidth <= 768;
+            const tickerContainer = document.querySelector('.testimonials-ticker-container');
+            const ticker = tickerContainer ? tickerContainer.querySelector('.testimonials-ticker') : null;
+
+            if (!tickerContainer || !ticker) {
+                return;
             }
 
-            const ticker = document.querySelector('.testimonials-ticker');
+            const isMobile = () => window.innerWidth <= 768;
+            const hintMessages = {
+                play: 'Toque para pausar depoimentos',
+                pause: 'Ticker pausado - toque para continuar'
+            };
+
             let isPaused = false;
+            let controlsEnabled = false;
+            let hintButton = null;
 
-            if (ticker && isMobile()) {
-                // Add touch event listener only on mobile
-                ticker.addEventListener('touchstart', function(e) {
-                    e.preventDefault();
+            function setPaused(paused) {
+                isPaused = paused;
+                ticker.style.animationPlayState = paused ? 'paused' : 'running';
+                ticker.classList.toggle('is-paused', paused);
 
-                    if (isPaused) {
-                        ticker.style.animationPlayState = 'running';
-                        isPaused = false;
-                    } else {
-                        ticker.style.animationPlayState = 'paused';
-                        isPaused = true;
-                    }
+                if (hintButton) {
+                    hintButton.setAttribute('aria-pressed', paused ? 'true' : 'false');
+                    hintButton.textContent = paused ? hintMessages.pause : hintMessages.play;
+                }
+            }
+
+            function togglePause(event) {
+                if (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                setPaused(!isPaused);
+            }
+
+            function ensureHint() {
+                if (hintButton) {
+                    hintButton.hidden = false;
+                    return;
+                }
+
+                hintButton = document.createElement('button');
+                hintButton.type = 'button';
+                hintButton.className = 'ticker-touch-toggle';
+                hintButton.textContent = hintMessages.play;
+                hintButton.setAttribute('aria-pressed', 'false');
+                hintButton.setAttribute('aria-label', 'Controlar rolagem dos depoimentos');
+
+                tickerContainer.appendChild(hintButton);
+                hintButton.addEventListener('click', togglePause);
+            }
+
+            function enableMobileControls() {
+                if (controlsEnabled) {
+                    return;
+                }
+
+                ensureHint();
+                setPaused(false);
+                ticker.addEventListener('touchstart', togglePause, { passive: false });
+                controlsEnabled = true;
+            }
+
+            function disableMobileControls() {
+                if (!controlsEnabled && !hintButton) {
+                    return;
+                }
+
+                ticker.removeEventListener('touchstart', togglePause);
+                setPaused(false);
+
+                if (hintButton) {
+                    hintButton.setAttribute('aria-pressed', 'false');
+                    hintButton.textContent = hintMessages.play;
+                    hintButton.hidden = true;
+                }
+
+                controlsEnabled = false;
+            }
+
+            function handleResize() {
+                if (isMobile()) {
+                    enableMobileControls();
+                } else {
+                    disableMobileControls();
+                }
+            }
+
+            handleResize();
+            window.addEventListener('resize', handleResize);
+        });
+
+        // =================================================
+        // PARTNERSHIP SLIDER (MOBILE ONLY)
+        // =================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            function isMobile() {
+                return window.innerWidth < 768;
+            }
+
+            const slider = document.querySelector('.partnership-slider');
+            const photos = document.querySelectorAll('.partnership-photo-item');
+            const prevBtn = document.querySelector('.partnership-slider-prev');
+            const nextBtn = document.querySelector('.partnership-slider-next');
+
+            let currentSlide = 0;
+            let autoplayInterval;
+
+            function updateSlider() {
+                if (!isMobile()) return;
+
+                photos.forEach((photo, index) => {
+                    photo.style.display = index === currentSlide ? 'block' : 'none';
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % photos.length;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + photos.length) % photos.length;
+                updateSlider();
+            }
+
+            function startAutoplay() {
+                if (isMobile()) {
+                    autoplayInterval = setInterval(nextSlide, 3000); // 3 seconds
+                }
+            }
+
+            function stopAutoplay() {
+                clearInterval(autoplayInterval);
+            }
+
+            // Navigation buttons
+            if (nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', function() {
+                    stopAutoplay();
+                    nextSlide();
+                    startAutoplay();
                 });
 
-                // Reset on window resize if no longer mobile
-                window.addEventListener('resize', function() {
-                    if (!isMobile() && isPaused) {
-                        ticker.style.animationPlayState = 'running';
-                        isPaused = false;
-                    }
+                prevBtn.addEventListener('click', function() {
+                    stopAutoplay();
+                    prevSlide();
+                    startAutoplay();
                 });
+            }
+
+            // Initialize
+            function init() {
+                if (isMobile()) {
+                    updateSlider();
+                    startAutoplay();
+                } else {
+                    // Show all photos on desktop
+                    photos.forEach(photo => {
+                        photo.style.display = 'block';
+                    });
+                    stopAutoplay();
+                }
+            }
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                init();
+            });
+
+            // Initial setup
+            init();
+        });
+
+        // =================================================
+        // TOUR VIRTUAL OVERLAY ACTIVATION
+        // =================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const tourOverlay = document.getElementById('tour-overlay');
+            const tourStartButton = document.getElementById('tour-start-button');
+            const tourIframe = document.getElementById('tour-embeded');
+
+            function activateTour() {
+                // Remove overlay
+                if (tourOverlay) {
+                    tourOverlay.classList.add('hidden');
+                }
+
+                // Enable iframe interaction by removing pointer-events restriction
+                if (tourIframe) {
+                    tourIframe.style.pointerEvents = 'auto';
+                }
+            }
+
+            // Click on button
+            if (tourStartButton) {
+                tourStartButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    activateTour();
+                });
+            }
+
+            // Click anywhere on overlay
+            if (tourOverlay) {
+                tourOverlay.addEventListener('click', activateTour);
+            }
+
+            // Initially disable iframe interaction
+            if (tourIframe) {
+                tourIframe.style.pointerEvents = 'none';
             }
         });
     </script>
 </body>
 </html>
+
+
