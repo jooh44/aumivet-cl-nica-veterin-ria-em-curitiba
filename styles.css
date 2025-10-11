@@ -765,12 +765,6 @@ h1, h2, h3, .hero-title, .section-title {
     gap: 2rem;
 }
 
-.health-plans-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
 .specialized-card {
     background: white;
     padding: 2.5rem;
@@ -815,6 +809,68 @@ h1, h2, h3, .hero-title, .section-title {
     width: 90px;
     height: 90px;
     object-fit: contain;
+}
+
+.health-plans-compact {
+    background: var(--branco);
+    padding: 60px 0;
+}
+
+.health-plans-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+}
+
+.health-plans-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.health-plan-card {
+    background: transparent;
+    border: 2px solid var(--verde);
+    border-radius: 14px;
+    padding: 1.75rem;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.health-plan-card:hover {
+    background: rgba(156, 168, 118, 0.08);
+    border-color: var(--verde-claro);
+}
+
+.health-plan-card h3 {
+    font-family: 'Alan Sans', sans-serif;
+    font-size: 1.25rem;
+    color: var(--preto);
+}
+
+.health-plan-card p {
+    color: var(--cinza);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.health-plan-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--verde);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.health-plan-link:hover {
+    color: var(--verde-claro);
 }
 
 
@@ -2255,7 +2311,7 @@ h1, h2, h3, .hero-title, .section-title {
 }
 
 .faq-chevron {
-    color: var(--verde);
+    color: var(--rosa);
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
@@ -2785,9 +2841,17 @@ html {
     }
 
     /* Ensure cards fit properly on small screens */
-    .specialized-grid,
-    .health-plans-grid {
+    .specialized-grid {
         gap: 1.5rem;
+    }
+
+    .health-plans-list {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .health-plan-card.full-width {
+        grid-column: 1 / -1;
     }
 
     .faq-question {
@@ -2914,8 +2978,8 @@ html {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .health-plans-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .health-plans-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .testimonials-grid {
@@ -2985,12 +3049,18 @@ html {
 }
 
 .partnership-target {
-    background: white;
+    background: transparent;
     padding: 2rem;
     border-radius: 16px;
     margin-bottom: 2rem;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    border: 2px solid var(--verde);
+    box-shadow: none;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.partnership-target:hover {
+    background: rgba(156, 168, 118, 0.08);
+    border-color: var(--verde-claro);
 }
 
 .partnership-target strong {
