@@ -862,72 +862,120 @@ p, span, a, li {
     object-fit: contain;
 }
 
-.health-plans-compact {
+/* =================================================
+   HEALTH PLANS STRIP
+   Compact health insurance plans strip
+   ================================================= */
+.health-plans-strip {
     background: var(--branco);
-    padding: 60px 0;
+    padding: 40px 0;
+    border-top: 1px solid rgba(156, 168, 118, 0.15);
+    border-bottom: 1px solid rgba(156, 168, 118, 0.15);
 }
 
-.health-plans-header {
+.health-plans-strip-header {
     text-align: center;
-    max-width: 640px;
-    margin: 0 auto 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.health-plans-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+.health-plans-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--verde);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Desktop: Horizontal grid */
+.health-plans-grid {
+    display: none;
 }
 
 @media (min-width: 768px) {
-    .health-plans-list {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    .health-plans-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
     }
 }
 
-.health-plan-card {
-    background: transparent;
-    border: 2px solid var(--verde);
-    border-radius: 14px;
-    padding: 1.75rem;
-    box-shadow: none;
+.health-plan-item {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    transition: background 0.3s ease, border-color 0.3s ease;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
 }
 
-.health-plan-card:hover {
-    background: rgba(156, 168, 118, 0.08);
-    border-color: var(--verde-claro);
+.health-plan-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(156, 168, 118, 0.1);
+    border-radius: 12px;
+    color: var(--verde);
+    transition: all 0.3s ease;
 }
 
-.health-plan-card h3 {
-    font-family: 'Alan Sans', sans-serif;
-    font-size: 1.25rem;
+@media (min-width: 768px) {
+    .health-plan-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .health-plan-item:hover .health-plan-icon {
+        background: rgba(156, 168, 118, 0.2);
+        transform: translateY(-2px);
+    }
+}
+
+.health-plan-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--preto);
 }
 
-.health-plan-card p {
-    color: var(--cinza);
-    line-height: 1.6;
-    font-size: 1rem;
-    margin: 0;
-    flex-grow: 1;
+/* Mobile: Ticker animation */
+.health-plans-ticker-wrapper {
+    overflow: hidden;
+    display: block;
 }
 
-.health-plan-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    color: var(--verde);
-    text-decoration: none;
-    transition: color 0.3s ease;
+@media (min-width: 768px) {
+    .health-plans-ticker-wrapper {
+        display: none;
+    }
 }
 
-.health-plan-link:hover {
-    color: var(--verde-claro);
+.health-plans-ticker {
+    display: flex;
+    gap: 2rem;
+    animation: health-plans-scroll 20s linear infinite;
+}
+
+.health-plans-ticker[aria-hidden="true"] {
+    position: absolute;
+    pointer-events: none;
+}
+
+@keyframes health-plans-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.health-plans-ticker .health-plan-item {
+    flex-shrink: 0;
+    min-width: 100px;
 }
 
 
@@ -3129,15 +3177,6 @@ html {
     /* Ensure cards fit properly on small screens */
     .specialized-grid {
         gap: 1.5rem;
-    }
-
-    .health-plans-list {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1.25rem;
-    }
-
-    .health-plan-card.full-width {
-        grid-column: 1 / -1;
     }
 
     .faq-question {
