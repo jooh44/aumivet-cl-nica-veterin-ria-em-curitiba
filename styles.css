@@ -945,6 +945,8 @@ p, span, a, li {
 .health-plans-ticker-wrapper {
     overflow: hidden;
     display: block;
+    position: relative;
+    white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -954,13 +956,16 @@ p, span, a, li {
 }
 
 .health-plans-ticker {
-    display: flex;
+    display: inline-flex;
     gap: 2rem;
+    flex-wrap: nowrap;
     animation: health-plans-scroll 20s linear infinite;
 }
 
 .health-plans-ticker[aria-hidden="true"] {
     position: absolute;
+    top: 0;
+    left: 0;
     pointer-events: none;
 }
 
@@ -976,6 +981,7 @@ p, span, a, li {
 .health-plans-ticker .health-plan-item {
     flex-shrink: 0;
     min-width: 100px;
+    white-space: normal;
 }
 
 
