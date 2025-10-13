@@ -1483,10 +1483,8 @@
             }
 
             function togglePause(event) {
-                if (event) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
+                // Não bloqueia o scroll natural do mobile
+                // Apenas alterna o estado de pausa
                 setPaused(!isPaused);
             }
 
@@ -1514,7 +1512,8 @@
 
                 ensureHint();
                 setPaused(false);
-                ticker.addEventListener('touchstart', togglePause, { passive: false });
+                // Usa passive: true para não bloquear o scroll
+                ticker.addEventListener('touchstart', togglePause, { passive: true });
                 controlsEnabled = true;
             }
 

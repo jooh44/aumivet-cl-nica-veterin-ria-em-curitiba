@@ -40,7 +40,6 @@ Clínica Veterinária em Curitiba
 }
 
 html {
-    overflow-x: hidden;
     max-width: 100%;
 }
 
@@ -50,9 +49,11 @@ body {
     color: var(--preto);
     background-color: var(--branco);
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100%;
     position: relative;
+    touch-action: pan-y pinch-zoom;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Prevent all images and media from causing overflow */
@@ -63,7 +64,6 @@ img, video, iframe, embed, object {
 
 /* Ensure all sections don't overflow */
 section {
-    overflow-x: hidden;
     max-width: 100%;
 }
 
@@ -113,7 +113,6 @@ p, span, a, li {
     left: 0;
     right: 0;
     z-index: 1000;
-    overflow-x: hidden;
 }
 
 .nav {
@@ -1942,7 +1941,6 @@ p, span, a, li {
     }
 
     .taxi-pet-showcase {
-        overflow-x: hidden;
         max-width: 100%;
     }
 
@@ -3045,7 +3043,6 @@ html {
     .container {
         padding: 0 16px;
         max-width: 100%;
-        overflow-x: hidden;
     }
     .about-section .section-header .container {
         padding: 0 16px;
