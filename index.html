@@ -1560,13 +1560,21 @@
             const nextBtn = document.querySelector('.partnership-slider-next');
 
             let currentSlide = 0;
-            let autoplayInterval;
+            let autoplayInterval = null;
+            let isInitialized = false;
+            let resizeTimeout;
 
             function updateSlider() {
                 if (!isMobile()) return;
 
                 photos.forEach((photo, index) => {
-                    photo.style.display = index === currentSlide ? 'block' : 'none';
+                    if (index === currentSlide) {
+                        photo.style.display = 'block';
+                        photo.style.opacity = '1';
+                    } else {
+                        photo.style.display = 'none';
+                        photo.style.opacity = '0';
+                    }
                 });
             }
 
@@ -1581,13 +1589,21 @@
             }
 
             function startAutoplay() {
+                // Prevent multiple intervals
+                if (autoplayInterval !== null) {
+                    return;
+                }
+
                 if (isMobile()) {
                     autoplayInterval = setInterval(nextSlide, 3000); // 3 seconds
                 }
             }
 
             function stopAutoplay() {
-                clearInterval(autoplayInterval);
+                if (autoplayInterval !== null) {
+                    clearInterval(autoplayInterval);
+                    autoplayInterval = null;
+                }
             }
 
             // Navigation buttons
@@ -1607,6 +1623,9 @@
 
             // Initialize
             function init() {
+                // Always stop autoplay first to prevent duplicates
+                stopAutoplay();
+
                 if (isMobile()) {
                     updateSlider();
                     startAutoplay();
@@ -1614,14 +1633,30 @@
                     // Show all photos on desktop
                     photos.forEach(photo => {
                         photo.style.display = 'block';
+                        photo.style.opacity = '1';
                     });
-                    stopAutoplay();
                 }
+
+                isInitialized = true;
             }
 
-            // Handle window resize
+            // Handle window resize with debounce
             window.addEventListener('resize', function() {
-                init();
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    if (isInitialized) {
+                        init();
+                    }
+                }, 250);
+            });
+
+            // Pause autoplay when tab is not visible
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    stopAutoplay();
+                } else if (isMobile() && isInitialized) {
+                    startAutoplay();
+                }
             });
 
             // Initial setup
