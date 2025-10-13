@@ -927,11 +927,6 @@ p, span, a, li {
         width: 56px;
         height: 56px;
     }
-
-    .health-plan-item:hover .health-plan-icon {
-        background: rgba(156, 168, 118, 0.2);
-        transform: translateY(-2px);
-    }
 }
 
 .health-plan-name {
@@ -943,7 +938,7 @@ p, span, a, li {
 
 /* Mobile: Ticker animation */
 .health-plans-ticker-wrapper {
-    overflow: hidden;
+    overflow: visible;
     display: block;
     position: relative;
     white-space: nowrap;
