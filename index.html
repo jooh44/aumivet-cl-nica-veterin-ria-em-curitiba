@@ -1090,9 +1090,31 @@
                             <p>Tenho muito que agradecer à Doutora Thaise! Ela acompanha nossa família há alguns anos e já salvou várias vidas dos animais que resgatamos, sempre auxiliando com muito amor. A gratidão é enorme: nesta semana minha cachorra foi atacada e ela estava ali, pronta para ajudar. Agradeço pelo profissionalismo e pelo carinho com que cuida!</p>
                         </div>
                     </div>
-                </div>                <!-- Fade overlays -->
+                </div>
+
+                <!-- Fade overlays -->
                 <div class="ticker-fade-left"></div>
                 <div class="ticker-fade-right"></div>
+            </div>
+
+            <!-- Mobile Slider Navigation -->
+            <div class="testimonials-slider-nav">
+                <button class="testimonials-slider-arrow testimonials-slider-prev" aria-label="Depoimento anterior">
+                    <i data-lucide="chevron-left" width="24" height="24"></i>
+                </button>
+                <button class="testimonials-slider-arrow testimonials-slider-next" aria-label="Próximo depoimento">
+                    <i data-lucide="chevron-right" width="24" height="24"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Slider Indicators -->
+            <div class="testimonials-slider-indicators">
+                <button class="testimonials-slider-dot active" data-index="0" aria-label="Ver depoimento 1"></button>
+                <button class="testimonials-slider-dot" data-index="1" aria-label="Ver depoimento 2"></button>
+                <button class="testimonials-slider-dot" data-index="2" aria-label="Ver depoimento 3"></button>
+                <button class="testimonials-slider-dot" data-index="3" aria-label="Ver depoimento 4"></button>
+                <button class="testimonials-slider-dot" data-index="4" aria-label="Ver depoimento 5"></button>
+                <button class="testimonials-slider-dot" data-index="5" aria-label="Ver depoimento 6"></button>
             </div>
         </div>
     </section>
@@ -1644,6 +1666,168 @@
             if (tourIframe) {
                 tourIframe.style.pointerEvents = 'none';
             }
+        });
+
+        // Testimonials Infinite Carousel (Mobile Only)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only run on mobile
+            function isMobile() {
+                return window.innerWidth < 768;
+            }
+
+            const ticker = document.querySelector('.testimonials-ticker');
+            const prevBtn = document.querySelector('.testimonials-slider-prev');
+            const nextBtn = document.querySelector('.testimonials-slider-next');
+            const dots = document.querySelectorAll('.testimonials-slider-dot');
+            const container = document.querySelector('.testimonials-ticker-container');
+
+            if (!ticker || !prevBtn || !nextBtn || !container) {
+                console.log('Slider elements not found');
+                return;
+            }
+
+            let currentIndex = 0;
+            const totalSlides = 6;
+            let isTransitioning = false;
+
+            function updateSlider(animate = true) {
+                if (!isMobile()) return;
+
+                const items = ticker.querySelectorAll('.testimonial-item');
+                if (items.length === 0) return;
+
+                // Get actual item width + gap
+                const firstItem = items[0];
+                const itemWidth = firstItem.offsetWidth;
+                const gap = 24; // 1.5rem in pixels
+                const slideWidth = itemWidth + gap;
+                const offset = -currentIndex * slideWidth;
+
+                console.log('Updating slider:', {
+                    currentIndex,
+                    itemWidth,
+                    gap,
+                    slideWidth,
+                    offset
+                });
+
+                if (animate) {
+                    ticker.style.transition = 'transform 0.4s ease-in-out';
+                } else {
+                    ticker.style.transition = 'none';
+                }
+
+                ticker.style.transform = `translateX(${offset}px)`;
+
+                // Update dots
+                const visualIndex = currentIndex % totalSlides;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === visualIndex);
+                });
+            }
+
+            function next() {
+                if (isTransitioning || !isMobile()) return;
+
+                isTransitioning = true;
+                currentIndex++;
+
+                console.log('Next clicked, going to index:', currentIndex);
+
+                updateSlider(true);
+
+                setTimeout(() => {
+                    if (currentIndex >= totalSlides) {
+                        currentIndex = 0;
+                        updateSlider(false);
+                    }
+                    isTransitioning = false;
+                }, 400);
+            }
+
+            function prev() {
+                if (isTransitioning || !isMobile()) return;
+
+                isTransitioning = true;
+                currentIndex--;
+
+                console.log('Prev clicked, going to index:', currentIndex);
+
+                if (currentIndex < 0) {
+                    // Jump to last duplicate without animation
+                    currentIndex = totalSlides - 1;
+                }
+
+                updateSlider(true);
+
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 400);
+            }
+
+            // Button events
+            if (prevBtn) {
+                prevBtn.addEventListener('click', prev);
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', next);
+            }
+
+            // Dots navigation
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    if (isTransitioning || !isMobile()) return;
+
+                    isTransitioning = true;
+                    currentIndex = parseInt(dot.dataset.index);
+                    updateSlider(true);
+
+                    setTimeout(() => {
+                        isTransitioning = false;
+                    }, 400);
+                });
+            });
+
+            // Touch/swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            ticker.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            ticker.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        next();
+                    } else {
+                        prev();
+                    }
+                }
+            }, { passive: true });
+
+            // Initial setup
+            if (isMobile()) {
+                updateSlider(false);
+            }
+
+            // Handle resize
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (!isMobile()) {
+                        ticker.style.transform = '';
+                        ticker.style.transition = '';
+                    } else {
+                        updateSlider(false);
+                    }
+                }, 250);
+            });
         });
     </script>
 </body>
