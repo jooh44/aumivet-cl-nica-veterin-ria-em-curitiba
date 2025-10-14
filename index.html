@@ -54,10 +54,10 @@
     <!-- Font preconnect and preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Alan+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
         <!-- =================================================
@@ -1375,7 +1375,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="images/logo-aumivet.png" alt="Logo Aumivet" class="footer-logo">
+                    <img src="images/logo-aumivet.png" alt="Logo Aumivet" class="footer-logo" loading="lazy">
                     <p>Cuidado veterinário com <em class="destaque-rosa">amor</em> e <em class="destaque">excelência</em></p>
                 </div>
                 <div class="footer-info">
@@ -1917,6 +1917,9 @@
             });
         });
     </script>
+
+    <!-- Lucide Icons - Loaded with defer to not block rendering -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 </body>
 </html>
 
