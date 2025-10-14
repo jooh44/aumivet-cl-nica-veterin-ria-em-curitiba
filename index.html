@@ -12,11 +12,11 @@
     <!-- SCHEMA MARKUP -->
     <script type="application/ld+json">
     {
-        "@context": "https:
+        "@context": "https://schema.org",
         "@type": "VeterinaryCare",
         "name": "Aumivet Clínica Veterinária",
         "description": "Clínica veterinária moderna em Curitiba com serviços completos: consultas, cirurgias, banho e tosa, coworking veterinário",
-        "url": "https:
+        "url": "https://aumivet.com.br",
         "telephone": "+55-41-98860-4202",
         "email": "aumivet.clinica@gmail.com",
         "address": {
@@ -52,19 +52,23 @@
     <link rel="preload" href="images/logo-aumivet.png" as="image">
 
     <!-- Font preconnect and preload -->
-    <link rel="preconnect" href="https:
-    <link rel="preconnect" href="https:
-    <link rel="preconnect" href="https:
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Alan+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <header class="header">
+        <!-- =================================================
+         HEADER SECTION
+         Fixed navigation with brand and call-to-action
+         ================================================= -->
+    <header class="header">
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <img src="images/logo-aumivet.png" alt="Aumivet - Clínica Veterinária" class="logo-img" width="180" height="60">
+                    <img src="images/logo-aumivet.png" alt="Aumivet - Clínica Veterinária" class="logo-img">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#services">Serviços</a></li>
@@ -73,11 +77,15 @@
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
-                <a href="https:
+                <a href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." class="nav-cta" target="_blank" rel="noopener">Agendar Consulta</a>
             </nav>
         </div>
     </header>
 
+    <!-- =================================================
+         HERO SECTION
+         Main landing area with headline and CTA
+         ================================================= -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
@@ -94,11 +102,11 @@
 
 
                     <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="300">
-                        <a href="https:
+                        <a href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." class="hero-cta-primary" target="_blank" rel="noopener">
                             <i data-lucide="calendar-plus" width="20" height="20"></i>
                             Agendar Consulta
                         </a>
-                        <a href="https:
+                        <a href="https://wa.me/5541988604202?text=Olá! Tenho dúvidas sobre os serviços." class="hero-cta-secondary" target="_blank" rel="noopener">
                             <i data-lucide="message-circle" width="20" height="20"></i>
                             Tire suas Dúvidas
                         </a>
@@ -106,7 +114,7 @@
                 </div>
                 <div class="hero-visual">
                     <div class="hero-image-container">
-                        <img src="images/aumivet_clinica_veterinaria_em_curitiba.jpg" alt="Aumivet - Clínica Veterinária em Curitiba" class="hero-image" loading="eager" width="600" height="400">
+                        <img src="images/aumivet_clinica_veterinaria_em_curitiba.jpg" alt="Aumivet - Clínica Veterinária em Curitiba" class="hero-image" loading="eager">
                     </div>
                 </div>
             </div>
@@ -203,6 +211,10 @@
     </section>
 
 
+    <!-- =================================================
+         SERVICES SECTION
+         Detailed service offerings with Figma design layout
+         ================================================= -->
     <section id="services" class="services-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -231,8 +243,8 @@
                             <p>Cuidar da saúde do seu pet começa com prevenção. Realizamos consultas clínicas completas e aplicamos vacinas essenciais com toda a segurança, carinho e atenção que eles merecem. Também oferecemos <strong>atendimento domiciliar</strong> para maior comodidade.</p>
                         </div>
                         <div class="service-actions">
-                            <a href="https:
-                            <a href="https:
+                            <a href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." class="service-button secondary" target="_blank" rel="noopener">Agendar</a>
+                            <a href="https://wa.me/5541988604202?text=Olá! Tenho dúvidas sobre consultas." class="service-button link" target="_blank" rel="noopener">
                                 Saber Mais
                                 <i data-lucide="chevron-right" width="16" height="16"></i>
                             </a>
@@ -251,8 +263,8 @@
                             <p>Aqui, seu pet está em boas mãos. Nossa equipe realiza procedimentos cirúrgicos com técnica, segurança e todo o cuidado que ele merece — desde os mais simples até os mais delicados. Todas as nossas cirurgias são realizadas com anestesia inalatória por médico veterinário especialista.</p>
                         </div>
                         <div class="service-actions">
-                            <a href="https:
-                            <a href="https:
+                            <a href="https://wa.me/5541988604202?text=Olá! Preciso de informações sobre cirurgias." class="service-button secondary" target="_blank" rel="noopener">Consultar</a>
+                            <a href="https://wa.me/5541988604202?text=Olá! Tenho dúvidas sobre procedimentos cirúrgicos." class="service-button link" target="_blank" rel="noopener">
                                 Saber Mais
                                 <i data-lucide="chevron-right" width="16" height="16"></i>
                             </a>
@@ -277,8 +289,8 @@
                             <p>Com tecnologia de ponta e agilidade nos resultados, oferecemos exames precisos que auxiliam no diagnóstico rápido e eficaz. Porque cada detalhe importa na saúde do seu pet.</p>
                         </div>
                         <div class="service-actions">
-                            <a href="https:
-                            <a href="https:
+                            <a href="https://wa.me/5541988604202?text=Olá! Preciso de exames para meu pet." class="service-button secondary" target="_blank" rel="noopener">Solicitar</a>
+                            <a href="https://wa.me/5541988604202?text=Olá! Tenho dúvidas sobre exames." class="service-button link" target="_blank" rel="noopener">
                                 Saber Mais
                                 <i data-lucide="chevron-right" width="16" height="16"></i>
                             </a>
@@ -297,8 +309,8 @@
                             <p>Saúde bucal também é qualidade de vida. Cuidamos do sorriso do seu pet com tratamentos odontológicos especializados e sem estresse.</p>
                         </div>
                         <div class="service-actions">
-                            <a href="https:
-                            <a href="https:
+                            <a href="https://wa.me/5541988604202?text=Olá! Meu pet precisa de cuidados dentários." class="service-button secondary" target="_blank" rel="noopener">Agendar</a>
+                            <a href="https://wa.me/5541988604202?text=Olá! Tenho dúvidas sobre odontologia veterinária." class="service-button link" target="_blank" rel="noopener">
                                 Saber Mais
                                 <i data-lucide="chevron-right" width="16" height="16"></i>
                             </a>
@@ -323,8 +335,8 @@
                             <p>Transforme o dia a dia com seu pet com mais harmonia e obediência. Técnicas positivas para comportamento e socialização.</p>
                         </div>
                         <div class="service-actions">
-                            <a href="https:
-                            <a href="https:
+                            <a href="https://wa.me/5541988604202?text=Olá! Tenho interesse no adestramento." class="service-button secondary" target="_blank" rel="noopener">Consultar</a>
+                            <a href="https://wa.me/5541988604202?text=Olá! Tenho dúvidas sobre adestramento." class="service-button link" target="_blank" rel="noopener">
                                 Saber Mais
                                 <i data-lucide="chevron-right" width="16" height="16"></i>
                             </a>
@@ -343,8 +355,8 @@
                             <p>Mais que higiene: momentos de cuidado e bem-estar. Seu pet sai limpo, cheiroso e ainda mais bonito com nossos serviços de banho e tosa pensados para o conforto dele.</p>
                         </div>
                         <div class="service-actions">
-                            <a href="https:
-                            <a href="https:
+                            <a href="https://wa.me/5541985332493?text=Olá! Quero agendar banho e tosa." class="service-button secondary" target="_blank" rel="noopener">Agendar</a>
+                            <a href="https://wa.me/5541985332493?text=Olá! Tenho dúvidas sobre banho e tosa." class="service-button link" target="_blank" rel="noopener">
                                 Saber Mais
                                 <i data-lucide="chevron-right" width="16" height="16"></i>
                             </a>
@@ -358,6 +370,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         HEALTH PLANS STRIP
+         Compact health insurance plans strip
+         ================================================= -->
     <section id="planos" class="health-plans-strip">
         <div class="container">
             <div class="health-plans-strip-header">
@@ -469,6 +485,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         PARTNERSHIP SECTION
+         Veterinary partnership and coworking
+         ================================================= -->
     <section id="parcerias" class="partnership-section">
         <div class="container">
             <div class="partnership-container">
@@ -491,7 +511,7 @@
                         </ul>
                     </div>
 
-                    <a href="https:
+                    <a href="https://wa.me/5541988604202?text=Olá! Tenho interesse na parceria para médicos veterinários." class="service-button secondary" target="_blank" rel="noopener">
                         Saber Mais
                         <i data-lucide="arrow-right" width="20" height="20"></i>
                     </a>
@@ -526,6 +546,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         SERVIÇOS ESPECIALIZADOS
+         Consultas com especialistas e serviços volantes
+         ================================================= -->
     <section id="servicos-especializados" class="specialized-section" style="background: var(--branco);">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -560,7 +584,7 @@
                                 <li>Dermatologia</li>
                             </ul>
                         </div>
-                        <a href="https:
+                        <a href="https://wa.me/5541988604202?text=Olá! Preciso de consulta com especialista." class="specialized-link" target="_blank" rel="noopener">
                             <span>Agendar Consulta</span>
                             <i data-lucide="calendar" width="16" height="16"></i>
                         </a>
@@ -584,7 +608,7 @@
                                 <li>Protocolos personalizados</li>
                             </ul>
                         </div>
-                        <a href="https:
+                        <a href="https://wa.me/5541988604202?text=Olá! Preciso de anestesista para procedimento." class="specialized-link" target="_blank" rel="noopener">
                             <span>Solicitar</span>
                             <i data-lucide="phone" width="16" height="16"></i>
                         </a>
@@ -608,7 +632,7 @@
                                 <li>Emergências cirúrgicas</li>
                             </ul>
                         </div>
-                        <a href="https:
+                        <a href="https://wa.me/5541988604202?text=Olá! Preciso de cirurgia para procedimento." class="specialized-link" target="_blank" rel="noopener">
                             <span>Consultar</span>
                             <i data-lucide="message-circle" width="16" height="16"></i>
                         </a>
@@ -618,6 +642,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         TAXI PET SECTION
+         Specialized transport service
+         ================================================= -->
     <section id="taxi-pet" class="taxi-pet-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -660,7 +688,7 @@
 
             <!-- CTA centralizado -->
             <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
-                <a href="https:
+                <a href="https://wa.me/5541988604202?text=Olá! Preciso do serviço de Leva e Traz." class="service-button secondary taxi-pet-button" target="_blank" rel="noopener">
                     Solicitar Leva e Traz
                     <i data-lucide="car" width="20" height="20"></i>
                 </a>
@@ -668,7 +696,15 @@
         </div>
     </section>
 
+    <!-- =================================================
+         HEALTH INSURANCE SECTION
+         Pet health insurance plans
+         ================================================= -->
     
+    <!-- =================================================
+         ABOUT AUMIVET SECTION
+         About the clinic and differentials
+         ================================================= -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -712,7 +748,7 @@
                         </div>
                     </div>
 
-                    <iframe id="tour-embeded" name="Aumivet" src="https:
+                    <iframe id="tour-embeded" name="Aumivet" src="https://tour.panoee.net/iframe/68d25781074e3db4ac87ab20" frameBorder="0" width="100%" height="720px" scrolling="no" allowvr="yes" allow="vr; xr; accelerometer; gyroscope; autoplay;" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" loading="lazy"></iframe>
                     <script>
                         var pano_iframe_name = "tour-embeded";
                         window.addEventListener("devicemotion", function(e){ var iframe = document.getElementById(pano_iframe_name); if (iframe) iframe.contentWindow.postMessage({ type:"devicemotion", deviceMotionEvent:{ acceleration:{ x:e.acceleration.x, y:e.acceleration.y, z:e.acceleration.z }, accelerationIncludingGravity:{ x:e.accelerationIncludingGravity.x, y:e.accelerationIncludingGravity.y, z:e.accelerationIncludingGravity.z }, rotationRate:{ alpha:e.rotationRate.alpha, beta:e.rotationRate.beta, gamma:e.rotationRate.gamma }, interval:e.interval, timeStamp:e.timeStamp } }, "*"); });
@@ -722,6 +758,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         TEAM SECTION
+         Meet our professional team
+         ================================================= -->
     <section id="team" class="team-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -923,6 +963,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         TESTIMONIALS SECTION
+         Client testimonials and reviews
+         ================================================= -->
     <section id="testimonials" class="testimonials-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -1128,6 +1172,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         FAQ SECTION
+         Frequently asked questions
+         ================================================= -->
     <section id="faq" class="faq-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -1233,6 +1281,10 @@
         </div>
     </section>
 
+    <!-- =================================================
+         CONTACT SECTION
+         Contact information and CTA
+         ================================================= -->
     <section id="contato" class="contact-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
@@ -1271,7 +1323,7 @@
                     </div>
 
                     <div class="contact-cta">
-                        <a href="https:
+                        <a href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." class="contact-btn primary" target="_blank" rel="noopener">
                             <i data-lucide="message-circle" width="20" height="20"></i>
                             Agendar pelo WhatsApp
                         </a>
@@ -1286,7 +1338,7 @@
                     <h3>Nossa Clínica no Mapa</h3>
                     <div class="map-container">
                         <iframe
-                            src="https:
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.0837123047447!2d-49.2847143!3d-25.4461097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce53b6b8b3b31%3A0x5a8b5b4a3b2b1b2b!2sR.%20Santo%20Ant%C3%B4nio%2C%20891%20-%20Rebou%C3%A7as%2C%20Curitiba%20-%20PR%2C%2080230-120!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"
                             width="100%"
                             height="300"
                             style="border:0; border-radius: 12px;"
@@ -1305,12 +1357,20 @@
         </div>
     </section>
 
-    <a href="https:
+    <!-- =================================================
+         WHATSAPP FLOATING BUTTON
+         Fixed position contact button
+         ================================================= -->
+    <a href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." class="whatsapp-float" title="Conversar no WhatsApp" target="_blank" rel="noopener">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.864 3.687"/>
         </svg>
     </a>
 
+    <!-- =================================================
+         FOOTER SECTION
+         Copyright and business information
+         ================================================= -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1331,6 +1391,9 @@
     </footer>
 
     <script>
+        // =================================================
+        // SMOOTH SCROLL NAVIGATION
+        // =================================================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1344,16 +1407,21 @@
             });
         });
 
+        // =================================================
+        // FAQ ACCORDION FUNCTIONALITY
+        // =================================================
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', function() {
                 const answer = this.nextElementSibling;
                 const isActive = this.classList.contains('active');
 
+                // Close all other FAQ items
                 document.querySelectorAll('.faq-question').forEach(q => {
                     q.classList.remove('active');
                     q.nextElementSibling.classList.remove('active');
                 });
 
+                // Toggle current item
                 if (!isActive) {
                     this.classList.add('active');
                     answer.classList.add('active');
@@ -1361,61 +1429,83 @@
             });
         });
 
+        // =================================================
+        // TEAM TABS FUNCTIONALITY
+        // =================================================
         let currentTeamTab = 0;
 
         function switchTeamTab(tabIndex) {
+            // Hide all content
             document.querySelectorAll('.team-folder-content').forEach(content => {
                 content.classList.add('hidden');
             });
 
+            // Remove active class from all tabs
             document.querySelectorAll('.team-tab').forEach(tab => {
                 tab.classList.remove('active');
             });
 
+            // Show selected content
             document.getElementById(`team-content-${tabIndex}`).classList.remove('hidden');
 
+            // Add active class to selected tab
             document.querySelector(`[data-tab="${tabIndex}"]`).classList.add('active');
 
             currentTeamTab = tabIndex;
         }
 
+        // Initialize first tab as active
         document.addEventListener('DOMContentLoaded', function() {
             switchTeamTab(0);
         });
 
+        // =================================================
+        // LUCIDE ICONS INITIALIZATION
+        // =================================================
         document.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
         });
 
+        // =================================================
+        // CUSTOM INTERSECTION OBSERVER ANIMATIONS
+        // =================================================
         document.addEventListener('DOMContentLoaded', function() {
+            // Create intersection observer
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const element = entry.target;
                         const delay = element.getAttribute('data-aos-delay') || 0;
 
+                        // Add animation with delay
                         setTimeout(() => {
                             const animationType = element.getAttribute('data-aos');
                             element.classList.add('animate-in');
 
+                            // Apply specific animation
                             if (animationType) {
                                 element.classList.add(`animate-${animationType}`);
                             }
                         }, parseInt(delay));
 
+                        // Stop observing this element
                         observer.unobserve(element);
                     }
                 });
             }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.1, // Trigger when 10% of element is visible
+                rootMargin: '0px 0px -50px 0px' // Start animation 50px before element comes into view
             });
 
+            // Observe all elements with data-aos attributes
             document.querySelectorAll('[data-aos]').forEach(el => {
                 observer.observe(el);
             });
         });
 
+        // =================================================
+        // TESTIMONIALS TICKER MOBILE PAUSE/PLAY
+        // =================================================
         document.addEventListener('DOMContentLoaded', function() {
             const tickerContainer = document.querySelector('.testimonials-ticker-container');
             const ticker = tickerContainer ? tickerContainer.querySelector('.testimonials-ticker') : null;
@@ -1446,6 +1536,8 @@
             }
 
             function togglePause(event) {
+                // Não bloqueia o scroll natural do mobile
+                // Apenas alterna o estado de pausa
                 setPaused(!isPaused);
             }
 
@@ -1473,6 +1565,7 @@
 
                 ensureHint();
                 setPaused(false);
+                // Usa passive: true para não bloquear o scroll
                 ticker.addEventListener('touchstart', togglePause, { passive: true });
                 controlsEnabled = true;
             }
@@ -1506,6 +1599,9 @@
             window.addEventListener('resize', handleResize);
         });
 
+        // =================================================
+        // PARTNERSHIP SLIDER (MOBILE ONLY)
+        // =================================================
         document.addEventListener('DOMContentLoaded', function() {
             function isMobile() {
                 return window.innerWidth < 768;
@@ -1546,12 +1642,13 @@
             }
 
             function startAutoplay() {
+                // Prevent multiple intervals
                 if (autoplayInterval !== null) {
                     return;
                 }
 
                 if (isMobile()) {
-                    autoplayInterval = setInterval(nextSlide, 3000);
+                    autoplayInterval = setInterval(nextSlide, 3000); // 3 seconds
                 }
             }
 
@@ -1562,6 +1659,7 @@
                 }
             }
 
+            // Navigation buttons
             if (nextBtn && prevBtn) {
                 nextBtn.addEventListener('click', function() {
                     stopAutoplay();
@@ -1576,13 +1674,16 @@
                 });
             }
 
+            // Initialize
             function init() {
+                // Always stop autoplay first to prevent duplicates
                 stopAutoplay();
 
                 if (isMobile()) {
                     updateSlider();
                     startAutoplay();
                 } else {
+                    // Show all photos on desktop
                     photos.forEach(photo => {
                         photo.style.display = 'block';
                         photo.style.opacity = '1';
@@ -1592,6 +1693,7 @@
                 isInitialized = true;
             }
 
+            // Handle window resize with debounce
             window.addEventListener('resize', function() {
                 clearTimeout(resizeTimeout);
                 resizeTimeout = setTimeout(function() {
@@ -1601,6 +1703,7 @@
                 }, 250);
             });
 
+            // Pause autoplay when tab is not visible
             document.addEventListener('visibilitychange', function() {
                 if (document.hidden) {
                     stopAutoplay();
@@ -1609,24 +1712,31 @@
                 }
             });
 
+            // Initial setup
             init();
         });
 
+        // =================================================
+        // TOUR VIRTUAL OVERLAY ACTIVATION
+        // =================================================
         document.addEventListener('DOMContentLoaded', function() {
             const tourOverlay = document.getElementById('tour-overlay');
             const tourStartButton = document.getElementById('tour-start-button');
             const tourIframe = document.getElementById('tour-embeded');
 
             function activateTour() {
+                // Remove overlay
                 if (tourOverlay) {
                     tourOverlay.classList.add('hidden');
                 }
 
+                // Enable iframe interaction by removing pointer-events restriction
                 if (tourIframe) {
                     tourIframe.style.pointerEvents = 'auto';
                 }
             }
 
+            // Click on button
             if (tourStartButton) {
                 tourStartButton.addEventListener('click', function(e) {
                     e.stopPropagation();
@@ -1634,16 +1744,20 @@
                 });
             }
 
+            // Click anywhere on overlay
             if (tourOverlay) {
                 tourOverlay.addEventListener('click', activateTour);
             }
 
+            // Initially disable iframe interaction
             if (tourIframe) {
                 tourIframe.style.pointerEvents = 'none';
             }
         });
 
+        // Testimonials Infinite Carousel (Mobile Only)
         document.addEventListener('DOMContentLoaded', function() {
+            // Only run on mobile
             function isMobile() {
                 return window.innerWidth < 768;
             }
@@ -1669,9 +1783,10 @@
                 const items = ticker.querySelectorAll('.testimonial-item');
                 if (items.length === 0) return;
 
+                // Get actual item width + gap
                 const firstItem = items[0];
                 const itemWidth = firstItem.offsetWidth;
-                const gap = 24;
+                const gap = 24; // 1.5rem in pixels
                 const slideWidth = itemWidth + gap;
                 const offset = -currentIndex * slideWidth;
 
@@ -1691,6 +1806,7 @@
 
                 ticker.style.transform = `translateX(${offset}px)`;
 
+                // Update dots
                 const visualIndex = currentIndex % totalSlides;
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === visualIndex);
@@ -1725,6 +1841,7 @@
                 console.log('Prev clicked, going to index:', currentIndex);
 
                 if (currentIndex < 0) {
+                    // Jump to last duplicate without animation
                     currentIndex = totalSlides - 1;
                 }
 
@@ -1735,6 +1852,7 @@
                 }, 400);
             }
 
+            // Button events
             if (prevBtn) {
                 prevBtn.addEventListener('click', prev);
             }
@@ -1743,6 +1861,7 @@
                 nextBtn.addEventListener('click', next);
             }
 
+            // Dots navigation
             dots.forEach(dot => {
                 dot.addEventListener('click', () => {
                     if (isTransitioning || !isMobile()) return;
@@ -1757,6 +1876,7 @@
                 });
             });
 
+            // Touch/swipe support
             let touchStartX = 0;
             let touchEndX = 0;
 
@@ -1777,10 +1897,12 @@
                 }
             }, { passive: true });
 
+            // Initial setup
             if (isMobile()) {
                 updateSlider(false);
             }
 
+            // Handle resize
             let resizeTimer;
             window.addEventListener('resize', () => {
                 clearTimeout(resizeTimer);
@@ -1797,7 +1919,7 @@
     </script>
 
     <!-- Lucide Icons - Loaded with defer to not block rendering -->
-    <script src="https:
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 </body>
 </html>
 
