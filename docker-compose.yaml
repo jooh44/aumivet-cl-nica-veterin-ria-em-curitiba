@@ -51,12 +51,12 @@ services:
       strapiDB:
         condition: service_healthy
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.strapi.rule=Host(`strapi.digitaldog.pet`)"
-      - "traefik.http.routers.strapi.entrypoints=websecure"
-      - "traefik.http.routers.strapi.tls=true"
-      - "traefik.http.routers.strapi.tls.certresolver=letsencrypt"
-      - "traefik.http.services.strapi.loadbalancer.server.port=1337"
+      - traefik.enable=true
+      - traefik.http.routers.strapi.rule=Host(`strapi.digitaldog.pet`)
+      - traefik.http.routers.strapi.entrypoints=websecure
+      - traefik.http.routers.strapi.tls=true
+      - traefik.http.routers.strapi.tls.certresolver=letsencrypt
+      - traefik.http.services.strapi.loadbalancer.server.port=1337
 
   frontend:
     container_name: aumivet-frontend
@@ -76,12 +76,12 @@ services:
     depends_on:
       - strapi
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.frontend.rule=Host(`aumivet.com.br`)"
-      - "traefik.http.routers.frontend.entrypoints=websecure"
-      - "traefik.http.routers.frontend.tls=true"
-      - "traefik.http.routers.frontend.tls.certresolver=letsencrypt"
-      - "traefik.http.services.frontend.loadbalancer.server.port=3000"
+      - traefik.enable=true
+      - traefik.http.routers.frontend.rule=Host(`aumivet.com.br`)
+      - traefik.http.routers.frontend.entrypoints=websecure
+      - traefik.http.routers.frontend.tls=true
+      - traefik.http.routers.frontend.tls.certresolver=letsencrypt
+      - traefik.http.services.frontend.loadbalancer.server.port=3000
 
 networks:
   coolify:
