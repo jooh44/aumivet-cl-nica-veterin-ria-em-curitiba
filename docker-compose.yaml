@@ -41,8 +41,6 @@ services:
     volumes:
       - ./strapi-app/config:/opt/app/config
       - ./strapi-app/src:/opt/app/src
-      - ./strapi-app/package.json:/opt/package.json
-      - ./strapi-app/package-lock.json:/opt/package-lock.json
       - ./strapi-app/public/uploads:/opt/app/public/uploads
     networks:
       - coolify
