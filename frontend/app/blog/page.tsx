@@ -113,37 +113,9 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Buscar posts do Strapi
-    const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'https://strapi.digitaldog.pet';
-    fetch(`${STRAPI_URL}/blog-posts`)
-      .then((res) => res.json())
-      .then((data) => {
-        const posts = data.map((post: any) => ({
-          id: post.id,
-          title: post.Title,
-          slug: post.Slug,
-          excerpt: post.Excerpt || '',
-          category: categoryLabels[post.Category] || post.Category,
-          author: post.Author || 'Dra. Thaise',
-          readTime: post.Readtime || '5 min',
-          date: post.Publishedat || post.published_at || new Date().toISOString(),
-          image: post.Featuredimage?.url
-            ? `${STRAPI_URL}${post.Featuredimage.url}`
-            : 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80',
-        }));
-        
-        console.log('Posts do Strapi:', posts); // Debug
-        
-        // Combinar posts do Strapi com estáticos
-        setBlogPosts([...posts, ...staticBlogPosts]);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Erro ao buscar posts:', error);
-        // Em caso de erro, usar posts estáticos
-        setBlogPosts(staticBlogPosts);
-        setLoading(false);
-      });
+    // Usar apenas posts estáticos
+    setBlogPosts(staticBlogPosts);
+    setLoading(false);
   }, []);
 
   useEffect(() => {
