@@ -1,61 +1,4 @@
 services:
-  strapiDB:
-    container_name: aumivet-strapi-db
-    image: postgres:15-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-strapi_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB:-aumivet_strapi}
-    volumes:
-      - strapi-data:/var/lib/postgresql/data
-    networks:
-      - default
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-strapi_user} -d ${POSTGRES_DB:-aumivet_strapi}" ]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  strapi:
-    container_name: aumivet-strapi
-    build:
-      context: ./strapi-app
-      dockerfile: Dockerfile
-    restart: unless-stopped
-    environment:
-      DATABASE_CLIENT: ${DATABASE_CLIENT:-postgres}
-      DATABASE_HOST: strapiDB
-      DATABASE_PORT: ${DATABASE_PORT:-5432}
-      DATABASE_NAME: ${DATABASE_NAME:-aumivet_strapi}
-      DATABASE_USERNAME: ${DATABASE_USERNAME:-strapi_user}
-      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
-      JWT_SECRET: ${JWT_SECRET}
-      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
-      APP_KEYS: ${APP_KEYS}
-      API_TOKEN_SALT: ${API_TOKEN_SALT}
-      NODE_ENV: production
-      HOST: 0.0.0.0
-      PORT: 1337
-      URL: ${STRAPI_URL:-https://strapi.digitaldog.pet}
-    volumes:
-      - ./strapi-app/config:/opt/app/config
-      - ./strapi-app/src:/opt/app/src
-      - ./strapi-app/public/uploads:/opt/app/public/uploads
-    networks:
-      - coolify
-      - default
-    depends_on:
-      strapiDB:
-        condition: service_healthy
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.strapi.rule=Host(`strapi.digitaldog.pet`)
-      - traefik.http.routers.strapi.entrypoints=websecure
-      - traefik.http.routers.strapi.tls=true
-      - traefik.http.routers.strapi.tls.certresolver=letsencrypt
-      - traefik.http.services.strapi.loadbalancer.server.port=1337
-
   frontend:
     container_name: aumivet-frontend
     build:
@@ -63,30 +6,22 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
-      NEXT_PUBLIC_STRAPI_URL: ${NEXT_PUBLIC_STRAPI_URL:-https://strapi.digitaldog.pet}
-      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://aumivet.com.br}
+      NEXT_PUBLIC_STRAPI_URL: 'https://strapi.digitaldog.pet'
+      NEXT_PUBLIC_SITE_URL: 'https://aumivet.com.br'
       NODE_ENV: production
       PORT: 3000
-      HOSTNAME: 0.0.0.0
+      HOSTNAME: "0.0.0.0"
     networks:
       - coolify
-      - default
-    depends_on:
-      - strapi
     labels:
       - traefik.enable=true
-      - traefik.http.routers.aumivet-frontend-manual.rule=Host(`aumivet.com.br`)
-      - traefik.http.routers.aumivet-frontend-manual.entrypoints=websecure
-      - traefik.http.routers.aumivet-frontend-manual.tls=true
-      - traefik.http.routers.aumivet-frontend-manual.tls.certresolver=letsencrypt
-      - traefik.http.services.aumivet-frontend-manual.loadbalancer.server.port=3000
+      - traefik.http.routers.aumivet-frontend.rule=Host(`aumivet.com.br`)
+      - traefik.http.routers.aumivet-frontend.entrypoints=websecure
+      - traefik.http.routers.aumivet-frontend.tls=true
+      - traefik.http.routers.aumivet-frontend.tls.certresolver=letsencrypt
+      - traefik.http.services.aumivet-frontend.loadbalancer.server.port=3000
       - traefik.docker.network=coolify
 
 networks:
   coolify:
     external: true
-  default:
-
-
-volumes:
-  strapi-data:
