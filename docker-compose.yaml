@@ -75,11 +75,12 @@ services:
       - strapi
     labels:
       - traefik.enable=true
-      - traefik.http.routers.frontend.rule=Host(`aumivet.com.br`)
-      - traefik.http.routers.frontend.entrypoints=websecure
-      - traefik.http.routers.frontend.tls=true
-      - traefik.http.routers.frontend.tls.certresolver=letsencrypt
-      - traefik.http.services.frontend.loadbalancer.server.port=3000
+      - traefik.http.routers.aumivet-frontend-manual.rule=Host(`aumivet.com.br`)
+      - traefik.http.routers.aumivet-frontend-manual.entrypoints=websecure
+      - traefik.http.routers.aumivet-frontend-manual.tls=true
+      - traefik.http.routers.aumivet-frontend-manual.tls.certresolver=letsencrypt
+      - traefik.http.services.aumivet-frontend-manual.loadbalancer.server.port=3000
+      - traefik.docker.network=coolify
 
 networks:
   coolify:
