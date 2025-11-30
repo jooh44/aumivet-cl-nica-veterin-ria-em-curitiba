@@ -177,27 +177,7 @@ const categoryLabels: Record<string, string> = {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  // Try to fetch from Strapi first
-  try {
-    const strapiPost = await getBlogPostBySlug(slug);
-    if (strapiPost) {
-      return {
-        title: strapiPost.Title,
-        description: strapiPost.Excerpt || strapiPost.Content.substring(0, 160),
-        openGraph: {
-          title: strapiPost.Title,
-          description: strapiPost.Excerpt || strapiPost.Content.substring(0, 160),
-          type: "article",
-          publishedTime: strapiPost.Publishedat,
-          authors: [strapiPost.Author],
-        },
-      };
-    }
-  } catch (error) {
-    console.error('Error fetching post from Strapi:', error);
-  }
-
-  // Fallback to placeholder
+  // Use placeholder data directly
   const post = placeholderPosts[slug];
 
   if (!post) {
@@ -222,35 +202,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  // Try to fetch from Strapi first
-  let postData = null;
-  try {
-    const strapiPost = await getBlogPostBySlug(slug);
-    if (strapiPost) {
-      // Handle readTime - can be number or string
-      const readTimeValue = typeof strapiPost.Readtime === 'string'
-        ? strapiPost.Readtime
-        : `${strapiPost.Readtime} min`;
-
-      postData = {
-        title: strapiPost.Title,
-        content: strapiPost.Content,
-        excerpt: strapiPost.Excerpt,
-        category: categoryLabels[strapiPost.Category] || strapiPost.Category,
-        date: strapiPost.Publishedat || strapiPost.published_at,
-        author: strapiPost.Author,
-        image: strapiPost.Featuredimage
-          ? getStrapiImageUrl(strapiPost.Featuredimage.url)
-          : 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=800&q=80',
-        readTime: readTimeValue,
-      };
-    }
-  } catch (error) {
-    console.error('Error fetching post from Strapi:', error);
-  }
-
-  // Fallback to placeholder posts
-  const post = postData || placeholderPosts[slug];
+  // Use placeholder posts directly
+  const post = placeholderPosts[slug];
 
   if (!post) {
     notFound();
