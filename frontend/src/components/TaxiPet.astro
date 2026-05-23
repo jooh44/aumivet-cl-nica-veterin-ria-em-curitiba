@@ -1,0 +1,35 @@
+---
+import { Car } from '@lucide/astro';
+---
+
+<section class="taxipet-section" id="leva-e-traz" aria-labelledby="taxipet-title">
+  <div class="taxipet-shell">
+    <div class="taxipet-content">
+      <span class="taxipet-eyebrow">Leva e traz</span>
+      <h2 id="taxipet-title">Seu pet em casa,<br />a consulta com a gente</h2>
+      <p class="taxipet-desc">
+        Buscamos e levamos seu pet com segurança e cuidado. Pontualidade, carinho e conforto do portão de casa até a clínica.
+      </p>
+      <a
+        class="button primary taxipet-cta"
+        href="https://wa.me/5541988604202?text=Olá! Preciso do serviço de Leva e Traz."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Car size={18} aria-hidden="true" />
+        Solicitar leva e traz
+      </a>
+    </div>
+
+    <div class="taxipet-visual">
+      <img
+        class="taxipet-car"
+        src="/images/carro-aumivet-nobg.webp"
+        alt="Carro da Aumivet para transporte seguro de pets"
+        width="1962"
+        height="1496"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>

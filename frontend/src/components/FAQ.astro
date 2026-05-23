@@ -1,0 +1,172 @@
+---
+import { ChevronDown } from '@lucide/astro';
+
+const faqs = [
+  {
+    question: 'A castração dói? Como meu pet será cuidado?',
+    answer: 'Utilizamos protocolos de anestesia modernos e monitorados por profissional anestesista para máxima segurança e conforto. Seu pet recebe analgésicos potentes antes, durante e após a cirurgia para garantir que não sinta dor pós-operatória.',
+  },
+  {
+    question: 'Meu pet pode tomar banho toda semana?',
+    answer: 'Depende da raça, do tipo de pelagem e da saúde da pele. Para a maioria dos cães saudáveis, banhos quinzenais são ideais. Pets em tratamentos dermatológicos podem necessitar de banhos mais frequentes com shampoos terapêuticos recomendados na consulta.',
+  },
+  {
+    question: 'Como sei se meu pet precisa de uma consulta dermatológica?',
+    answer: 'Fique atento a sinais como: coceira excessiva (se lamber ou coçar constantemente), perda localizada de pelo, vermelhidão na pele, descamação, feridas ou odor forte incomum vindo da pele e das orelhas.',
+  },
+  {
+    question: 'Vocês fazem banho e tosa em gatos?',
+    answer: 'Sim! Nosso atendimento de estética felina é realizado com técnicas de manejo amigável (Cat Friendly) para reduzir o estresse, utilizando materiais específicos e secagem silenciosa para preservar a tranquilidade do gato.',
+  },
+  {
+    question: 'O que acontece se eu não escovar os dentes do meu pet?',
+    answer: 'A falta de escovação causa acúmulo de tártaro, provocando mau hálito, gengivite e dor de dente. Em casos graves, as bactérias da boca podem cair na corrente sanguínea e atingir órgãos vitais como coração e rins. Recomendamos a profilaxia dentária preventiva.',
+  },
+  {
+    question: 'Quais vacinas meu pet precisa tomar?',
+    answer: 'Cães necessitam da vacina múltipla (V10), Antirrábica, contra Gripe Canina e contra Giárdia. Gatos necessitam da vacina quádrupla (V4) ou quíntupla (V5) e da Antirrábica. O protocolo ideal é montado individualmente na consulta.',
+  },
+  {
+    question: 'Como funciona o atendimento de emergência?',
+    answer: 'Para casos de urgência ou emergência, você deve entrar em contato imediato pelo nosso WhatsApp (41) 98860-4202. Isso permite que a nossa equipe de prontidão prepare o consultório e os equipamentos necessários para receber o pet de imediato.',
+  },
+  {
+    question: 'Como funciona o agendamento de consultas?',
+    answer: 'O agendamento pode ser feito de forma rápida diretamente por mensagem em nosso WhatsApp (41) 98860-4202. Como trabalhamos exclusivamente com horários agendados, garantimos que quase não haja tempo de espera na clínica.',
+  },
+];
+---
+
+<section class="faq-shell" id="faq" aria-labelledby="faq-title">
+  <div class="faq-container" data-animate="faq-frame">
+    <div class="section-heading text-center no-eyebrow">
+      <h2 id="faq-title">Dúvidas <span class="highlight">Frequentes</span></h2>
+      <p class="section-subtitle">
+        Encontre respostas para as principais dúvidas sobre cuidados, cirurgias e serviços da Aumivet.
+      </p>
+    </div>
+
+    <div class="faq-accordion-grid">
+      {faqs.map(({ question, answer }, idx) => (
+        <details class="faq-details" data-faq-idx={idx}>
+          <summary class="faq-summary">
+            <span class="faq-question-text">{question}</span>
+            <span class="faq-toggle-icon" aria-hidden="true">
+              <ChevronDown size={18} />
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <p>{answer}</p>
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Web Animations API para animar a abertura e fechamento das sanfonas de forma suave e acessível
+  const accordions: Accordion[] = [];
+
+  class Accordion {
+    private el: HTMLDetailsElement;
+    private summary: HTMLElement;
+    private content: HTMLElement;
+    private animation: Animation | null;
+    private isClosing: boolean;
+    private isExpanding: boolean;
+
+    constructor(el: HTMLDetailsElement) {
+      this.el = el;
+      this.summary = el.querySelector('summary')!;
+      this.content = el.querySelector('.faq-answer')!;
+      this.animation = null;
+      this.isClosing = false;
+      this.isExpanding = false;
+
+      this.summary.addEventListener('click', (e) => this.onClick(e));
+      accordions.push(this);
+    }
+
+    private onClick(e: Event) {
+      e.preventDefault();
+      this.el.style.overflow = 'hidden';
+
+      if (this.isClosing || !this.el.open) {
+        // Se estamos abrindo este, fecha todos os outros abertos!
+        accordions.forEach((acc) => {
+          if (acc !== this) {
+            acc.closeSmoothly();
+          }
+        });
+        this.open();
+      } else if (this.isExpanding || this.el.open) {
+        this.shrink();
+      }
+    }
+
+    public closeSmoothly() {
+      if (this.el.open && !this.isClosing) {
+        this.shrink();
+      }
+    }
+
+    private shrink() {
+      this.isClosing = true;
+      const startHeight = `${this.el.offsetHeight}px`;
+      const endHeight = `${this.summary.offsetHeight}px`;
+
+      if (this.animation) {
+        this.animation.cancel();
+      }
+
+      this.animation = this.el.animate(
+        { height: [startHeight, endHeight] },
+        { duration: 250, easing: 'cubic-bezier(0.25, 1, 0.5, 1)' }
+      );
+
+      this.animation.onfinish = () => this.onAnimationFinish(false);
+      this.animation.oncancel = () => (this.isClosing = false);
+    }
+
+    private open() {
+      this.el.style.height = `${this.el.offsetHeight}px`;
+      this.el.open = true;
+      window.requestAnimationFrame(() => this.expand());
+    }
+
+    private expand() {
+      this.isExpanding = true;
+      const startHeight = `${this.el.offsetHeight}px`;
+      const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+
+      if (this.animation) {
+        this.animation.cancel();
+      }
+
+      this.animation = this.el.animate(
+        { height: [startHeight, endHeight] },
+        { duration: 250, easing: 'cubic-bezier(0.25, 1, 0.5, 1)' }
+      );
+
+      this.animation.onfinish = () => this.onAnimationFinish(true);
+      this.animation.oncancel = () => (this.isExpanding = false);
+    }
+
+    private onAnimationFinish(open: boolean) {
+      this.el.open = open;
+      this.animation = null;
+      this.isClosing = false;
+      this.isExpanding = false;
+      this.el.style.height = '';
+      this.el.style.overflow = '';
+    }
+  }
+
+  // Inicializa todos os accordions na página
+  document.querySelectorAll('details.faq-details').forEach((el) => {
+    new Accordion(el as HTMLDetailsElement);
+  });
+</script>

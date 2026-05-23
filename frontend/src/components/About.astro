@@ -1,0 +1,256 @@
+---
+import { Award, Heart, Maximize2, ShieldCheck, ChevronLeft, ChevronRight, X } from '@lucide/astro';
+
+const photos = [
+  {
+    src: '/images/aumivet-clinica-veterinaria-em-curitiba (1).jpg',
+    alt: 'Recepção moderna e acolhedora com atendimento humanizado',
+    label: 'Recepção & Espera',
+    tag: 'Infraestrutura',
+  },
+  {
+    src: '/images/aumivet-clinica-veterinaria-em-curitiba (2).jpg',
+    alt: 'Consultório veterinário com conceito Fear-Free (Livre de Medo)',
+    label: 'Consultório de Atendimento',
+    tag: 'Consultório',
+  },
+  {
+    src: '/images/aumivet-clinica-veterinaria-em-curitiba (3).jpg',
+    alt: 'Equipamentos modernos para exames ágeis no local',
+    label: 'Área de Exames',
+    tag: 'Diagnóstico',
+  },
+  {
+    src: '/images/aumivet-clinica-veterinaria-em-curitiba (4).jpg',
+    alt: 'Farmácia interna equipada para maior comodidade',
+    label: 'Farmácia & Instalações',
+    tag: 'Infraestrutura',
+  },
+];
+
+const differentials = [
+  {
+    icon: 'heart',
+    title: 'Atendimento Humanizado',
+    text: 'Cuidado centrado no acolhimento e livre de medo.',
+  },
+  {
+    icon: 'award',
+    title: 'Equipe Especializada',
+    text: 'Profissionais renomados em constante atualização.',
+  },
+  {
+    icon: 'shield',
+    title: 'Estrutura Completa',
+    text: 'Bloco cirúrgico moderno e exames ágeis no local.',
+  },
+];
+---
+
+<section class="about-shell" id="sobre" aria-labelledby="about-title">
+  <div class="about-container" data-animate="about-frame">
+
+    <!-- Cabeçalho -->
+    <div class="section-heading text-center no-eyebrow">
+      <h2 id="about-title">Conheça a <span class="highlight">Aumivet</span></h2>
+      <p class="section-subtitle">
+        Mais que uma clínica veterinária, somos um centro de cuidado completo focado no bem-estar do seu pet.
+      </p>
+    </div>
+
+    <!-- Grid principal: texto + galeria lado a lado -->
+    <div class="about-grid">
+
+      <!-- Coluna esquerda: texto + diferenciais -->
+      <div class="about-text-col">
+        <h3 class="about-mission-title">Nossa Missão</h3>
+        <p>
+          Oferecemos atendimento veterinário de excelência em Curitiba, unindo ciência avançada com sensibilidade — em um ambiente moderno, seguro e acolhedor para cães e gatos.
+        </p>
+
+        <div class="about-diff-grid">
+          {differentials.map(d => (
+            <div class="diff-badge-item">
+              <div class="diff-badge-icon">
+                {d.icon === 'heart' && <Heart size={28} aria-hidden="true" />}
+                {d.icon === 'award' && <Award size={28} aria-hidden="true" />}
+                {d.icon === 'shield' && <ShieldCheck size={28} aria-hidden="true" />}
+              </div>
+              <div class="diff-badge-text">
+                <strong>{d.title}</strong>
+                <span>{d.text}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Coluna direita: galeria e-commerce -->
+      <div class="about-gallery-col">
+        <div class="gallery-header">
+          <h3>Galeria</h3>
+        </div>
+
+        <div class="gallery-ecommerce">
+          <!-- Foto principal -->
+          <div
+            class="gallery-main"
+            id="gallery-main"
+            role="button"
+            aria-label="Ampliar foto"
+            tabindex="0"
+          >
+            <img
+              id="gallery-main-img"
+              src={photos[0].src}
+              alt={photos[0].alt}
+              loading="lazy"
+            />
+            <div class="gallery-main-overlay">
+              <div class="gallery-main-info">
+                <span class="gallery-main-tag" id="gallery-main-tag">{photos[0].tag}</span>
+                <h4 id="gallery-main-label">{photos[0].label}</h4>
+              </div>
+              <div class="gallery-expand-icon">
+                <Maximize2 size={16} />
+              </div>
+            </div>
+          </div>
+
+          <!-- Thumbnails -->
+          <div class="gallery-thumbs" id="gallery-thumbs">
+            {photos.map((photo, i) => (
+              <button
+                class={`gallery-thumb ${i === 0 ? 'active' : ''}`}
+                data-gallery-idx={String(i)}
+                data-src={photo.src}
+                data-alt={photo.alt}
+                data-label={photo.label}
+                data-tag={photo.tag}
+                aria-label={`Ver foto: ${photo.label}`}
+              >
+                <img src={photo.src} alt={photo.alt} loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<dialog class="lightbox-dialog" id="lightbox-modal" aria-label="Visualizador de fotos">
+  <div class="lightbox-content">
+    <button class="lightbox-close-btn" id="lightbox-close" aria-label="Fechar visualizador">
+      <X size={24} aria-hidden="true" />
+    </button>
+
+    <div class="lightbox-nav-wrapper">
+      <button class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Foto anterior">
+        <ChevronLeft size={36} aria-hidden="true" />
+      </button>
+
+      <div class="lightbox-img-container">
+        <img id="lightbox-img" src="" alt="" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+      </div>
+
+      <button class="lightbox-nav-btn next" id="lightbox-next" aria-label="Próxima foto">
+        <ChevronRight size={36} aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+</dialog>
+
+<script define:vars={{ photos }}>
+  // Gallery e-commerce logic
+  const mainImg = document.getElementById('gallery-main-img');
+  const mainLabel = document.getElementById('gallery-main-label');
+  const mainTag = document.getElementById('gallery-main-tag');
+  const thumbs = document.querySelectorAll('.gallery-thumb');
+  let currentGalleryIdx = 0;
+
+  function setActiveThumb(idx) {
+    currentGalleryIdx = idx;
+    const photo = photos[idx];
+    if (!photo || !mainImg) return;
+
+    mainImg.src = photo.src;
+    mainImg.alt = photo.alt;
+    if (mainLabel) mainLabel.textContent = photo.label;
+    if (mainTag) mainTag.textContent = photo.tag;
+
+    thumbs.forEach((t, i) => {
+      t.classList.toggle('active', i === idx);
+    });
+  }
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+      setActiveThumb(Number(thumb.dataset.galleryIdx));
+    });
+  });
+
+  // Lightbox
+  const dialog = document.getElementById('lightbox-modal');
+  const dialogImg = document.getElementById('lightbox-img');
+  const dialogCaption = document.getElementById('lightbox-caption');
+  const dialogCounter = document.getElementById('lightbox-counter');
+  const closeBtn = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+
+  function updateLightbox() {
+    const p = photos[currentGalleryIdx];
+    if (!p || !dialogImg) return;
+    dialogImg.src = p.src;
+    dialogImg.alt = p.alt;
+    if (dialogCaption) dialogCaption.textContent = p.alt;
+    if (dialogCounter) dialogCounter.textContent = `${currentGalleryIdx + 1} de ${photos.length}`;
+  }
+
+  const galleryMain = document.getElementById('gallery-main');
+  if (galleryMain && dialog) {
+    const openLightbox = () => {
+      updateLightbox();
+      dialog.showModal();
+      document.body.style.overflow = 'hidden';
+    };
+    galleryMain.addEventListener('click', openLightbox);
+    galleryMain.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(); }
+    });
+  }
+
+  const closeLightbox = () => {
+    if (!dialog) return;
+    dialog.close();
+    document.body.style.overflow = '';
+  };
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  dialog?.addEventListener('click', (e) => { if (e.target === dialog) closeLightbox(); });
+
+  const navigateNext = () => {
+    currentGalleryIdx = (currentGalleryIdx + 1) % photos.length;
+    updateLightbox();
+    setActiveThumb(currentGalleryIdx);
+  };
+  const navigatePrev = () => {
+    currentGalleryIdx = (currentGalleryIdx - 1 + photos.length) % photos.length;
+    updateLightbox();
+    setActiveThumb(currentGalleryIdx);
+  };
+
+  prevBtn?.addEventListener('click', navigatePrev);
+  nextBtn?.addEventListener('click', navigateNext);
+  document.addEventListener('keydown', (e) => {
+    if (!dialog?.open) return;
+    if (e.key === 'ArrowRight') navigateNext();
+    else if (e.key === 'ArrowLeft') navigatePrev();
+    else if (e.key === 'Escape') closeLightbox();
+  });
+</script>

@@ -1,0 +1,98 @@
+---
+import { Clock, Mail, MapPin, MessageCircle, Phone, TriangleAlert } from '@lucide/astro';
+---
+
+<section class="contact-shell" id="contato" aria-labelledby="contact-title">
+  <div class="contact-container" data-animate="contact-frame">
+    <div class="section-heading text-center no-eyebrow">
+      <h2 id="contact-title">Vamos cuidar do seu pet <span class="highlight">juntos?</span></h2>
+      <p class="section-subtitle">
+        Estamos à disposição para oferecer o melhor atendimento com carinho e dedicação.
+      </p>
+    </div>
+
+    <!-- Layout Split Compacto -->
+    <div class="contact-bento-box">
+      <!-- Painel de Informações Super Compacto -->
+      <div class="contact-info-block">
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><MapPin size={18} /></div>
+            <div class="info-text">
+              <strong>Endereço:</strong>
+              <span>R. Santo Antônio, 891 - Rebouças, Curitiba - PR</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><Phone size={18} /></div>
+            <div class="info-text">
+              <strong>Telefone & WhatsApp:</strong>
+              <span>(41) 98860-4202</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><Mail size={18} /></div>
+            <div class="info-text">
+              <strong>E-mail:</strong>
+              <span>aumivet.clinica@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><Clock size={18} /></div>
+            <div class="info-text">
+              <strong>Atendimento:</strong>
+              <span>Com agendamento prévio (atenção exclusiva)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alerta de Emergência Integrado e Discreto -->
+        <div class="emergency-alert-bar">
+          <TriangleAlert size={16} aria-hidden="true" />
+          <span><strong>Emergências:</strong> Mensagem imediata no WhatsApp para orientação prévia.</span>
+        </div>
+
+        <!-- Ações CTAs -->
+        <div class="contact-cta-wrapper">
+          <a
+            class="button primary"
+            href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle size={16} aria-hidden="true" />
+            Agendar no WhatsApp
+          </a>
+          <a class="button secondary" href="tel:+5541988604202">
+            <Phone size={16} aria-hidden="true" />
+            Ligar Agora
+          </a>
+        </div>
+      </div>
+
+      <!-- Painel do Mapa Reduzido -->
+      <div class="contact-map-block">
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.0837123047447!2d-49.2847143!3d-25.4461097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce53b6b8b3b31%3A0x5a8b5b4a3b2b1b2b!2sR.%20Santo%20Ant%C3%B4nio%2C%20891%20-%20Rebou%C3%A7as%2C%20Curitiba%20-%20PR%2C%2080230-120!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Aumivet - R. Santo Antônio, 891 - Rebouças, Curitiba"
+          >
+          </iframe>
+        </div>
+        <div class="map-hint">
+          <MapPin size={14} aria-hidden="true" />
+          <span>Fácil acesso com vagas de estacionamento exclusivas no local</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

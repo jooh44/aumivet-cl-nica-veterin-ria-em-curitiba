@@ -1,0 +1,54 @@
+---
+const plans = [
+  { src: '/images/health-plans/petlove.png', alt: 'Petlove Saúde', wide: true },
+  { src: '/images/health-plans/tutor-e-pet.png', alt: 'Tutor & Pet' },
+  { src: '/images/health-plans/pet-health.png', alt: 'PetHealth' },
+  { src: '/images/health-plans/dog-life.png', alt: 'Dog Life' },
+  { src: '/images/health-plans/au-happy.png', alt: 'Au! Happy', tall: true },
+  { src: '/images/health-plans/pet-mais-vida.png', alt: 'Pet Mais Vida', extraWide: true },
+];
+
+// Triple for guaranteed seamless loop
+const tickerItems = [...plans, ...plans, ...plans];
+---
+
+<section class="hp-ticker-shell" aria-label="Planos de saúde atendidos">
+  <p class="hp-ticker-label">Planos de Saúde que atendemos:</p>
+  <div class="hp-ticker-track-wrapper">
+    <div class="hp-ticker-fade hp-ticker-fade--left"></div>
+    <div class="hp-ticker-track" aria-hidden="true">
+      {tickerItems.map(plan => (
+        <div class={`hp-ticker-item ${plan.wide ? 'hp-ticker-item--wide' : ''} ${plan.tall ? 'hp-ticker-item--tall' : ''} ${plan.extraWide ? 'hp-ticker-item--xwide' : ''}`}>
+          <img src={plan.src} alt={plan.alt} loading="lazy" />
+        </div>
+      ))}
+    </div>
+    <div class="hp-ticker-fade hp-ticker-fade--right"></div>
+  </div>
+</section>
+
+<script>
+  const wrapper = document.querySelector('.hp-ticker-track-wrapper');
+  const track = document.querySelector('.hp-ticker-track') as HTMLElement;
+  if (wrapper && track) {
+    const el = track;
+    const baseSpeed = 0.5;
+    const slowSpeed = 0.18;
+    let currentSpeed = baseSpeed;
+    let targetSpeed = baseSpeed;
+    let pos = 0;
+    const resetAt = el.scrollWidth / 3;
+
+    function tick() {
+      currentSpeed += (targetSpeed - currentSpeed) * 0.05;
+      pos -= currentSpeed;
+      if (pos <= -resetAt) pos += resetAt;
+      el.style.transform = `translate3d(${pos}px, 0, 0)`;
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+
+    wrapper.addEventListener('mouseenter', () => { targetSpeed = slowSpeed; });
+    wrapper.addEventListener('mouseleave', () => { targetSpeed = baseSpeed; });
+  }
+</script>

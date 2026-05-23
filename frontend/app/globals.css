@@ -1,6 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Import complete Aumivet original CSS */
-@import './aumivet-original.css';

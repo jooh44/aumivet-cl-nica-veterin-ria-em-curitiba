@@ -1,0 +1,244 @@
+---
+import { CalendarDays, Menu, X } from '@lucide/astro';
+
+const nav = [
+  { label: 'Início', href: '#inicio', active: true },
+  { label: 'Serviços', href: '#servicos' },
+  { label: 'Sobre', href: '#sobre' },
+  { label: 'Equipe', href: '#equipe' },
+  { label: 'Depoimentos', href: '#depoimentos' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Planos', href: '#planos' },
+  { label: 'Contato', href: '#contato' },
+];
+---
+
+<header class="site-header" aria-label="Cabeçalho principal">
+  <a class="brand" href="#inicio" aria-label="Aumivet Clínica Veterinária">
+    <span class="brand-media" aria-hidden="true">
+      <img class="brand-logo-full" src="/images/logo-aumivet-2026.png" alt="" width="463" height="130" />
+      <img class="brand-logo-symbol" src="/images/aumivet-symbol-2026.png" alt="" width="230" height="230" />
+    </span>
+  </a>
+
+  <nav class="nav-pill" aria-label="Navegação principal">
+    <div class="nav-active-indicator" id="nav-indicator"></div>
+    {nav.map((item) => (
+      <a class:list={[item.active && 'active']} href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+
+  <a class="header-cta" href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." target="_blank" rel="noopener noreferrer">
+    <CalendarDays size={18} aria-hidden="true" />
+    <span>Agendar consulta</span>
+  </a>
+
+  <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-drawer">
+    <span class="toggle-open"><Menu size={22} aria-hidden="true" /></span>
+    <span class="toggle-close"><X size={22} aria-hidden="true" /></span>
+  </button>
+</header>
+
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+  <button class="drawer-close" id="drawer-close" aria-label="Fechar menu">
+    <X size={22} aria-hidden="true" />
+  </button>
+  <nav class="drawer-nav" aria-label="Menu mobile">
+    {nav.map((item) => (
+      <a class:list={['drawer-link', item.active && 'active']} href={item.href}>{item.label}</a>
+    ))}
+  </nav>
+  <a
+    class="drawer-cta"
+    href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <CalendarDays size={20} aria-hidden="true" />
+    Agendar consulta
+  </a>
+</div>
+<div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle')!;
+  const drawer = document.getElementById('mobile-drawer')!;
+  const backdrop = document.getElementById('drawer-backdrop')!;
+
+  function openMenu() {
+    toggle.setAttribute('aria-expanded', 'true');
+    drawer.classList.add('open');
+    backdrop.classList.add('visible');
+    drawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    toggle.setAttribute('aria-expanded', 'false');
+    drawer.classList.remove('open');
+    backdrop.classList.remove('visible');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', () => {
+    drawer.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  backdrop.addEventListener('click', closeMenu);
+  document.getElementById('drawer-close')?.addEventListener('click', closeMenu);
+
+  drawer.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+  // Lógica de indicador ativo e navegação suave do menu.
+  const navLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('.nav-pill a'));
+  const drawerLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('.drawer-link'));
+  const allSectionLinks = [...navLinks, ...drawerLinks];
+  const sectionIds = new Set(allSectionLinks.map((link) => link.hash.slice(1)).filter(Boolean));
+  const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id]')).filter((section) => sectionIds.has(section.id));
+  const indicator = document.getElementById('nav-indicator') as HTMLDivElement | null;
+  let activeId = 'inicio';
+  let targetId: string | null = null;
+  let targetReleaseTimer: number | undefined;
+  let ticking = false;
+
+  function getHeaderOffset() {
+    return Math.ceil((document.querySelector('.site-header') as HTMLElement | null)?.getBoundingClientRect().height ?? 96) + 20;
+  }
+
+  function updateIndicator(activeLink: HTMLElement) {
+    if (indicator && activeLink) {
+      indicator.style.width = `${activeLink.offsetWidth}px`;
+      indicator.style.height = `${activeLink.offsetHeight}px`;
+      indicator.style.left = `${activeLink.offsetLeft}px`;
+      indicator.style.top = `${activeLink.offsetTop}px`;
+      indicator.style.opacity = '1';
+    }
+  }
+
+  function setActiveSection(id: string, options: { force?: boolean } = {}) {
+    if (!options.force && activeId === id) return;
+
+    activeId = id;
+    allSectionLinks.forEach((link) => {
+      const isActive = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'true');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+
+    const activeLink = navLinks.find((link) => link.getAttribute('href') === `#${id}`);
+    if (activeLink) updateIndicator(activeLink);
+  }
+
+  function getCurrentSectionId() {
+    const readLine = window.scrollY + getHeaderOffset() + 16;
+    let current = sections[0]?.id ?? activeId;
+
+    for (const section of sections) {
+      if (section.offsetTop <= readLine) {
+        current = section.id;
+      } else {
+        break;
+      }
+    }
+
+    const bottomGap = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight);
+    if (bottomGap < 8) {
+      current = sections.at(-1)?.id ?? current;
+    }
+
+    return current;
+  }
+
+  function releaseTargetWhenSettled() {
+    if (!targetId) return;
+
+    const target = document.getElementById(targetId);
+    if (!target) {
+      targetId = null;
+      return;
+    }
+
+    const distance = Math.abs(target.getBoundingClientRect().top - getHeaderOffset());
+    if (distance < 12) {
+      targetId = null;
+    }
+  }
+
+  function updateFromScroll() {
+    ticking = false;
+    releaseTargetWhenSettled();
+    if (!targetId) setActiveSection(getCurrentSectionId());
+  }
+
+  const triggerUpdate = () => {
+    const activeLink = navLinks.find((link) => link.classList.contains('active'));
+    if (activeLink) {
+      updateIndicator(activeLink);
+    }
+  };
+
+  window.addEventListener('resize', () => {
+    setActiveSection(getCurrentSectionId(), { force: true });
+    triggerUpdate();
+  });
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateFromScroll);
+  }, { passive: true });
+
+  // Logo badge: aparece quando sai da hero
+  const brand = document.querySelector<HTMLElement>('.brand');
+  const hero = document.getElementById('inicio');
+  if (brand && hero) {
+    const heroObs = new IntersectionObserver(([entry]) => {
+      brand.classList.toggle('scrolled', !entry.isIntersecting);
+    }, { threshold: 0.05 });
+    heroObs.observe(hero);
+  }
+
+  // Posicionamento inicial
+  setActiveSection(getCurrentSectionId(), { force: true });
+  setTimeout(triggerUpdate, 200);
+
+  // Atualizar quando o usuário clicar manualmente para navegar
+  allSectionLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const hash = link.hash;
+      if (!hash) return;
+
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (!target) return;
+
+      event.preventDefault();
+      targetId = target.id;
+      setActiveSection(target.id, { force: true });
+
+      window.clearTimeout(targetReleaseTimer);
+      targetReleaseTimer = window.setTimeout(() => {
+        targetId = null;
+        setActiveSection(getCurrentSectionId(), { force: true });
+      }, 1400);
+
+      const scrollTop = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+      const lenis = (window as Window & {
+        aumivetLenis?: { scrollTo: (target: number, options: { duration: number }) => void };
+      }).aumivetLenis;
+      if (lenis) {
+        lenis.scrollTo(scrollTop, { duration: 1.05 });
+      } else {
+        window.scrollTo({
+          top: scrollTop,
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        });
+      }
+
+      history.replaceState(null, '', hash);
+    });
+  });
+</script>

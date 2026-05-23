@@ -1,0 +1,154 @@
+---
+import { ChevronLeft, ChevronRight, Star } from '@lucide/astro';
+
+const testimonials = [
+  {
+    author: 'Luiza Folda',
+    text: 'A Dra Thaise já acompanha a nossa família há anos! Sempre pronta para me auxiliar em qualquer dúvida, vacinando tanto meus cães como meus gatos. Escolho ela de olhos fechados! Me ajudou também com transporte internacional dos meus dois cães para os Estados Unidos e de volta ao Brasil! Se você quer o melhor atendimento para os seus filhos de quatro patas ela é a escolha ideal! Agora nessa nova clínica espetacular: conta com tudo de melhor e mais moderno para os seus bichinhos!',
+  },
+  {
+    author: 'Thays Kempa',
+    text: 'Super indico a Aumivet! Atendimento acolhedor, minha filha (minha gatinha) precisou fazer extração de alguns dentes e foi muito bem cuidada, com todo amor e carinho. A Dra explica tudo certinho, profissional que realmente ama o que faz e faz com amor! Sempre nos mantendo informados sobre cada procedimento, me senti segura e sabia que ela estava em boas mãos. Profissionais excelentes!',
+  },
+  {
+    author: 'Suélen Ribeiro',
+    text: 'Eu agradeço grandemente por toda equipe da Aumivet. Foram muito atenciosos e carinhosos. Chegamos angustiados com o estado do meu cachorro e eles, com toda paciência e carinho, nos acalmaram. Tiveram um cuidado gigante antes e depois da cirurgia. Foram anjos nas nossas vidas! Agradeço demais por tudo! Deus abençoe cada um de vocês!',
+  },
+  {
+    author: 'Elisangela Zembik',
+    text: 'Thaise trabalha por amor, é uma profissional diferenciada. Todo conhecimento dela foi essencial para o tratamento de diabetes do meu cão e ela mostrou uma prestatividade difícil de encontrar. Indico de olhos fechados, somos eternamente gratos! 🙏❤️',
+  },
+  {
+    author: 'Marina Santos',
+    text: 'Tenho muito que agradecer à Doutora Thaise! Ela acompanha nossa família há alguns anos e já salvou várias vidas dos animais que resgatamos, sempre auxiliando com muito amor. A gratidão é enorme: nesta semana minha cachorra foi atacada e ela estava ali, pronta para ajudar. Agradeço pelo profissionalismo e pelo carinho com que cuida!',
+  },
+];
+
+// Duplica a lista para fazer o scroll infinito seamless no desktop
+const doubleTestimonials = [...testimonials, ...testimonials];
+---
+
+<section class="test-shell" id="depoimentos" aria-labelledby="test-title">
+  <div class="test-container" data-animate="test-frame">
+    <div class="section-heading text-center no-eyebrow">
+      <h2 id="test-title">O que dizem os <span class="highlight">Tutores</span></h2>
+      <p class="section-subtitle">
+        Veja a experiência de quem confia a saúde de seus melhores amigos à equipe Aumivet.
+      </p>
+    </div>
+
+    <!-- Ticker Desktop / Slider Mobile -->
+    <div class="test-carousel-wrapper">
+      <div class="test-carousel-container" id="testimonials-slider">
+        <!-- Ticker Interno -->
+        <div class="test-ticker">
+          {doubleTestimonials.map(({ author, text }, idx) => (
+            <article class="testimonial-card" data-idx={idx % testimonials.length}>
+              <div class="test-card-header">
+                <div class="test-stars" aria-label="Avaliação: 5 estrelas">
+                  {[...Array(5)].map(() => (
+                    <Star size={14} fill="var(--aumi-500)" stroke="var(--aumi-500)" aria-hidden="true" />
+                  ))}
+                </div>
+                <div class="test-google-logo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="test-text">“{text}”</p>
+              <div class="test-footer">
+                <span class="test-author">{author}</span>
+                <span class="test-source">Avaliação no Google</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <!-- Sombras laterais de desvanecimento no Desktop -->
+      <div class="ticker-fade fade-left"></div>
+      <div class="ticker-fade fade-right"></div>
+    </div>
+
+    <!-- Navegação Mobile (Setas e Indicadores) -->
+    <div class="test-mobile-controls">
+      <div class="slider-arrows">
+        <button class="slider-arrow btn-prev" id="slider-prev" aria-label="Depoimento anterior">
+          <ChevronLeft size={20} aria-hidden="true" />
+        </button>
+        <button class="slider-arrow btn-next" id="slider-next" aria-label="Próximo depoimento">
+          <ChevronRight size={20} aria-hidden="true" />
+        </button>
+      </div>
+
+      <div class="slider-indicators" id="slider-dots">
+        {testimonials.map((_, idx) => (
+          <button
+            class={`slider-dot ${idx === 0 ? 'active' : ''}`}
+            data-dot-idx={idx}
+            aria-label={`Ver depoimento ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slider = document.getElementById('testimonials-slider');
+  const prevBtn = document.getElementById('slider-prev');
+  const nextBtn = document.getElementById('slider-next');
+  const dots = document.querySelectorAll('#slider-dots .slider-dot');
+  const testimonialCount = 5; // quantidade de depoimentos originais
+
+  if (slider && prevBtn && nextBtn && dots.length > 0) {
+    // Navegação de clique nas setas (Mobile)
+    const scrollSlider = (direction: 'left' | 'right') => {
+      const card = slider.querySelector('.testimonial-card');
+      if (!card) return;
+      const cardWidth = card.clientWidth + 16; // card width + gap (16px)
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    };
+
+    prevBtn.addEventListener('click', () => scrollSlider('left'));
+    nextBtn.addEventListener('click', () => scrollSlider('right'));
+
+    // Navegação pelos Dots (Mobile)
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const dotIdx = Number((dot as HTMLElement).dataset.dotIdx);
+        const card = slider.querySelector('.testimonial-card');
+        if (!card) return;
+        const cardWidth = card.clientWidth + 16;
+        slider.scrollTo({ left: dotIdx * cardWidth, behavior: 'smooth' });
+      });
+    });
+
+    // Atualização automática dos Dots com IntersectionObserver
+    const updateDots = () => {
+      const scrollLeft = slider.scrollLeft;
+      const card = slider.querySelector('.testimonial-card');
+      if (!card) return;
+      const cardWidth = card.clientWidth + 16;
+      
+      // Calcula o índice aproximado com base no scroll
+      const activeIdx = Math.round(scrollLeft / cardWidth) % testimonialCount;
+
+      dots.forEach((dot, idx) => {
+        if (idx === activeIdx) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    };
+
+    slider.addEventListener('scroll', updateDots, { passive: true });
+    window.addEventListener('resize', updateDots, { passive: true });
+  }
+</script>

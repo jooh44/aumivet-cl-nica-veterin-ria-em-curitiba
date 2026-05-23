@@ -6,7 +6,6 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
-      NEXT_PUBLIC_STRAPI_URL: 'https://strapi.digitaldog.pet'
       NEXT_PUBLIC_SITE_URL: 'https://aumivet.com.br'
       NODE_ENV: production
       PORT: 3000

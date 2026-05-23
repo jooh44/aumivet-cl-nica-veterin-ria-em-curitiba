@@ -1,0 +1,36 @@
+---
+---
+
+<div class="cookie-consent" data-cookie-consent hidden>
+  <div class="cookie-consent__text">
+    <strong>Privacidade e cookies</strong>
+    <p>
+      Usamos cookies essenciais e, com seu consentimento, dados de navegação para medir acessos e melhorar nossos canais de contato.
+    </p>
+  </div>
+  <div class="cookie-consent__actions">
+    <a href="/politica-de-privacidade/" class="cookie-consent__link">Política</a>
+    <button type="button" class="cookie-consent__button ghost" data-cookie-reject>Recusar</button>
+    <button type="button" class="cookie-consent__button" data-cookie-accept>Aceitar</button>
+  </div>
+</div>
+
+<script>
+  const consentKey = 'aumivet-cookie-consent';
+  const banner = document.querySelector<HTMLElement>('[data-cookie-consent]');
+  const accept = document.querySelector<HTMLButtonElement>('[data-cookie-accept]');
+  const reject = document.querySelector<HTMLButtonElement>('[data-cookie-reject]');
+
+  const saveConsent = (value: 'accepted' | 'rejected') => {
+    localStorage.setItem(consentKey, value);
+    window.dispatchEvent(new CustomEvent('aumivet-cookie-consent', { detail: { value } }));
+    banner?.setAttribute('hidden', '');
+  };
+
+  if (banner && !localStorage.getItem(consentKey)) {
+    banner.removeAttribute('hidden');
+  }
+
+  accept?.addEventListener('click', () => saveConsent('accepted'));
+  reject?.addEventListener('click', () => saveConsent('rejected'));
+</script>

@@ -1,0 +1,553 @@
+- generic [active] [ref=e1]:
+  - banner "Cabeçalho principal" [ref=e2]:
+    - link "Aumivet Clínica Veterinária" [ref=e3] [cursor=pointer]:
+      - /url: "#inicio"
+      - img "Aumivet Clínica Veterinária" [ref=e4]
+    - button "Abrir menu" [ref=e5] [cursor=pointer]:
+      - img [ref=e7]
+  - main [ref=e8]:
+    - region "Cuidado com amor, ciência e carinho" [ref=e9]:
+      - generic [ref=e12]:
+        - heading "Cuidado com amor, ciência e carinho" [level=1] [ref=e13]:
+          - text: Cuidado com amor,
+          - text: ciência e
+          - generic [ref=e15]: carinho
+        - paragraph [ref=e16]:
+          - img [ref=e17]
+          - text: Clínica Veterinária no Rebouças
+        - paragraph [ref=e20]: Na Aumivet, unimos atendimento acolhedor, estrutura moderna e amor genuíno pelos animais para oferecer uma experiência segura e humana para pets e tutores.
+        - generic "Ações principais" [ref=e21]:
+          - link "Agendar consulta" [ref=e22] [cursor=pointer]:
+            - /url: https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta.
+            - img [ref=e23]
+            - text: Agendar consulta
+          - link "Conhecer serviços" [ref=e25] [cursor=pointer]:
+            - /url: "#servicos"
+            - img [ref=e26]
+            - text: Conhecer serviços
+        - list "Pilares do atendimento" [ref=e29]:
+          - listitem [ref=e30]:
+            - img [ref=e31]
+            - text: Clínica geral
+          - listitem [ref=e35]:
+            - img [ref=e36]
+            - text: Vacinação
+          - listitem [ref=e43]:
+            - img [ref=e44]
+            - text: Exames
+          - listitem [ref=e48]:
+            - img [ref=e49]
+            - text: Atendimento humanizado
+    - region "Planos de saúde atendidos" [ref=e51]:
+      - paragraph [ref=e52]: Planos que atendemos
+      - generic [ref=e54]:
+        - img "Petlove Saúde" [ref=e56]
+        - img "Tutor & Pet" [ref=e58]
+        - img "PetHealth" [ref=e60]
+        - img "Dog Life" [ref=e62]
+        - img "Au! Happy" [ref=e64]
+        - img "Pet Mais Vida" [ref=e66]
+        - img "Petlove Saúde" [ref=e68]
+        - img "Tutor & Pet" [ref=e70]
+        - img "PetHealth" [ref=e72]
+        - img "Dog Life" [ref=e74]
+        - img "Au! Happy" [ref=e76]
+        - img "Pet Mais Vida" [ref=e78]
+    - region "Nossos serviços" [ref=e79]:
+      - generic [ref=e80]:
+        - heading "Nossos serviços" [level=2] [ref=e82]
+        - generic [ref=e83]:
+          - article [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: Procedimentos seguros
+              - heading "Cirurgias Especializadas" [level=3] [ref=e87]
+            - button "Abrir detalhes de Cirurgias Especializadas" [ref=e88] [cursor=pointer]:
+              - img [ref=e89]
+              - generic [ref=e94]: Abrir
+          - article [ref=e95]:
+            - generic [ref=e96]:
+              - generic [ref=e97]: Check-up anual
+              - heading "Consultas e Vacinas" [level=3] [ref=e98]
+            - button "Abrir detalhes de Consultas e Vacinas" [ref=e99] [cursor=pointer]:
+              - img [ref=e100]
+              - generic [ref=e105]: Abrir
+          - article [ref=e106]:
+            - generic [ref=e107]:
+              - generic [ref=e108]: Imagem e laboratório
+              - heading "Exames e Diagnósticos" [level=3] [ref=e109]
+            - button "Abrir detalhes de Exames e Diagnósticos" [ref=e110] [cursor=pointer]:
+              - img [ref=e111]
+              - generic [ref=e116]: Abrir
+          - article [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119]: Saúde bucal
+              - heading "Odontologia Veterinária" [level=3] [ref=e120]
+            - button "Abrir detalhes de Odontologia Veterinária" [ref=e121] [cursor=pointer]:
+              - img [ref=e122]
+              - generic [ref=e127]: Abrir
+          - article [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]: Comportamento
+              - heading "Adestramento Pet" [level=3] [ref=e131]
+            - button "Abrir detalhes de Adestramento Pet" [ref=e132] [cursor=pointer]:
+              - img [ref=e133]
+              - generic [ref=e138]: Abrir
+    - dialog "Cirurgias Especializadas":
+      - button "Fechar":
+        - img
+      - generic:
+        - img "Cirurgias Especializadas"
+      - generic:
+        - generic:
+          - img
+          - text: Credenciada Petlove Saúde
+        - heading "Cirurgias Especializadas" [level=3]
+        - paragraph: Nossa equipe realiza cirurgias de tecidos moles, ortopedia de rotina, odontologia cirúrgica e cirurgia de catarata — com anestesia inalatória monitorada e recuperação acompanhada.
+        - list:
+          - listitem:
+            - img
+            - text: Anestesia inalatória com monitoramento contínuo
+          - listitem:
+            - img
+            - text: Única clínica do Paraná credenciada Petlove Saúde para catarata
+          - listitem:
+            - img
+            - text: Cirurgia geral, odontológica e oftalmológica
+          - listitem:
+            - img
+            - text: Acompanhamento pós-operatório humanizado
+        - link "Agendar pelo WhatsApp":
+          - /url: https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre cirurgias especializadas.
+          - img
+          - text: Agendar pelo WhatsApp
+    - dialog "Consultas e Vacinas":
+      - button "Fechar":
+        - img
+      - generic:
+        - img "Consultas e Vacinas"
+      - generic:
+        - heading "Consultas e Vacinas" [level=3]
+        - paragraph: Atendimento clínico completo para cães e gatos, com avaliação física, orientação nutricional e protocolo vacinal atualizado conforme as diretrizes veterinárias.
+        - list:
+          - listitem:
+            - img
+            - text: Consulta clínica com avaliação completa
+          - listitem:
+            - img
+            - text: Vacinação V8/V10, antirrábica e gripe canina
+          - listitem:
+            - img
+            - text: Protocolo personalizado por idade e estilo de vida
+          - listitem:
+            - img
+            - text: Orientação preventiva e nutricional
+        - link "Agendar pelo WhatsApp":
+          - /url: https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre consultas e vacinas.
+          - img
+          - text: Agendar pelo WhatsApp
+    - dialog "Exames e Diagnósticos":
+      - button "Fechar":
+        - img
+      - generic:
+        - img "Exames e Diagnósticos"
+      - generic:
+        - heading "Exames e Diagnósticos" [level=3]
+        - paragraph: Diagnóstico por imagem e laboratório in-house para resultados rápidos, permitindo início imediato do tratamento quando necessário.
+        - list:
+          - listitem:
+            - img
+            - text: Radiografia digital de alta resolução
+          - listitem:
+            - img
+            - text: Ultrassonografia abdominal e gestacional
+          - listitem:
+            - img
+            - text: Hemograma e bioquímico com resultado no mesmo dia
+          - listitem:
+            - img
+            - text: Exames pré-cirúrgicos completos
+        - link "Agendar pelo WhatsApp":
+          - /url: https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre exames e diagnósticos.
+          - img
+          - text: Agendar pelo WhatsApp
+    - dialog "Odontologia Veterinária":
+      - button "Fechar":
+        - img
+      - generic:
+        - img "Odontologia Veterinária"
+      - generic:
+        - generic:
+          - img
+          - text: Aceita Petlove Saúde
+        - heading "Odontologia Veterinária" [level=3]
+        - paragraph: Tratamento odontológico completo com equipamento especializado e anestesia monitorada, da profilaxia à cirurgia oral.
+        - list:
+          - listitem:
+            - img
+            - text: Limpeza dental com ultrassom odontológico
+          - listitem:
+            - img
+            - text: Extração e tratamento periodontal
+          - listitem:
+            - img
+            - text: Radiografia dental intraoral
+          - listitem:
+            - img
+            - text: Anestesia monitorada durante todo o procedimento
+        - link "Agendar pelo WhatsApp":
+          - /url: https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre odontologia veterinária.
+          - img
+          - text: Agendar pelo WhatsApp
+    - dialog "Adestramento Pet":
+      - button "Fechar":
+        - img
+      - generic:
+        - img "Adestramento Pet"
+      - generic:
+        - heading "Adestramento Pet" [level=3]
+        - paragraph: Programa de adestramento baseado em reforço positivo, adaptado à personalidade e necessidades do seu cão, com aulas individuais ou em grupo.
+        - list:
+          - listitem:
+            - img
+            - text: Método 100% reforço positivo
+          - listitem:
+            - img
+            - text: Aulas individuais ou em grupo
+          - listitem:
+            - img
+            - text: Socialização supervisionada para filhotes
+          - listitem:
+            - img
+            - text: Orientação comportamental para tutores
+        - link "Agendar pelo WhatsApp":
+          - /url: https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre adestramento pet.
+          - img
+          - text: Agendar pelo WhatsApp
+    - region "Seu pet em casa, a consulta com a gente" [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e142]: Leva e traz
+          - heading "Seu pet em casa, a consulta com a gente" [level=2] [ref=e143]:
+            - text: Seu pet em casa,
+            - text: a consulta com a gente
+          - paragraph [ref=e144]: Buscamos e levamos seu pet com segurança e cuidado. Pontualidade, carinho e conforto do portão de casa até a clínica.
+          - link "Solicitar leva e traz" [ref=e145] [cursor=pointer]:
+            - /url: https://wa.me/5541988604202?text=Olá! Preciso do serviço de Leva e Traz.
+            - img [ref=e146]
+            - text: Solicitar leva e traz
+        - img "Carro da Aumivet para transporte seguro de pets" [ref=e151]
+    - region "Conheça a Aumivet" [ref=e152]:
+      - generic [ref=e153]:
+        - generic [ref=e154]:
+          - heading "Conheça a Aumivet" [level=2] [ref=e155]
+          - paragraph [ref=e156]: Mais que uma clínica veterinária, somos um centro de cuidado completo focado no bem-estar do seu pet.
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - heading "Nossa Missão" [level=3] [ref=e159]
+            - paragraph [ref=e160]: Oferecemos atendimento veterinário de excelência em Curitiba, unindo ciência avançada com sensibilidade — em um ambiente moderno, seguro e acolhedor para cães e gatos.
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - img [ref=e164]
+                - generic [ref=e166]:
+                  - strong [ref=e167]: Atendimento Humanizado
+                  - generic [ref=e168]: Cuidado centrado no acolhimento e livre de medo.
+              - generic [ref=e169]:
+                - img [ref=e171]
+                - generic [ref=e174]:
+                  - strong [ref=e175]: Equipe Especializada
+                  - generic [ref=e176]: Profissionais renomados em constante atualização.
+              - generic [ref=e177]:
+                - img [ref=e179]
+                - generic [ref=e182]:
+                  - strong [ref=e183]: Estrutura Completa
+                  - generic [ref=e184]: Bloco cirúrgico moderno e exames ágeis no local.
+          - generic [ref=e185]:
+            - heading "Galeria" [level=3] [ref=e187]
+            - generic [ref=e188]:
+              - button "Ampliar foto" [ref=e189] [cursor=pointer]:
+                - img "Recepção moderna e acolhedora com atendimento humanizado" [ref=e190]
+                - generic [ref=e191]:
+                  - generic [ref=e192]:
+                    - generic [ref=e193]: Infraestrutura
+                    - heading "Recepção & Espera" [level=4] [ref=e194]
+                  - img [ref=e196]
+              - generic [ref=e201]:
+                - 'button "Ver foto: Recepção & Espera" [ref=e202] [cursor=pointer]':
+                  - img "Recepção moderna e acolhedora com atendimento humanizado" [ref=e203]
+                - 'button "Ver foto: Consultório de Atendimento" [ref=e204] [cursor=pointer]':
+                  - img "Consultório veterinário com conceito Fear-Free (Livre de Medo)" [ref=e205]
+                - 'button "Ver foto: Área de Exames" [ref=e206] [cursor=pointer]':
+                  - img "Equipamentos modernos para exames ágeis no local" [ref=e207]
+                - 'button "Ver foto: Farmácia & Instalações" [ref=e208] [cursor=pointer]':
+                  - img "Farmácia interna equipada para maior comodidade" [ref=e209]
+    - region "Nossa equipe" [ref=e210]:
+      - generic [ref=e211]:
+        - heading "Nossa equipe" [level=2] [ref=e213]
+        - generic [ref=e214]:
+          - tablist "Membros da equipe" [ref=e215]:
+            - tab "Dra. Thaise" [selected] [ref=e216] [cursor=pointer]
+            - tab "Dr. Gustavo" [ref=e217] [cursor=pointer]
+            - tab "Dra. Renata" [ref=e218] [cursor=pointer]
+            - tab "Dr. Franz" [ref=e219] [cursor=pointer]
+          - tabpanel "Dra. Thaise" [ref=e221]:
+            - img "Foto de Dra. Thaise" [ref=e222]
+            - generic [ref=e223]:
+              - generic [ref=e224]: Fundadora · Cirurgia Geral
+              - heading "Dra. Thaise" [level=3] [ref=e225]
+              - paragraph [ref=e226]: Médica Veterinária · CRMV-PR 16704
+              - paragraph [ref=e227]: Fundadora da Aumivet. Pós-graduanda em Clínica Médica e Cirúrgica de Pequenos Animais pela PUCPR, com atuação em cirurgia de tecidos moles, ortopedia e emergências.
+    - region "O que dizem os Tutores" [ref=e228]:
+      - generic [ref=e229]:
+        - generic [ref=e230]:
+          - heading "O que dizem os Tutores" [level=2] [ref=e231]
+          - paragraph [ref=e232]: Veja a experiência de quem confia a saúde de seus melhores amigos à equipe Aumivet.
+        - generic [ref=e235]:
+          - article [ref=e236]:
+            - generic [ref=e237]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e238]':
+                - img [ref=e239]
+                - img [ref=e241]
+                - img [ref=e243]
+                - img [ref=e245]
+                - img [ref=e247]
+              - img [ref=e250]
+            - paragraph [ref=e255]: "“A Dra Thaise já acompanha a nossa família há anos! Sempre pronta para me auxiliar em qualquer dúvida, vacinando tanto meus cães como meus gatos. Escolho ela de olhos fechados! Me ajudou também com transporte internacional dos meus dois cães para os Estados Unidos e de volta ao Brasil! Se você quer o melhor atendimento para os seus filhos de quatro patas ela é a escolha ideal! Agora nessa nova clínica espetacular: conta com tudo de melhor e mais moderno para os seus bichinhos!”"
+            - generic [ref=e256]:
+              - generic [ref=e257]: Luiza Folda
+              - generic [ref=e258]: Avaliação no Google
+          - article [ref=e259]:
+            - generic [ref=e260]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e261]':
+                - img [ref=e262]
+                - img [ref=e264]
+                - img [ref=e266]
+                - img [ref=e268]
+                - img [ref=e270]
+              - img [ref=e273]
+            - paragraph [ref=e278]: “Super indico a Aumivet! Atendimento acolhedor, minha filha (minha gatinha) precisou fazer extração de alguns dentes e foi muito bem cuidada, com todo amor e carinho. A Dra explica tudo certinho, profissional que realmente ama o que faz e faz com amor! Sempre nos mantendo informados sobre cada procedimento, me senti segura e sabia que ela estava em boas mãos. Profissionais excelentes!”
+            - generic [ref=e279]:
+              - generic [ref=e280]: Thays Kempa
+              - generic [ref=e281]: Avaliação no Google
+          - article [ref=e282]:
+            - generic [ref=e283]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e284]':
+                - img [ref=e285]
+                - img [ref=e287]
+                - img [ref=e289]
+                - img [ref=e291]
+                - img [ref=e293]
+              - img [ref=e296]
+            - paragraph [ref=e301]: “Eu agradeço grandemente por toda equipe da Aumivet. Foram muito atenciosos e carinhosos. Chegamos angustiados com o estado do meu cachorro e eles, com toda paciência e carinho, nos acalmaram. Tiveram um cuidado gigante antes e depois da cirurgia. Foram anjos nas nossas vidas! Agradeço demais por tudo! Deus abençoe cada um de vocês!”
+            - generic [ref=e302]:
+              - generic [ref=e303]: Suélen Ribeiro
+              - generic [ref=e304]: Avaliação no Google
+          - article [ref=e305]:
+            - generic [ref=e306]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e307]':
+                - img [ref=e308]
+                - img [ref=e310]
+                - img [ref=e312]
+                - img [ref=e314]
+                - img [ref=e316]
+              - img [ref=e319]
+            - paragraph [ref=e324]: “Thaise trabalha por amor, é uma profissional diferenciada. Todo conhecimento dela foi essencial para o tratamento de diabetes do meu cão e ela mostrou uma prestatividade difícil de encontrar. Indico de olhos fechados, somos eternamente gratos! 🙏❤️”
+            - generic [ref=e325]:
+              - generic [ref=e326]: Elisangela Zembik
+              - generic [ref=e327]: Avaliação no Google
+          - article [ref=e328]:
+            - generic [ref=e329]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e330]':
+                - img [ref=e331]
+                - img [ref=e333]
+                - img [ref=e335]
+                - img [ref=e337]
+                - img [ref=e339]
+              - img [ref=e342]
+            - paragraph [ref=e347]: "“Tenho muito que agradecer à Doutora Thaise! Ela acompanha nossa família há alguns anos e já salvou várias vidas dos animais que resgatamos, sempre auxiliando com muito amor. A gratidão é enorme: nesta semana minha cachorra foi atacada e ela estava ali, pronta para ajudar. Agradeço pelo profissionalismo e pelo carinho com que cuida!”"
+            - generic [ref=e348]:
+              - generic [ref=e349]: Marina Santos
+              - generic [ref=e350]: Avaliação no Google
+          - article [ref=e351]:
+            - generic [ref=e352]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e353]':
+                - img [ref=e354]
+                - img [ref=e356]
+                - img [ref=e358]
+                - img [ref=e360]
+                - img [ref=e362]
+              - img [ref=e365]
+            - paragraph [ref=e370]: "“A Dra Thaise já acompanha a nossa família há anos! Sempre pronta para me auxiliar em qualquer dúvida, vacinando tanto meus cães como meus gatos. Escolho ela de olhos fechados! Me ajudou também com transporte internacional dos meus dois cães para os Estados Unidos e de volta ao Brasil! Se você quer o melhor atendimento para os seus filhos de quatro patas ela é a escolha ideal! Agora nessa nova clínica espetacular: conta com tudo de melhor e mais moderno para os seus bichinhos!”"
+            - generic [ref=e371]:
+              - generic [ref=e372]: Luiza Folda
+              - generic [ref=e373]: Avaliação no Google
+          - article [ref=e374]:
+            - generic [ref=e375]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e376]':
+                - img [ref=e377]
+                - img [ref=e379]
+                - img [ref=e381]
+                - img [ref=e383]
+                - img [ref=e385]
+              - img [ref=e388]
+            - paragraph [ref=e393]: “Super indico a Aumivet! Atendimento acolhedor, minha filha (minha gatinha) precisou fazer extração de alguns dentes e foi muito bem cuidada, com todo amor e carinho. A Dra explica tudo certinho, profissional que realmente ama o que faz e faz com amor! Sempre nos mantendo informados sobre cada procedimento, me senti segura e sabia que ela estava em boas mãos. Profissionais excelentes!”
+            - generic [ref=e394]:
+              - generic [ref=e395]: Thays Kempa
+              - generic [ref=e396]: Avaliação no Google
+          - article [ref=e397]:
+            - generic [ref=e398]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e399]':
+                - img [ref=e400]
+                - img [ref=e402]
+                - img [ref=e404]
+                - img [ref=e406]
+                - img [ref=e408]
+              - img [ref=e411]
+            - paragraph [ref=e416]: “Eu agradeço grandemente por toda equipe da Aumivet. Foram muito atenciosos e carinhosos. Chegamos angustiados com o estado do meu cachorro e eles, com toda paciência e carinho, nos acalmaram. Tiveram um cuidado gigante antes e depois da cirurgia. Foram anjos nas nossas vidas! Agradeço demais por tudo! Deus abençoe cada um de vocês!”
+            - generic [ref=e417]:
+              - generic [ref=e418]: Suélen Ribeiro
+              - generic [ref=e419]: Avaliação no Google
+          - article [ref=e420]:
+            - generic [ref=e421]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e422]':
+                - img [ref=e423]
+                - img [ref=e425]
+                - img [ref=e427]
+                - img [ref=e429]
+                - img [ref=e431]
+              - img [ref=e434]
+            - paragraph [ref=e439]: “Thaise trabalha por amor, é uma profissional diferenciada. Todo conhecimento dela foi essencial para o tratamento de diabetes do meu cão e ela mostrou uma prestatividade difícil de encontrar. Indico de olhos fechados, somos eternamente gratos! 🙏❤️”
+            - generic [ref=e440]:
+              - generic [ref=e441]: Elisangela Zembik
+              - generic [ref=e442]: Avaliação no Google
+          - article [ref=e443]:
+            - generic [ref=e444]:
+              - 'generic "Avaliação: 5 estrelas" [ref=e445]':
+                - img [ref=e446]
+                - img [ref=e448]
+                - img [ref=e450]
+                - img [ref=e452]
+                - img [ref=e454]
+              - img [ref=e457]
+            - paragraph [ref=e462]: "“Tenho muito que agradecer à Doutora Thaise! Ela acompanha nossa família há alguns anos e já salvou várias vidas dos animais que resgatamos, sempre auxiliando com muito amor. A gratidão é enorme: nesta semana minha cachorra foi atacada e ela estava ali, pronta para ajudar. Agradeço pelo profissionalismo e pelo carinho com que cuida!”"
+            - generic [ref=e463]:
+              - generic [ref=e464]: Marina Santos
+              - generic [ref=e465]: Avaliação no Google
+    - region "Dúvidas Frequentes" [ref=e466]:
+      - generic [ref=e467]:
+        - generic [ref=e468]:
+          - heading "Dúvidas Frequentes" [level=2] [ref=e469]
+          - paragraph [ref=e470]: Encontre respostas para as principais dúvidas sobre cuidados, cirurgias e serviços da Aumivet.
+        - generic [ref=e471]:
+          - group [ref=e472]:
+            - generic "A castração dói? Como meu pet será cuidado?" [ref=e473] [cursor=pointer]:
+              - generic [ref=e474]: A castração dói? Como meu pet será cuidado?
+              - img [ref=e476]
+          - group [ref=e478]:
+            - generic "Meu pet pode tomar banho toda semana?" [ref=e479] [cursor=pointer]:
+              - generic [ref=e480]: Meu pet pode tomar banho toda semana?
+              - img [ref=e482]
+          - group [ref=e484]:
+            - generic "Como sei se meu pet precisa de uma consulta dermatológica?" [ref=e485] [cursor=pointer]:
+              - generic [ref=e486]: Como sei se meu pet precisa de uma consulta dermatológica?
+              - img [ref=e488]
+          - group [ref=e490]:
+            - generic "Vocês fazem banho e tosa em gatos?" [ref=e491] [cursor=pointer]:
+              - generic [ref=e492]: Vocês fazem banho e tosa em gatos?
+              - img [ref=e494]
+          - group [ref=e496]:
+            - generic "O que acontece se eu não escovar os dentes do meu pet?" [ref=e497] [cursor=pointer]:
+              - generic [ref=e498]: O que acontece se eu não escovar os dentes do meu pet?
+              - img [ref=e500]
+          - group [ref=e502]:
+            - generic "Quais vacinas meu pet precisa tomar?" [ref=e503] [cursor=pointer]:
+              - generic [ref=e504]: Quais vacinas meu pet precisa tomar?
+              - img [ref=e506]
+          - group [ref=e508]:
+            - generic "Como funciona o atendimento de emergência?" [ref=e509] [cursor=pointer]:
+              - generic [ref=e510]: Como funciona o atendimento de emergência?
+              - img [ref=e512]
+          - group [ref=e514]:
+            - generic "Como funciona o agendamento de consultas?" [ref=e515] [cursor=pointer]:
+              - generic [ref=e516]: Como funciona o agendamento de consultas?
+              - img [ref=e518]
+    - region "Planos de Saúde Pet" [ref=e520]:
+      - generic [ref=e521]:
+        - generic [ref=e522]:
+          - heading "Planos de Saúde Pet" [level=2] [ref=e523]
+          - paragraph [ref=e524]: Aceitamos os principais planos de saúde animal. Consulte cobertura e agende pelo WhatsApp.
+        - generic [ref=e525]:
+          - generic [ref=e526]:
+            - img "Petlove Saúde" [ref=e528]
+            - generic [ref=e529]: Petlove Saúde
+            - generic [ref=e530]: Credenciada
+          - generic [ref=e531]:
+            - img "Tutor & Pet" [ref=e533]
+            - generic [ref=e534]: Tutor & Pet
+          - generic [ref=e535]:
+            - img "PetHealth" [ref=e537]
+            - generic [ref=e538]: PetHealth
+          - generic [ref=e539]:
+            - img "Dog Life" [ref=e541]
+            - generic [ref=e542]: Dog Life
+          - generic [ref=e543]:
+            - img "Au! Happy" [ref=e545]
+            - generic [ref=e546]: Au! Happy
+          - generic [ref=e547]:
+            - img "Pet Mais Vida" [ref=e549]
+            - generic [ref=e550]: Pet Mais Vida
+        - generic [ref=e551]:
+          - img "Petlove Saúde" [ref=e553]
+          - generic [ref=e554]:
+            - strong [ref=e555]: Única clínica do Paraná credenciada Petlove Saúde para cirurgias de catarata.
+            - generic [ref=e556]: Cobertura para cirurgias, consultas, exames e odontologia veterinária.
+    - region "Vamos cuidar do seu pet juntos?" [ref=e557]:
+      - generic [ref=e558]:
+        - generic [ref=e559]:
+          - heading "Vamos cuidar do seu pet juntos?" [level=2] [ref=e560]
+          - paragraph [ref=e561]: Estamos à disposição para oferecer o melhor atendimento com carinho e dedicação.
+        - generic [ref=e562]:
+          - generic [ref=e563]:
+            - generic [ref=e564]:
+              - generic [ref=e565]:
+                - img [ref=e567]
+                - generic [ref=e570]:
+                  - strong [ref=e571]: "Endereço:"
+                  - generic [ref=e572]: R. Santo Antônio, 891 - Rebouças, Curitiba - PR
+              - generic [ref=e573]:
+                - img [ref=e575]
+                - generic [ref=e577]:
+                  - strong [ref=e578]: "Telefone & WhatsApp:"
+                  - generic [ref=e579]: (41) 98860-4202
+              - generic [ref=e580]:
+                - img [ref=e582]
+                - generic [ref=e585]:
+                  - strong [ref=e586]: "E-mail:"
+                  - generic [ref=e587]: aumivet.clinica@gmail.com
+              - generic [ref=e588]:
+                - img [ref=e590]
+                - generic [ref=e593]:
+                  - strong [ref=e594]: "Atendimento:"
+                  - generic [ref=e595]: Com agendamento prévio (atenção exclusiva)
+            - generic [ref=e596]:
+              - img [ref=e597]
+              - generic [ref=e599]:
+                - strong [ref=e600]: "Emergências:"
+                - text: Mensagem imediata no WhatsApp para orientação prévia.
+            - generic [ref=e601]:
+              - link "Agendar no WhatsApp" [ref=e602] [cursor=pointer]:
+                - /url: https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta.
+                - img [ref=e603]
+                - text: Agendar no WhatsApp
+              - link "Ligar Agora" [ref=e605] [cursor=pointer]:
+                - /url: tel:+5541988604202
+                - img [ref=e606]
+                - text: Ligar Agora
+          - generic [ref=e608]:
+            - iframe [ref=e610]
+            - generic [ref=e611]:
+              - img [ref=e612]
+              - generic [ref=e615]: Fácil acesso com vagas de estacionamento exclusivas no local
+  - link "Agendar pelo WhatsApp" [ref=e617] [cursor=pointer]:
+    - /url: https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta.
+    - img [ref=e618]
+    - generic: Agendar pelo WhatsApp

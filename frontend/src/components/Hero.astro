@@ -1,0 +1,114 @@
+---
+import { CalendarDays, Compass, HeartHandshake, MapPin, Microscope, Stethoscope, Syringe } from '@lucide/astro';
+
+const pillars = [
+  { label: 'Clínica geral', Icon: Stethoscope },
+  { label: 'Vacinação', Icon: Syringe },
+  { label: 'Exames', Icon: Microscope },
+  { label: 'Atendimento humanizado', Icon: HeartHandshake },
+];
+---
+
+<section class="hero-shell" id="inicio" aria-labelledby="hero-title">
+  <div class="hero-bento" data-animate="hero-card">
+    <picture class="hero-picture">
+      <source media="(max-width: 720px)" srcset="/images/redesign/hero-bento-mobile.webp" />
+      <img class="hero-bg" src="/images/redesign/hero-bento-desktop.webp" alt="" width="1716" height="917" fetchpriority="high" />
+    </picture>
+
+    <div class="hero-copy" data-animate="hero-copy">
+      <h1 class="hero-title" id="hero-title">
+        Cuidado com<span class="br-mobile"><br /></span> amor,<span class="br-desktop"><br /></span>
+        ciência e
+        <span class="highlight-wrap">
+          <span class="sr-only">carinho</span>
+          <img
+            class="carinho-highlight"
+            src="/images/redesign/carinho-highlight-transparent.png"
+            alt=""
+            width="2150"
+            height="570"
+            loading="eager"
+          />
+        </span>
+      </h1>
+
+      <p class="hero-kicker">
+        <MapPin size={15} stroke-width={2.8} aria-hidden="true" />
+        Clínica Veterinária no Rebouças
+      </p>
+
+      <p class="hero-description">
+        <span class="hide-mobile">Na Aumivet, unimos atendimento acolhedor, estrutura moderna e amor genuíno pelos animais para oferecer uma experiência segura e humana para pets e tutores.</span>
+        <span class="show-mobile">Atendimento humanizado, estrutura completa e amor genuíno por cada pet.</span>
+      </p>
+
+      <div class="hero-actions" aria-label="Ações principais">
+        <a class="button primary" href="https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta." target="_blank" rel="noopener noreferrer">
+          <CalendarDays size={18} aria-hidden="true" />
+          Agendar consulta
+        </a>
+        <a class="button secondary" href="#servicos">
+          <Compass size={18} aria-hidden="true" />
+          Conhecer serviços
+        </a>
+      </div>
+
+      <ul class="hero-pills" aria-label="Pilares do atendimento">
+        {pillars.map(({ label, Icon }) => (
+          <li>
+            <Icon size={16} aria-hidden="true" />
+            {label}
+          </li>
+        ))}
+      </ul>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from 'gsap';
+  import Lenis from 'lenis';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduceMotion) {
+    const lenis = new Lenis({
+      duration: 1.1,
+      wheelMultiplier: 0.8,
+      touchMultiplier: 1,
+    });
+
+    (window as Window & { aumivetLenis?: Lenis }).aumivetLenis = lenis;
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    gsap.from('[data-animate="hero-card"]', {
+      opacity: 0,
+      y: 18,
+      scale: 0.985,
+      duration: 0.9,
+      ease: 'power3.out',
+    });
+
+    gsap.from('[data-animate="hero-copy"] > *', {
+      opacity: 0,
+      y: 18,
+      duration: 0.72,
+      stagger: 0.08,
+      delay: 0.15,
+      ease: 'power3.out',
+    });
+  }
+</script>

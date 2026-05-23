@@ -13,20 +13,12 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 frontend/.env.production
-strapi-app/.env
 
 # Next.js
 frontend/.next/
 frontend/out/
 frontend/build/
 frontend/.vercel
-
-# Strapi
-# strapi-app/  <-- COMMENTED OUT TO ALLOW COMMITTING STRAPI CODE
-.tmp/
-.cache/
-build/
-.strapi-updater.json
 
 # Docker
 *.log
@@ -43,6 +35,11 @@ Thumbs.db
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# Local agent tooling
+.agents/
+.claude/skills/
+_bmad/
 
 # Testing
 coverage/

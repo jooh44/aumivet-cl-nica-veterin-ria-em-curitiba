@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planejamento de retomada — Aumivet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FFFFF2;
+    --ink: #111111;
+    --muted: #1D1D1D;
+    --soft: #8A8A82;
+    --rosa: #E66884;
+    --verde: #9CA876;
+    --verde-claro: #B6D455;
+    --rule: #E8E4D2;
+    --card: #F8F4E2;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 72px 32px 96px;
+  }
+  header.brand {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    margin-bottom: 56px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .brand-mark {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+  }
+  .brand-mark::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--rosa);
+    border-radius: 50%;
+    margin-right: 10px;
+    transform: translateY(-2px);
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+  }
+  .lead {
+    font-size: 17px;
+    color: var(--muted);
+    margin: 0 0 56px;
+    max-width: 58ch;
+  }
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    margin: 56px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 36px 0 12px;
+    color: var(--ink);
+  }
+  h3 .num {
+    display: inline-block;
+    width: 22px;
+    color: var(--rosa);
+    font-weight: 600;
+  }
+  p { margin: 0 0 16px; color: var(--muted); }
+  strong { color: var(--ink); font-weight: 600; }
+  ul, ol {
+    margin: 0 0 16px;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul li, ol li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    color: var(--muted);
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0.7em;
+    width: 6px;
+    height: 1px;
+    background: var(--rosa);
+  }
+  ol { counter-reset: ord; }
+  ol li { counter-increment: ord; }
+  ol li::before {
+    content: counter(ord);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--rosa);
+  }
+  .callout {
+    background: var(--card);
+    border-left: 2px solid var(--verde);
+    padding: 20px 24px;
+    margin: 24px 0 8px;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .usp {
+    background: #FFFFFF;
+    border: 1px solid var(--rosa);
+    padding: 22px 26px;
+    margin: 28px 0;
+    border-radius: 6px;
+    position: relative;
+  }
+  .usp::before {
+    content: "DIFERENCIAL ÚNICO";
+    position: absolute;
+    top: -9px;
+    left: 22px;
+    background: var(--rosa);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+  .usp p { margin: 0; color: var(--ink); font-size: 17px; line-height: 1.55; }
+  .usp p strong { font-weight: 600; }
+  footer.sign {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer.sign .who { color: var(--ink); font-weight: 500; }
+  @media (max-width: 600px) {
+    .page { padding: 48px 22px 72px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 21px; }
+    header.brand { flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .page { padding: 0; }
+    h2, h3 { page-break-after: avoid; }
+    .callout { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header class="brand">
+    <span class="brand-mark">Aumivet</span>
+    <span class="meta">Planejamento · Maio 2026</span>
+  </header>
+
+  <h1>Planejamento de retomada</h1>
+
+  <p class="lead">Oi Dra. Thaise, segue um resumo rápido do que vamos fazer nos próximos dias antes de acender os anúncios. A ideia é deixar tudo redondo para o investimento em mídia render de verdade.</p>
+
+  <h2>Foco principal</h2>
+  <p>A prioridade do trabalho é atrair pacientes para <strong>cirurgias no geral</strong> — com destaque para <strong>cirurgia geral</strong> (assinada por você), <strong>odontologia</strong> e, principalmente, <strong>cirurgia de catarata</strong>, que é hoje o maior diferencial competitivo da clínica.</p>
+
+  <div class="usp">
+    <p>A Aumivet é a <strong>única clínica do Paraná credenciada para cirurgia de catarata pelo Petlove Saúde</strong>. Esse posicionamento vai ocupar lugar central no site e nos anúncios.</p>
+  </div>
+
+  <p>Ortopedia, por ser terceirizada e não coberta pelo Petlove, fica fora da estratégia.</p>
+
+  <h2>O que vamos fazer</h2>
+
+  <h3><span class="num">1</span> Site</h3>
+  <p>Vamos atualizar o site da Aumivet para incluir <strong>três páginas dedicadas</strong>:</p>
+  <ul>
+    <li>uma página guarda-chuva de <strong>cirurgias</strong> (castração, remoção de tumores, tecidos moles, emergências cirúrgicas);</li>
+    <li>uma página exclusiva de <strong>cirurgia de catarata</strong>, posicionando você como a única credenciada Petlove do estado;</li>
+    <li>uma página de <strong>odontologia</strong>.</li>
+  </ul>
+  <p>Cada uma vai mostrar com clareza:</p>
+  <ul>
+    <li>o que é feito,</li>
+    <li>como é o ambiente e a segurança anestésica,</li>
+    <li>a equipe responsável,</li>
+    <li>a parceria com a Petlove,</li>
+    <li>botões diretos para WhatsApp, telefone e rota.</li>
+  </ul>
+  <p>O visual do site continua igual ao atual; vamos apenas reorganizar e somar conteúdo. A mudança técnica é invisível para o tutor, mas ajuda o site a aparecer melhor no Google e nas buscas com inteligência artificial.</p>
+
+  <h3><span class="num">2</span> Presença local no Google</h3>
+  <p>Vamos revisar e atualizar o perfil da clínica no Google para:</p>
+  <ul>
+    <li>corrigir e ampliar as categorias de serviço,</li>
+    <li>listar cirurgia e odontologia entre os serviços oferecidos,</li>
+    <li>subir fotos atuais da clínica e da equipe,</li>
+    <li>garantir que o nome, telefone e endereço estão idênticos em todos os lugares.</li>
+  </ul>
+
+  <h3><span class="num">3</span> Parceria Petlove</h3>
+  <p>A Aumivet já está listada na rede credenciada Petlove Saúde (ótimo). E o ponto da <strong>catarata</strong> é especial: como você é a única do Paraná credenciada para esse procedimento pelo plano, vamos:</p>
+  <ul>
+    <li>destacar essa unicidade no topo da página de catarata e em um selo dedicado,</li>
+    <li>mostrar o selo "Credenciada Petlove Saúde" também na home, na página de cirurgias e na de odontologia,</li>
+    <li>linkar sempre para a página oficial da clínica no diretório Petlove,</li>
+    <li>usar essa parceria como prova de confiança para tutores e como sinal de autoridade local para o ranqueamento.</li>
+  </ul>
+  <p>A combinação <strong>"única do estado + Petlove + cirurgia de catarata"</strong> é o argumento mais forte da clínica hoje, e ela vai ocupar lugar central na comunicação.</p>
+
+  <h3><span class="num">4</span> Medição de contatos</h3>
+  <p>Antes de qualquer anúncio entrar no ar, vamos instalar a medição dos contatos. Isso significa que cada clique no botão de WhatsApp, ligação e rota no mapa fica registrado. Sem isso, é impossível saber qual canal traz cliente de verdade.</p>
+
+  <h3><span class="num">5</span> Anúncios no Google</h3>
+  <p>Quando os passos acima estiverem prontos, aí sim acendemos os anúncios. A campanha inicial será enxuta:</p>
+  <ul>
+    <li>foco em quem busca por cirurgia veterinária em Curitiba (cirurgia geral, catarata e odontologia),</li>
+    <li>prioridade alta para <strong>cirurgia de catarata</strong>, que tem menos concorrência e diferencial único,</li>
+    <li>região limitada ao raio de atendimento da clínica,</li>
+    <li>começando pequena para a gente medir resultado e ajustar.</li>
+  </ul>
+  <p>A verba de <strong>R$ 500 por mês</strong> em mídia vai ser usada toda em quem já está procurando esses serviços especificamente.</p>
+
+  <h2>Decisões que precisamos aprovar</h2>
+  <div class="callout">
+    <ul>
+      <li><strong>Foco em cirurgias no geral, com destaque para cirurgia de catarata</strong> como motor de aquisição. Ortopedia, por ser terceirizada e fora da cobertura Petlove, fica fora da estratégia.</li>
+      <li><strong>Posicionamento "Única do Paraná credenciada Petlove para catarata"</strong> como argumento principal.</li>
+      <li><strong>Banho e tosa</strong> será removido das categorias do Google assim que a clínica fechar essa frente.</li>
+      <li><strong>Petlove em destaque</strong> no site e no posicionamento.</li>
+      <li><strong>Acender os anúncios só depois do site, perfil e medição prontos</strong>, para não queimar verba.</li>
+    </ul>
+  </div>
+
+  <h2>O que precisamos de você</h2>
+  <p>Para o trabalho fluir sem travar, preciso de algumas coisas suas:</p>
+  <ol>
+    <li><strong>Fotos suas no centro cirúrgico</strong> e da equipe de apoio (anestesista e demais médicos da rotina), com nome e CRMV, para credenciar as páginas.</li>
+    <li><strong>Material da cirurgia de catarata</strong>: fotos do procedimento ou pós-operatório, e se possível alguma noção do volume mensal de catarata feito pela Petlove (ajuda a calibrar os anúncios).</li>
+    <li><strong>Confirmar se podemos publicar casos clínicos</strong> (antes e depois de cirurgia, com autorização do tutor). É uma das coisas que mais converte em cirurgia — principalmente em catarata.</li>
+  </ol>
+
+  <footer class="sign">
+    <span class="who">Johny · Aumivet</span>
+    <span>aumivet.com.br</span>
+  </footer>
+
+</main>
+</body>
+</html>

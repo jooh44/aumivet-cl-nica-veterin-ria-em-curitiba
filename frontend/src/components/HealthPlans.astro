@@ -1,0 +1,63 @@
+---
+const others = [
+  { src: '/images/health-plans/tutor-e-pet.png', alt: 'Tutor & Pet', size: 'normal' },
+  { src: '/images/health-plans/pet-health.png', alt: 'PetHealth', size: 'normal' },
+  { src: '/images/health-plans/dog-life.png', alt: 'Dog Life', size: 'normal' },
+  { src: '/images/health-plans/au-happy.png', alt: 'Au! Happy', size: 'tall' },
+  { src: '/images/health-plans/pet-mais-vida.png', alt: 'Pet Mais Vida', size: 'xwide' },
+];
+---
+
+<section class="hp-section" id="planos" aria-labelledby="hp-title">
+  <div class="hp-section-inner">
+
+    <div class="hp-bento-header">
+      <h2 id="hp-title">Planos de <span class="highlight">Saúde Pet</span></h2>
+      <p>Aceitamos os principais planos de saúde animal. Consulte cobertura e agende pelo WhatsApp.</p>
+    </div>
+
+    <div class="hp-layout">
+
+      <!-- Petlove featured -->
+      <div class="hp-featured-area">
+        <span class="hp-featured-badge">Credenciada</span>
+        <div class="hp-logo-featured-clip">
+          <img src="/images/health-plans/petlove.png" alt="Petlove Saúde" class="hp-logo hp-logo--featured" loading="lazy" />
+        </div>
+        <p class="hp-featured-desc">
+          Única clínica do Paraná credenciada para cirurgias de <span class="hp-highlight-aumi">catarata</span>
+        </p>
+      </div>
+
+      <!-- Outros planos -->
+      <div class="hp-others-area">
+        <div class="hp-others-header">
+          <span>Outros planos</span>
+        </div>
+        <div class="hp-others-grid">
+          {others.map(plan => (
+            <div class="hp-other-cell">
+              <div class={`hp-logo-img-wrap hp-logo-img--${plan.size}`}>
+                <img src={plan.src} alt={plan.alt} loading="lazy" />
+              </div>
+            </div>
+          ))}
+          <div class="hp-other-cell hp-other-cell--empty" aria-hidden="true"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hp-cta-row">
+      <a
+        class="hp-petlove-cta"
+        href="https://wa.me/5541988604202?text=Olá! Gostaria de saber sobre cobertura do meu plano de saúde pet."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Consultar cobertura pelo WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>

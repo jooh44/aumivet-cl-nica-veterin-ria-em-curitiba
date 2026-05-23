@@ -1,0 +1,124 @@
+---
+const members = [
+  {
+    name: 'Dra. Thaise',
+    credential: 'Médica Veterinária · CRMV-PR 16704',
+    role: 'Fundadora · Cirurgia Geral',
+    bio: 'Fundadora da Aumivet. Pós-graduanda em Clínica Médica e Cirúrgica de Pequenos Animais pela PUCPR, com atuação em cirurgia de tecidos moles, ortopedia e emergências.',
+    photo: '/images/dra-thaise.jpg',
+    photoPos: 'center 15%',
+    wa: 'https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta com a Dra. Thaise.',
+  },
+  {
+    name: 'Dr. Gustavo',
+    credential: 'Médico Veterinário · CRMV-PR',
+    role: 'Anestesiologia',
+    bio: 'Graduado pela UFPR (2015) com residência em Anestesiologia Veterinária pela PUCPR (2018). Responsável pelos protocolos anestésicos e monitoramento cirúrgico.',
+    photo: '/images/dr-gustavo-trevisan.jpg',
+    photoPos: 'center 15%',
+    wa: 'https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta com o Dr. Gustavo.',
+  },
+  {
+    name: 'Dra. Renata',
+    credential: 'Médica Veterinária · CRMV-PR',
+    role: 'Odontologia Veterinária',
+    bio: 'Formada pela PUC Paraná (2009). Após 12 anos de clínica médica, especializou-se em odontologia veterinária pelo CTEOV-SP e Anclivepa-SP (2021–2023).',
+    photo: '/images/Dra Renata.jpg',
+    photoPos: 'center top',
+    wa: 'https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta com a Dra. Renata.',
+  },
+  {
+    name: 'Dr. Franz',
+    credential: 'Médico Veterinário · CRMV-PR',
+    role: 'Oftalmologia Veterinária',
+    bio: 'Residência em Oftalmologia pela UFPR e externship na Michigan State University. Mestrando em Ciências Veterinárias e preceptor da residência em oftalmologia da UFPR.',
+    photo: '/images/franz.jpg',
+    photoPos: 'center top',
+    wa: 'https://wa.me/5541988604202?text=Olá! Gostaria de agendar uma consulta com o Dr. Franz.',
+  },
+];
+
+---
+
+<section class="team-section" id="equipe" aria-labelledby="team-title">
+  <div class="team-shell">
+    <div class="section-heading">
+      <h2 id="team-title">Nossa equipe</h2>
+    </div>
+
+    <div class="team-tabs-root">
+      <!-- Tabs -->
+      <div class="team-nav" role="tablist" aria-label="Membros da equipe">
+        {members.map(({ name }, i) => (
+          <button
+            class={`team-tab${i === 0 ? ' active' : ''}`}
+            id={`team-tab-${i}`}
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            aria-controls={`team-panel-${i}`}
+            data-tab={i}
+          >
+            {name}
+          </button>
+        ))}
+      </div>
+
+      <!-- Tab panels -->
+      <div class="team-panels">
+        {members.map((m, i) => (
+          <div
+            class={`team-panel${i === 0 ? ' active' : ''}`}
+            id={`team-panel-${i}`}
+            role="tabpanel"
+            aria-labelledby={`team-tab-${i}`}
+            tabindex={i === 0 ? 0 : -1}
+          >
+            <img
+              class="team-photo"
+              src={m.photo}
+              alt={`Foto de ${m.name}`}
+              width="400"
+              height="480"
+              fetchpriority={i === 0 ? 'auto' : 'low'}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              style={`object-position: ${m.photoPos || 'center top'}`}
+            />
+            <div class="team-overlay">
+              <span class="team-eyebrow">{m.role}</span>
+              <h3 class="team-name">{m.name}</h3>
+              <p class="team-credential">{m.credential}</p>
+              <p class="team-bio">{m.bio}</p>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('.team-tab');
+  const panels = document.querySelectorAll('.team-panel');
+
+  tabs.forEach((tab, idx) => {
+    tab.addEventListener('click', () => {
+      // Deactivate all tabs and panels
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(p => {
+        p.classList.remove('active');
+        p.setAttribute('tabindex', '-1');
+      });
+
+      // Activate selected tab and panel
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const targetPanel = panels[idx];
+      targetPanel.classList.add('active');
+      targetPanel.setAttribute('tabindex', '0');
+    });
+  });
+</script>

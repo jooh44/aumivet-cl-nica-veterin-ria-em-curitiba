@@ -1,0 +1,265 @@
+---
+import { Maximize2, PawPrint, X } from '@lucide/astro';
+
+const featured = {
+  title: 'Cirurgias Especializadas',
+  eyebrow: 'Procedimentos seguros',
+  description: 'Centro cirúrgico completo com equipe especializada, anestesia monitorada e acompanhamento humanizado na recuperação.',
+  longDescription: 'Nossa equipe realiza cirurgias de tecidos moles, ortopedia de rotina, odontologia cirúrgica e cirurgia de catarata — com anestesia inalatória monitorada e recuperação acompanhada.',
+  bullets: [
+    'Anestesia inalatória com monitoramento contínuo',
+    'Única clínica do Paraná credenciada Petlove Saúde para catarata',
+    'Cirurgia geral, odontológica e oftalmológica',
+    'Acompanhamento pós-operatório humanizado',
+  ],
+  badge: 'Credenciada Petlove Saúde',
+  href: 'https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre cirurgias especializadas.',
+  phone: '5541988604202',
+  photo: '/images/services/cirurgias.webp',
+  posMob: 'center 30%',
+};
+
+const services = [
+  {
+    title: 'Consultas e Vacinas',
+    eyebrow: 'Check-up anual',
+    description: 'Consultas clínicas completas e protocolo vacinal atualizado para cães e gatos, com foco em prevenção e saúde ao longo da vida.',
+    longDescription: 'Atendimento clínico completo para cães e gatos, com avaliação física, orientação nutricional e protocolo vacinal atualizado conforme as diretrizes veterinárias.',
+    bullets: [
+      'Consulta clínica com avaliação completa',
+      'Vacinação V8/V10, antirrábica e gripe canina',
+      'Protocolo personalizado por idade e estilo de vida',
+      'Orientação preventiva e nutricional',
+    ],
+    href: 'https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre consultas e vacinas.',
+    phone: '5541988604202',
+    photo: '/images/services/consultas.webp',
+    posMob: '80% 20%',
+  },
+  {
+    title: 'Exames e Diagnósticos',
+    eyebrow: 'Imagem e laboratório',
+    description: 'Radiografia, ultrassom e exames laboratoriais com resultados ágeis para diagnóstico preciso e início rápido do tratamento.',
+    longDescription: 'Diagnóstico por imagem e laboratório in-house para resultados rápidos, permitindo início imediato do tratamento quando necessário.',
+    bullets: [
+      'Radiografia digital de alta resolução',
+      'Ultrassonografia abdominal e gestacional',
+      'Hemograma e bioquímico com resultado no mesmo dia',
+      'Exames pré-cirúrgicos completos',
+    ],
+    href: 'https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre exames e diagnósticos.',
+    phone: '5541988604202',
+    photo: '/images/services/exames-e-diagnosticos.webp',
+    posMob: '60% 55%',
+  },
+  {
+    title: 'Odontologia Veterinária',
+    eyebrow: 'Saúde bucal',
+    description: 'Limpeza dental profissional, extração e tratamento periodontal com anestesia monitorada para saúde bucal completa.',
+    longDescription: 'Tratamento odontológico completo com equipamento especializado e anestesia monitorada, da profilaxia à cirurgia oral.',
+    bullets: [
+      'Limpeza dental com ultrassom odontológico',
+      'Extração e tratamento periodontal',
+      'Radiografia dental intraoral',
+      'Anestesia monitorada durante todo o procedimento',
+    ],
+    badge: 'Aceita Petlove Saúde',
+    href: 'https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre odontologia veterinária.',
+    phone: '5541988604202',
+    photo: '/images/services/odontologia.webp',
+    posMob: 'center 20%',
+  },
+  {
+    title: 'Adestramento Pet',
+    eyebrow: 'Comportamento',
+    description: 'Treinamento com reforço positivo para cães de todas as idades, individual ou em grupo, desenvolvendo obediência e bem-estar.',
+    longDescription: 'Programa de adestramento baseado em reforço positivo, adaptado à personalidade e necessidades do seu cão, com aulas individuais ou em grupo.',
+    bullets: [
+      'Método 100% reforço positivo',
+      'Aulas individuais ou em grupo',
+      'Socialização supervisionada para filhotes',
+      'Orientação comportamental para tutores',
+    ],
+    href: 'https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre adestramento pet.',
+    phone: '5541988604202',
+    photo: '/images/services/adestramento.webp',
+    posMob: '80% 30%',
+  },
+];
+
+const allServices = [
+  featured,
+  ...services,
+];
+---
+
+<section class="svc-section" id="servicos" aria-labelledby="svc-title">
+  <div class="svc-shell" data-animate="svc-frame">
+    <div class="section-heading">
+      <h2 id="svc-title">Nossos serviços</h2>
+    </div>
+
+    <div class="svc-grid">
+      <!-- Card destaque -->
+      <article class="svc-card featured" style={`--card-bg: url('${featured.photo}'); --card-pos-mob: ${featured.posMob}`}>
+        <div class="svc-top">
+          <span class="svc-eyebrow">{featured.eyebrow}</span>
+          <h3>{featured.title}</h3>
+        </div>
+        <button
+          class="svc-expand-btn"
+          data-svc-idx="0"
+          aria-label={`Abrir detalhes de ${featured.title}`}
+        >
+          <Maximize2 size={14} aria-hidden="true" />
+          <span class="svc-expand-label">Abrir</span>
+        </button>
+      </article>
+
+      <!-- Cards regulares -->
+      {services.map(({ title, eyebrow, photo, posMob }, i) => (
+        <article class="svc-card" style={`--card-bg: url('${photo}'); --card-pos-mob: ${posMob}`}>
+          <div class="svc-top">
+            <span class="svc-eyebrow">{eyebrow}</span>
+            <h3>{title}</h3>
+          </div>
+          <button
+            class="svc-expand-btn"
+            data-svc-idx={String(i + 1)}
+            aria-label={`Abrir detalhes de ${title}`}
+          >
+            <Maximize2 size={14} aria-hidden="true" />
+            <span class="svc-expand-label">Abrir</span>
+          </button>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Modais estáticos (SEO-friendly) -->
+<div class="svc-modal-backdrop" id="svc-modal-backdrop" aria-hidden="true"></div>
+
+{allServices.map((svc, i) => (
+  <div
+    class="svc-modal"
+    id={`svc-modal-${i}`}
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby={`svc-modal-title-${i}`}
+    data-svc-modal={String(i)}
+  >
+    <button class="svc-modal-close" aria-label="Fechar">
+      <X size={18} aria-hidden="true" />
+    </button>
+
+    <div class="svc-modal-photo">
+      <img
+        src={svc.photo}
+        alt={svc.title}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <div class="svc-modal-body">
+      {svc.badge && (
+        <span class="svc-modal-badge">
+          <PawPrint size={13} aria-hidden="true" />
+          {svc.badge}
+        </span>
+      )}
+
+      <h3 class="svc-modal-title" id={`svc-modal-title-${i}`}>{svc.title}</h3>
+      <p class="svc-modal-text">{svc.longDescription || svc.description}</p>
+
+      {svc.bullets && (
+        <ul class="svc-modal-bullets">
+          {svc.bullets.map((b: string) => (
+            <li>
+              <svg class="svc-bullet-check" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <circle cx="8" cy="8" r="8" fill="var(--vet-100)"/>
+                <path d="M5 8l2 2 4-4" stroke="var(--vet-600)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              {b}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <a
+        class="svc-modal-cta"
+        href={svc.href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16.02 3.2c-7.06 0-12.8 5.66-12.8 12.62 0 2.39.69 4.71 1.98 6.72L3.1 28.8l6.46-2.06a12.96 12.96 0 0 0 6.46 1.72c7.06 0 12.8-5.66 12.8-12.64 0-6.96-5.74-12.62-12.8-12.62Zm0 23.13c-2.06 0-4.07-.6-5.78-1.73l-.42-.27-3.74 1.19 1.21-3.59-.28-.43a10.34 10.34 0 0 1-1.65-5.68c0-5.78 4.78-10.49 10.66-10.49 5.87 0 10.65 4.71 10.65 10.49 0 5.8-4.78 10.51-10.65 10.51Zm5.85-7.86c-.32-.16-1.9-.93-2.2-1.03-.29-.11-.51-.16-.73.16-.21.31-.83 1.03-1.01 1.24-.19.22-.37.24-.69.08-.32-.16-1.35-.49-2.58-1.57-.95-.84-1.6-1.87-1.78-2.18-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.1-.22.05-.4-.03-.56-.08-.16-.73-1.73-1-2.37-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.4-.29.31-1.12 1.08-1.12 2.63 0 1.56 1.15 3.06 1.31 3.28.16.21 2.27 3.42 5.5 4.79.77.33 1.37.53 1.84.68.77.24 1.47.21 2.03.13.62-.09 1.9-.76 2.17-1.5.27-.75.27-1.38.19-1.51-.08-.14-.29-.22-.61-.38Z" fill="currentColor"/>
+        </svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+))}
+
+<script>
+  const backdrop = document.getElementById('svc-modal-backdrop');
+  const modals = document.querySelectorAll<HTMLElement>('.svc-modal');
+  let activeModal: HTMLElement | null = null;
+
+  function openModal(idx: number) {
+    const modal = document.querySelector<HTMLElement>(`[data-svc-modal="${idx}"]`);
+    if (!modal) return;
+    activeModal = modal;
+    modal.classList.add('open');
+    backdrop!.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector<HTMLButtonElement>('.svc-modal-close')?.focus();
+  }
+
+  function closeModal() {
+    if (!activeModal) return;
+    activeModal.classList.remove('open');
+    backdrop!.classList.remove('open');
+    document.body.style.overflow = '';
+    activeModal = null;
+  }
+
+  document.querySelectorAll('.svc-expand-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      openModal(Number((btn as HTMLElement).dataset.svcIdx));
+    });
+  });
+
+  modals.forEach(m => {
+    m.querySelector('.svc-modal-close')?.addEventListener('click', closeModal);
+  });
+  backdrop?.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+
+<script>
+  import gsap from 'gsap';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduceMotion) {
+    const frame = document.querySelector('[data-animate="svc-frame"]');
+    if (frame) {
+      const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          gsap.from('.svc-card', {
+            opacity: 0,
+            y: 28,
+            duration: 0.66,
+            stagger: 0.08,
+            ease: 'power3.out',
+          });
+          observer.disconnect();
+        }
+      }, { threshold: 0.15 });
+      observer.observe(frame);
+    }
+  }
+</script>
