@@ -5,17 +5,18 @@ const featured = {
   title: 'Cirurgias Especializadas',
   eyebrow: 'Procedimentos seguros',
   description: 'Centro cirúrgico completo com equipe especializada, anestesia monitorada e acompanhamento humanizado na recuperação.',
-  longDescription: 'Nossa equipe realiza cirurgias de tecidos moles, ortopedia de rotina, odontologia cirúrgica e cirurgia de catarata — com anestesia inalatória monitorada e recuperação acompanhada.',
+  longDescription: 'Nossa equipe realiza cirurgias de tecidos moles, ortopedia, odontologia cirúrgica, oftalmologia (catarata), oncologia e outras especialidades — com anestesia inalatória monitorada e recuperação acompanhada.',
   bullets: [
-    'Anestesia inalatória com monitoramento contínuo',
+    'Tecidos moles, ortopedia e oncologia',
+    'Odontologia cirúrgica e oftalmologia',
     'Única clínica do Paraná credenciada Petlove Saúde para catarata',
-    'Cirurgia geral, odontológica e oftalmológica',
+    'Anestesia inalatória com monitoramento contínuo',
     'Acompanhamento pós-operatório humanizado',
   ],
   badge: 'Credenciada Petlove Saúde',
   href: 'https://wa.me/5541988604202?text=Olá! Gostaria de saber mais sobre cirurgias especializadas.',
   phone: '5541988604202',
-  photo: '/images/services/cirurgias.webp',
+  photo: '',
   posMob: 'center 30%',
 };
 
@@ -153,14 +154,16 @@ const allServices = [
       <X size={18} aria-hidden="true" />
     </button>
 
-    <div class="svc-modal-photo">
-      <img
-        src={svc.photo}
-        alt={svc.title}
-        loading="lazy"
-        decoding="async"
-      />
-    </div>
+    {svc.photo && (
+      <div class="svc-modal-photo">
+        <img
+          src={svc.photo}
+          alt={svc.title}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    )}
 
     <div class="svc-modal-body">
       {svc.badge && (
