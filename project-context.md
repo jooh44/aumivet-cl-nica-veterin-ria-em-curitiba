@@ -1,6 +1,6 @@
 # Project Context - Aumivet
 
-Ultima atualizacao: 2026-05-19
+Ultima atualizacao: 2026-05-23
 
 Este arquivo e a fonte rapida para agentes continuarem a retomada da Aumivet sem reconstruir contexto.
 
@@ -17,7 +17,7 @@ O foco da retomada nao e vender um projeto do zero. E reposicionar a presenca di
 - `docs/01-proposta-google-ads-upsell.md`: base interna inicial da oferta.
 - `docs/02-checklist-retomada.md`: checklist tecnico e comercial.
 - `CLAUDE.md`: briefing curto para agentes.
-- `frontend/`: aplicacao Next.js.
+- `frontend/`: site Astro estatico atual, usado para o deploy.
 - `index.html` e `styles.css`: landing estatica publica original.
 
 ## Proposta comercial atual
@@ -137,7 +137,35 @@ Impacto em outros arquivos:
 
 Evitar misturar outro design system. Todo material deve parecer Aumivet.
 
-## Estado tecnico do repo
+## Estado atual do site e deploy — 2026-05-23
+
+O site esta pronto para deploy/pos-deploy no app Astro em `frontend/`. O usuario fez os ultimos ajustes com Claude e realizou deploy em 2026-05-23. Para continuidade, tratar o estado de `frontend/src/`, `frontend/public/images/` e `frontend/dist/` como a base visual mais recente, nao a landing estatica legada da raiz.
+
+Stack atual:
+
+- Astro `^5.16.0` em `frontend/`.
+- Scripts principais: `pnpm build`, `pnpm preview`, `pnpm check`.
+- `frontend/package.json` inclui `astro`, `@astrojs/check`, `@lucide/astro`, `gsap`, `lenis`, `sharp` e `typescript`.
+- Build validado com `pnpm build`; passa com 0 erros. Permanecem apenas 2 hints conhecidos em `src/components/About.astro` sobre o script inline da galeria (`photos` via `define:vars`).
+
+Estado visual recente:
+
+- Hero usa bento premium: um unico card grande arredondado, com imagem unica de fundo para desktop/mobile.
+- O bento da hero agora segue a logica dos cards de servicos: moldura externa branca real, com imagem recuada internamente em vez de apenas stroke/sombra interna.
+- Imagens finais da hero foram exportadas do Figma node `71:2` do arquivo `eIGmItv6LdatT0BOoMfKvj`:
+  - `image 7` -> `frontend/public/images/redesign/hero-bento-desktop.webp` (`1716x917`).
+  - `image 8` -> `frontend/public/images/redesign/hero-bento-mobile.webp` (`941x1672`).
+- `Hero.astro` foi ajustado para declarar `width="1716"` e `height="917"` no asset desktop.
+- A navegacao/active state foi estabilizada: cliques entre secoes usam Lenis quando disponivel, calculam offset real da header sticky e evitam disputa entre clique e observacao de scroll.
+
+Cuidados de continuidade:
+
+- Nao substituir a hero por pets separados em colunas; a decisao continua sendo asset unico dentro de bento.
+- Se trocar fotos da galeria, manter os paths e composicao visual do site atual; validar com `pnpm build`.
+- Se mexer na nav, preservar a fonte unica de active state em `frontend/src/components/Header.astro`.
+- Se mexer na hero, preservar a moldura externa branca em `.hero-bento` e o recuo interno de `.hero-picture`.
+
+## Estado tecnico historico do repo
 
 Repositorio clonado em:
 
@@ -147,24 +175,23 @@ Origem:
 
 `https://github.com/jooh44/aumivet-cl-nica-veterin-ria-em-curitiba`
 
-Estado relevante:
+Estado historico relevante da retomada:
 
 - Branch atual: `master`.
 - O projeto nao usa CMS no estado atual.
 - Codigo e documentacao legada de Strapi/CMS foram removidos.
 - Busca por termos de Strapi ficou limpa fora de `node_modules`, `.next` e `.git`.
-- `frontend` usa Next `^16.3.0-canary.19`, necessario na retomada porque a versao estavel mais recente ainda mantinha dependencia vulneravel via `postcss`.
-- `npm audit --omit=dev` retornou `found 0 vulnerabilities`.
-- `npm run build` em `frontend` passou.
-- `frontend/public/sitemap.xml` e `frontend/tsconfig.json` foram alterados pelo build/Next.
+- O frontend ja foi Next durante a limpeza inicial, mas o app ativo em 2026-05-23 e Astro. Nao tratar `frontend/app/` ou componentes React antigos como fonte atual.
+- Na etapa antiga, `npm audit --omit=dev` retornou `found 0 vulnerabilities` e `npm run build` passou no Next.
+- No estado atual Astro, usar `pnpm build` dentro de `frontend/`.
 
 Comandos principais:
 
 ```bash
 cd frontend
-npm ci
-npm run build
-npm audit --omit=dev
+pnpm install
+pnpm build
+pnpm preview
 ```
 
 ## Limpeza ja feita
@@ -190,4 +217,4 @@ Nao reintroduzir CMS, Strapi ou revalidate webhook sem decisao explicita.
 - Se for alterar proposta, editar diretamente `docs/proposta-comercial-aumivet.html`.
 - Se for criar planejamento para Claude, usar este arquivo como fonte e manter a proposta final sem jargao tecnico.
 - Se for mexer no site, preservar a direcao comercial: Petlove em evidencia, presenca local, contato facil, ranqueamento e busca com IA.
-- Confirmar depois se o deploy oficial continuara na landing estatica da raiz ou migrara para o app Next.js.
+- O deploy mais recente foi feito a partir do site Astro em `frontend/`; nao retomar a landing estatica da raiz sem decisao explicita.

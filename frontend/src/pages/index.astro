@@ -13,9 +13,154 @@ import HealthPlans from '../components/HealthPlans.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import WhatsApp from '../components/WhatsApp.astro';
+
+const siteUrl = 'https://aumivet.com.br';
+const phone = '+5541988604202';
+const faqItems = [
+  {
+    question: 'A castração dói? Como meu pet será cuidado?',
+    answer: 'A Aumivet utiliza protocolos de anestesia modernos e monitorados por profissional anestesista, com analgésicos antes, durante e após a cirurgia para reduzir dor e desconforto no pós-operatório.',
+  },
+  {
+    question: 'Meu pet pode tomar banho toda semana?',
+    answer: 'Depende da raça, do tipo de pelagem e da saúde da pele. Para a maioria dos cães saudáveis, banhos quinzenais são ideais; pets em tratamento dermatológico podem precisar de orientação específica.',
+  },
+  {
+    question: 'Como sei se meu pet precisa de uma consulta dermatológica?',
+    answer: 'Coceira excessiva, lambedura constante, perda localizada de pelo, vermelhidão, descamação, feridas ou odor forte na pele e nas orelhas indicam que o pet deve passar por avaliação veterinária.',
+  },
+  {
+    question: 'Vocês fazem banho e tosa em gatos?',
+    answer: 'Sim. A estética felina é feita com manejo amigável, materiais específicos e secagem cuidadosa para reduzir o estresse e preservar a tranquilidade do gato.',
+  },
+  {
+    question: 'O que acontece se eu não escovar os dentes do meu pet?',
+    answer: 'A falta de escovação favorece tártaro, mau hálito, gengivite e dor. Em casos graves, bactérias da boca podem afetar órgãos como coração e rins, por isso a profilaxia dentária preventiva é recomendada.',
+  },
+  {
+    question: 'Quais vacinas meu pet precisa tomar?',
+    answer: 'Cães geralmente precisam de V10, antirrábica, gripe canina e giárdia. Gatos precisam de V4 ou V5 e antirrábica. O protocolo ideal é definido individualmente em consulta.',
+  },
+  {
+    question: 'Como funciona o atendimento de emergência?',
+    answer: 'Em urgências, o tutor deve chamar a Aumivet imediatamente pelo WhatsApp (41) 98860-4202 para que a equipe oriente os primeiros passos e prepare a estrutura para receber o pet.',
+  },
+  {
+    question: 'Como funciona o agendamento de consultas?',
+    answer: 'O agendamento é feito pelo WhatsApp (41) 98860-4202. A Aumivet trabalha com horários agendados para oferecer atenção exclusiva e reduzir o tempo de espera na clínica.',
+  },
+];
+
+const schema = [
+  {
+    '@type': ['LocalBusiness', 'VeterinaryCare'],
+    '@id': `${siteUrl}/#aumivet`,
+    name: 'Aumivet',
+    alternateName: [
+      'Aumivet Clínica Veterinária',
+      'Aumivet Clínica Veterinária em Curitiba',
+      'Aumivet Rebouças',
+    ],
+    url: siteUrl,
+    logo: `${siteUrl}/images/logo-aumivet-2026.png`,
+    image: [
+      `${siteUrl}/images/redesign/hero-bento-desktop.webp`,
+      `${siteUrl}/images/aumivet-clinica-veterinaria-em-curitiba (1).jpg`,
+      `${siteUrl}/images/services/cirurgias.webp`,
+    ],
+    description: 'Aumivet é uma clínica veterinária em Curitiba, no bairro Rebouças, com atendimento humanizado para cães e gatos, consultas, vacinas, exames, odontologia veterinária, cirurgias especializadas e planos de saúde pet.',
+    slogan: 'Cuidado com amor, ciência e carinho.',
+    telephone: phone,
+    email: 'aumivet.clinica@gmail.com',
+    priceRange: '$$',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Rua Santo Antônio, 891',
+      addressLocality: 'Curitiba',
+      addressRegion: 'PR',
+      postalCode: '80230-120',
+      addressCountry: 'BR',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -25.4461097,
+      longitude: -49.2847143,
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Curitiba' },
+      { '@type': 'Place', name: 'Rebouças, Curitiba' },
+    ],
+    sameAs: [
+      'https://www.instagram.com/aumivet/',
+      'https://maps.google.com/?q=R.+Santo+Antonio,+891+-+Rebouças,+Curitiba+-+PR,+80230-120',
+    ],
+    makesOffer: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Consultas veterinárias e vacinas para cães e gatos' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cirurgias veterinárias especializadas' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cirurgia de catarata veterinária credenciada Petlove Saúde' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exames e diagnóstico veterinário' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Odontologia veterinária' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Adestramento pet' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Leva e traz para pets' } },
+    ],
+    knowsAbout: [
+      'clínica veterinária em Curitiba',
+      'veterinário no Rebouças',
+      'consulta veterinária',
+      'vacinação para cães e gatos',
+      'cirurgia veterinária',
+      'cirurgia de catarata veterinária',
+      'Petlove Saúde',
+      'odontologia veterinária',
+      'exames veterinários',
+      'atendimento humanizado para pets',
+    ],
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    url: siteUrl,
+    name: 'Aumivet',
+    alternateName: 'Aumivet Clínica Veterinária em Curitiba',
+    inLanguage: 'pt-BR',
+    publisher: { '@id': `${siteUrl}/#aumivet` },
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/#webpage`,
+    url: siteUrl,
+    name: 'Aumivet Clínica Veterinária em Curitiba',
+    description: 'Site oficial da Aumivet, clínica veterinária no Rebouças, em Curitiba.',
+    inLanguage: 'pt-BR',
+    isPartOf: { '@id': `${siteUrl}/#website` },
+    about: { '@id': `${siteUrl}/#aumivet` },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/images/redesign/hero-bento-desktop.webp`,
+    },
+  },
+  {
+    '@type': 'FAQPage',
+    '@id': `${siteUrl}/#faq`,
+    inLanguage: 'pt-BR',
+    mainEntity: faqItems.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer,
+      },
+    })),
+  },
+];
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Aumivet Clínica Veterinária em Curitiba | Rebouças"
+  description="Site oficial da Aumivet, clínica veterinária em Curitiba no Rebouças. Consultas, vacinas, exames, odontologia, cirurgias especializadas, Petlove Saúde e atendimento humanizado para cães e gatos."
+  canonicalPath="/"
+  schema={schema}
+>
   <Header />
   <main>
     <Hero />
@@ -32,4 +177,3 @@ import WhatsApp from '../components/WhatsApp.astro';
   <Footer />
   <WhatsApp />
 </BaseLayout>
-

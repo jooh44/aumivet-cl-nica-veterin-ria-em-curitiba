@@ -1,0 +1,395 @@
+[00:00]
+isso não depende de você, irmão, mas a gente precisa ajustar. Então a gente precisa pegar essas campanhas e colocar um material gráfico decente. Vocacionar o Arthur, cara. Vocacionar o Arthur. Hã? Vocacionar o Arthur e pedir para ele. Tudo bem, mano, mas a gente tá trabalhando um ano junto e a gente não acionou o Arthur até hoje para fazer Não. isso Entendeu Tá É que assim o olha Rafael sei que tu Deixa eu terminar de te falar, mano. Deixa eu terminar de te falar. Por favor. Tá.
+
+[00:26]
+Johnny, eu vou te falar uma coisa que eu falo teu Lucas que é meu funcionário, que você colida com ele, você é reativo igual ele, mano. Eu não estou apontando o dedo na tua cara dizendo que você está errado, eu estou dizendo que nós temos que resolver um problema. E eu estou conversando com você. E e quando eu digo, é assim, cara, eu preciso da sua ajuda, eu estou vendo uma necessidade, eu estou trazendo para você. Ah, mas não sei o que. Cara, foda-se o passado. Faz o corte e vamos para frente, entendeu? Uhum. É isso.
+
+[00:56]
+Não, eu entendi como a não entendi como a franta a minha, eu estou com falando, eu tô olhando para os fatos de realmente. Não, é fato, é fato, é fato. E eu sei de todos os fatos. Aí você fala: "Não, tava focado na programação, não, tava focado nisso". OK, eu entendi tudo isso. Tá focado no desenvolvimento da PI, tá focado Cara, eu entendi tudo isso. Eu sei onde nós estamos pisando. Você não tá lidando com uma pessoa que simplesmente aponta o dedo e tem a necessidade de um resultado. Ponto. Podemos seguir daí?
+
+[01:25]
+Sim, é, por isso que eu tô partindo explicando o o o o relatório. Não, aí, aí é onde eu vou te falar o que eu quero chegar. Eu gostaria, dentro da realidade possível, reestruturar todos esses anúncios trabalhando exatamente embasado no que a gente já tem, mas com as melhorias que são necessárias.
+
+[01:46]
+Eh, melhorar sim, cara, reestruturar, a gente vai dar um vai acontecer a mesma coisa que aconteceu lá quando ela perdeu a inteligência de campanha. A gente não pode fazer isso tipo É, estruturar tudo. O que a gente pode pode pode terminar. É que você deu uma pausa, eu achei que era bem falar, cara. Não, normal, é que eu também dou dessas, perdão.
+
+[02:12]
+É, pensei que a gente vai gastar um pouco mais dinheiro, mas a gente reestrutura, a gente pega, cria um novo perfil no Ads, reestrutura o novo perfil no Ads, vai gastar mais dinheiro, injeta nos dois perfis simultaneamente Até esse novo perfil rodar e aí depois desativa o perfil antigo. Essa é minha linha de raciocínio. Faz sentido para você isso?
+
+[02:40]
+Para o Google Ads não não faz sentido porque a nossa conta ela tem anos de de dados e inteligência já. Tá, então eu reparo que agora agora assim ó tá deixa eu agora eu posso explicar né agora que a gente conseguiu fazer engrenar e volta Tu lembra como é que estava antes, né? Voltou a vender mais caro. Voltou a voltar Voltou, né? O ticket está equilibrando de novo.
+
+[03:09]
+Não, isso eu concordo, eu concordo. Então assim, então agora o que que eu o que que eu fiz para isso, né? Para para isso acontecer. Eu realo todas as palavras chaves que o relatório que tu mandou a acusou de estarem pausadas ou não estar funcionando, elas foram transferidas para outro tipo de campanha, que é a a campanha inteligente, que é ela, a própria IA ajuda a gerar os títulos, os conteúdos e ela tá vendendo.
+
+[03:37]
+Ela que tá sendo nossa a salvação do tráfego da loja, né? E essa campanha de produtos que tava R$ 6 por dia, ela a gente tá desativando ela aos poucos, porque era essa que tava comendo dinheiro e não tava trazendo retorno. Mas você viu que eu fiz uma mudança, então, aonde eu quero chegar? Uhum. Ontem, eu tava tava mexendo e aí eu tava com o Cloud e aí eu falei: "Mano, testa isso para mim".
+
+[04:05]
+E ele fez uma alteração completa no sistema sem eu eu, tipo, deu aceite sem querer. Tá, pera aí, mas ele tem um um tem um foi me tem um foi mudado alguma coisa lá nas campanhas? Foi, mano, ontem foi. Ai, cara, aí você me complica. Por isso que eu tô te ligando, veado. Aí, assim, deixa eu só ver aqui. Eu vou puxar até pela API, que daí assim Tem 24 horas. O, o quê? Não entendi.
+
+[04:34]
+24 horas, foi ontem. Eu fiz o sistema fazer automático. Deixa eu ver aqui. Cara, a P Max tá com 20 dias, cara, a institucional, cara, R$ 55 a institucional não faz esse sentido. Porque essa institucional é as palavras chaves e defesa de marca, que é o quando a gente, quando eles pesquisam o RZvet para que os concorrentes não apareçam junto. Mas 55 por dia a gente tá jogando em conversão que a gente já queria naturalmente, cara.
+
+[05:04]
+Então, corrige, mano. Então, eu vou corrigir, né? Eu vou voltar aqui. A institucional é baixo e a P Max que é que que era que tá para tá com mais valor, que ela tá 20 por dia só, essa que tinha que tá com o valor desse adicional. Então, vou Então, transfere. Eu vou transferir, vou dar a correção. Mas foi um erro meu, cara. Eu tô Por isso que eu tô te ligando. Foi eu fiz merda. Não, mas relaxa. Não Não foi tu não não não empurrou a filha do precipício, pelo menos. Dá para Dá Dá para salvar.
+
+[05:34]
+Só que assim, cara, eh Você tem que falar Cara, eu eu tava analisando, eu não vou mexer, eu tava analisando Uhum. E aí ele mandou um comando, eu tava resolvendo um monte de coisa, ele falou: "Ah, execução, você faz". Aí eu falei: "Vai". E aí depois ele já tinha executado tudo, eu falei: "Se eu parar ele no meio, vai ser pior", entendeu? Ele usa o navegador, né? Daí Uhum para fazer as alterações, sabe?
+
+[06:02]
+Eh, aí E no sinal preciso de um computador melhor, tô com 16 GB, 16 GB tá uma bosta. Cara, quando tu quiser, assim, ó, vamos vamos vamos facilitar o teu lado. Você Você que Você tá curtindo o Tu tá empolgado agora com o IAI, tu Não, Cara, aí eu não quero fazer o seu trabalho, velho. É que isso realmente eu pedi uma análise, porque assim, e você há de concordar comigo, eu fiz uma análise e você resolveu um monte de coisa depois que eu te mostrei uma análise, porque você também tá envolvido um monte de coisa, entendeu? Agora, esse último relatório do último relatório foi na verdade foi só a questão dos títulos, na verdade a o restante foi invalidado, né?
+
+[06:34]
+Sim, mas mas resolveu, não resolveu? Você achou pontos, não? Achou pontos? Achei. Título, que eu tenho que resolver urgente. Isso aí é um já coloca na Ah, quando a casa voltar, alertar. Ela vai voltar na quarta. Então, cara, os títulos pode, ô, você pode executar, você tem acesso nos títulos lá para executar? Eu tenho, cara. Eu tenho Eu tenho acesso a toda a toda a estrutura do Então, patamar pode executar. Só que assim, eu preciso de um grande favor seu. Manda um e-mail dizendo que eu autorizei tal, tal, tal, dou afirmação para se der merda depois o resto da equipe não te cobrar.
+
+[07:04]
+Não, tranquilo, tranquilo. É, beleza. E assim, é, voltando, eu vou tá, vou corrigir, né? já está, estamos gravando e está marcando o checklist, eu vou lembrar. Então assim cara, o Google Ads, ele vai performar mais agora, né? Com essa campanha aí que eu puxei, que ela usa o catálogo inteligente, então ela vai Tu reparou que lá aquelas vendas que pipocou de 7K, Google Shopping, era aquele lá, aquele lance que tu tinha me mandado, lembra?
+
+[07:33]
+Que do Google Merchant Center, né? Algum, a três já tem uma integração nativa com o Merchant Center. Então, só pelo fato da gente estar, eh, tanto o catálogo lá dentro, aí a gente quando a gente ligar o Google Ads, os nossos produtos já vão para o marketplace automaticamente. É, isso que eu te Beleza. Isso que eu te falar, eh, mano, uma coisa, isso aí já não envolve você, tá?
+
+[08:00]
+Mas a gente parou de faturar na Amazon, mano, 2 anos atrás, 1 ano e 1/2 atrás a gente faturava até tipo 5.000, 6.000 na Amazon, a gente parou. Eu vou cobrar cash depois. O que que eu preciso fazer? Eu quero abrir todas as marketplace por possíveis, mano. Ah, é, que, mas um, é uma questão de atividade, cara. Botar, botar catálogo lá em, lá na, na Amazon também.
+
+[08:23]
+Eu vou ter que, eu posso avaliar a sincronização que ela está tendo da loja com a Amazon para ver se tem algum gap. Provavelmente deve ter, porque Veja isso aí do gap. Agora da questão do gerenciamento, do cadastro, isso a gente faz. Isso aí não é responsabilidade sua. Quando a gente muda o catálogo na TRAIL, ele vai mudar Tá em todos os canais da da Ela a o catálogo da Trey é a fonte da verdade dos produtos que roda no Google, que roda no Meta, que roda em qualquer lugar, sabe?
+
+[08:54]
+Qual é a a fonte, né, da Tá, é, mas é isso, mano, eu preciso de verdade outra coisa que eu quero falar com você, cara, e você vai odiar essa conversa. Se for para cortar outro cortar Não, não vai cortar nada não, mano. Não vai cortar nada não. Por enquanto não vai cortar Não, daí a próxima a gente tem serra, cara. Daí a próxima Poxa, não fica bravo não, rapaz. Calma. Porque assim, não, não, agora que você é porque é assim, cara.
+
+[09:21]
+Eh, Deixa eu falar, você você se estressar. Não sofre por antecedência, por favor. Eh, não. Cara, posso falar? Eu não vou Pode falar. Fala primeiro, depois eu falo. Tá. Cara, o seu chat não tá rolando, mano. Não tá rolando. A gente tá tendo muito dor de cabeça, a gente tá sabe o que eu tô fazendo? Eu tô tendo o resultado dos vendedores que tão roubando clientes do Chat Utente, fazendo o atendimento no próprio celular, tá ligado?
+
+[09:50]
+E analisando tudo assim, o que que qual que é a minha sugestão de verdade, Johnny? Eh, apareceu para mim e eu não e eu vou pedir sua ajuda para você me me ajudar nisso, de verdade. Por que que a gente não pega um sistema pronto, mano, que paga lá 200 conto por mês, tá ligado? Concordo. E usa a plataforma do os cara e que foda-se tudo e aí a gente bate. Aí já tem o sistema cambanzinho rodando, o CRM rodando.
+
+[10:20]
+Eu vi um bonzinho aqui, que é que caiu meu sistema agora aqui, eu não sei se eu salvei até até tinha colocado para mandar para você. Como? K e o m m o. Não, é o esse aqui, ó, vou te mandar aqui, ó, copiar. Mas claro, eu já por mim nunca a gente bota. Porque aí a gente não se mata, viado. Tipo, aí eu vou entrar naquela conversa que eu te falei, mano, às vezes a gente fica se cabando com um monte de merda e e o foco é outro, entendeu? Ó, te mandei aí. Foi um dos que eu achei, entendeu?
+
+[10:50]
+Tem dezenas assim. Ah. Tá. Esse aqui que você me mandou, ele é o mesmo sistema que a gente usa. Só que tá pronto, os cara tem camba, a gente não tem que programar, não tem que fazer nada, entendeu? Porque assim, eu quero soluções, Johnny. E assim, eu não tô eu não quero ter eu não vou terminar relações com você, mas eu quero soluções, entendeu? Uhum. É, então vou vou deixa eu te explicar sobre esse aplicativo aqui e eu Não, essa é uma opção, não tô dizendo que é essa que eu quero, tá?
+
+[11:19]
+É, a gente tem, né, a gente tem vários assim que são bons, tá? Mas eu uma uma coisa assim assim, é, que, a gente implementa, ele funciona, a lógica é a mesma, né? Tipo, camba, arrasta, Não, não, é é a mesma rolê, velho. Só que assim, Roteamento, né? Roteamento Porque assim, e Johnny, a gente, a gente tem um conhecimento técnico muito bom. Eu e você conversando é um nível. E eu adoro ter esse nível com você.
+
+[11:44]
+Só que, mano, quando a gente coloca peãozada, a galera do dia a dia, é isso que eu ia falar para ti, cara. Na verdade, o problema, o problema não tá sendo Só que irmão, é essa essa equipe que a gente tem, veado. É o que a gente A gente tem O problema não tá com o aplicativo, cara. Não, também tá. Porque o Desculpa. hoje Se o aplicativo Se o aplicativo não é funcional para limitação da equipe que eu tenho, ele tem um problema. Desculpa. É a realidade. Tá?
+
+[12:11]
+Mas quando eu falo isso, não é uma crítica negativa sobre o aplicativo, é que ele não é feito para aquele perfil de cliente. Entende? Que você quer vender um produto para o cliente que não tá preparado para aquilo? É isso. Hum. Não quer dizer que ele é ruim. Ele só não serve para aquele perfil. O que acontece Ah, a Lô, o o chat útil, como eu falei para ti, eh então, tudo aquelas questões e problemas já foram resolvidas.
+
+[12:38]
+Porque a gente colocar Eu sei qualquer coisa mas ele ele ele ele ele é dificultoso para trabalhar, cara. Ele é muito trabalhoso, ele é muito sistema grande. Ele tem muitos acessos, ele tem muitas abas É, ele tem um poder muito maior que qualquer CRM, sabe? Então, Exato. só que é o seguinte, irmão, eu preciso do cara que clica quatro vezes no bagulho por dia no máximo. Entende? É tipo assim, você tá dando um sistema da NASA pro macaco. Desculpa, mas é a realidade, entendeu?
+
+[13:08]
+É, faz sentido. Mas Entendeu? é Só pro macaco Não interprete mal, mas é a realidade. Então, eu preciso de um sistema básico, operacional que não trave. Hum. Tá. É, cara, assim, eu vou eu vou trazer as soluções que eu já conheço, já tenho elas na minha mente até quando estava falando, sabe? De De soluções, digamos que a gente vai ter que pagar uma assinatura para uma empresa, mas melhor por quê?
+
+[13:35]
+A gente cobra dessa empresa daí Exato, aí da voadora no que que toca na estratégia, É que nem você fez com a Trey, agora é voadora na Trey, tá ligado? É, não, exatamente, tipo, a as nossas automa Por exemplo, assim, as nossas automações, tudo, ela funciona normal, independente de chat e útil, sabe? É o menu, o menu menu lá e tal. Sim, sim, sim. Ela não precisa de tudo. Então a gente consegue manter e apenas conectar, tipo, a gente derruba o derruba não, né?
+
+[14:03]
+A gente salva tudo o trabalho que a gente fez, base de Não, dados pega o backup, né? Faz backup, transfere. Aí a gente tem essa mesma base de dados, vai para esse novo CRM. OK? Beleza. Aí, eh eu vou buscar um CRM simples. A gente vai perder muita coisa interessante de personalização, tá? Mas eles já não tavam executando, Então Você entendeu, mas assim, ó, essa vivência, ô, Johnny, você entendeu que toda sua expertise, eu vou te falar, quantos anos você tá, Johnny? Quantos anos você tem, mano? 32.
+
+[14:33]
+32. A criança ainda, com todo respeito.
+
+[14:40]
+Mas assim, o que eu quero te dizer, Johnny, assim, uma coisa, às vezes a gente sonha muito pelos outros, entendeu? A gente cria uma expectativa pela habilidade dos outros. E é isso que tá acontecendo nesse processo. É, cara, Eu eu tô eu tô dizendo para você me fodeu. Sua expectativa te fodeu. São coisas diferentes. É, também. Sim, exatamente. A sua expectativa te fodeu. São coisas diferentes. Você aí é a mesma coisa de falar: "Você me fodeu, porque você fodeu meu comércio". Ah, não.
+
+[15:10]
+Entende? Então, não não faz sentido. É, o que eu quero dizer é o seguinte, mano. É feijão com arroz, é disparo de segmentado para produtos segmentados, é A porra do Google Ads segmentada para produtos segmentados, por exemplo, o nosso Google Ads antigo que eu fiz lá atrás, que eu quero rastrear isso com você.
+
+[15:34]
+Eu quero realmente, cara, a gente criar dentro do Google Ads a gente criar uma nova janela só para a gente fazer um perfil novo, sem desativar. Eu sei que dá para fazer ali do lado. Por exemplo, é, manguito, cara. Nosso manguito, velho, parou de vender, mano. E nosso manguito é o melhor do Brasil, é o melhor da América Latina. Tá puxando na na campanha ainda manguitos, cara. A gente Eu tinha uma campanha de manguito que eu gastava R$ 7 por mês, velho, eu vendia a rodo. Ele não vende mais.
+
+[16:01]
+E eu não tenho concorrente de manguito que que me me que me me me cobriu. Hum. Eu sei que tem erros aí a ser resolvidos, entendeu? Então assim, não é uma treta, mas é uma necessidade de problemas a ser resolvidos. Ponto. Então assim, é, vamos focar nisso da loja. Eu tô te autorizando a partir de agora, mas manda por e-mail no final dessa reunião. Resolve todos aqueles erros ortográficos de abertura lá, tal, tal, tal, tal, tal. Só que não mexe nos códigos que estão lá de variação.
+
+[16:31]
+Não põe a mão naquilo. Ah, não. Lá na porta. Na escrita, na escrita aí no CEO Pode alterar que isso não é um problema. Tá, show de bola. Eu estudei, eu só não te liberei na primeiro momento que eu não sabia como ia se comportar o sistema. Aí como eu dei uma lida, dei uma avaliada, eu vi que é de boa. Então pode fazer essas alterações, tá? E a gente segue daí. Perfeito. Perfeito. Da sua questão de alterar lá, fazer a nova layout do do site. Não vamos mexer nisso agora. É, vamos deixar ali.
+
+[17:01]
+Aquilo ali a eu falei, hoje eu tenho já Vamos. Vamos. Mas vamos focar na é no motor principal. Depois Aí você ganha dinheiro, irmão. Você precisa pagar suas contas, não precisa? Não, claro, né? Então, pronto. A gente deu Cara, depois dos últimos acontecimentos, cara, eu dei assim, eu eu já falo que eu já tava, assim, você trouxe algo que eu já tava pensando que era eh já eh descontinuar o chat útil e levar para um CRM mais simples.
+
+[17:29]
+Porque, como eu falei, tavam levando Tá, o que eu preciso de você de verdade, mano, de verdade, de verdade. Primeiro, corrigir o site, fazer um API funcional efetivo e um no mínimo uma IAD atendimento rápido, mano, eu preciso disso. Uhum. Dá para fazer com a API oficial ainda, cara. Com a API oficial. Eu preciso Tem disso que ser, na verdade, tem que ser. Para a gente ligar agora a meta tá derrubando a gente, né? Não, eu não preciso.
+
+[17:58]
+Eu não Eu quero oficial e aí, tipo, o resto, mano, eu tô fazendo. Por exemplo, o Arthur vai rodar. E ele já sabe que ele vai rodar, porque que ele está fazendo o básico do básico. Deixa eu usar, deixa deixa eu espremer um pouco ele, não se Não, ele tem material para caralho. O Arthur você tem ele até junho, depois de junho já era. Tá, então vou usar ele bastante então. No bom sentido, né? Mas usa com foco.
+
+[18:24]
+Johnny, eu gosto muito de trabalhar com você mano, mas eu preciso de resultado, irmão. A minha treta com você não é nenhuma, mano. Eu preciso de resultado. Não, no caso, a gente Eu preciso de resultado. Se você me entregar resultado, irmão, eu te pago comissão, te pago porcentagem, eu eu vou virar padrinho dos seus filhos, vou viajar com seu vou fazer churrasco na tua casa, Você tá pagando sabe? Agora eu preciso de resultado.
+
+[18:52]
+Eh, vamos vamos definir então, tipo assim, a gente precisa duas coisas, né? A gente vai definir um escopo eh a partir de agora baseado já nessa reunião. Então, a gente já vai pegar o contexto dessa reunião. Eh, O que que eu, digamos, a minha visão agora para para a gente Por exemplo, uma coisa que é ridícula para mim.
+
+[19:15]
+Nós temos um um celular de API fixa que não está travada no nosso no no no no nosso Instagram, mano. É, aquilo aquilo ainda não Ela só funciona pelo gerenciador de anúncios, sabe? Dá para usar a API? Sim, anunciar usando aquela API. Só que criando pelo gerenciador de anúncios. Então. Tanto que a partir aqui, né? Você Tu me passou, lembra?
+
+[19:43]
+Para fazer aquela campanha que mostra o carro seu dos produtos, né? Já tá no meu checklist para eu fazer, né? E nesses carro seu ou algum outro produto, tem o botão do WhatsApp, daí ela vai clicar, vai cair na página oficial. Mas tem que ser pelo gerenciador da meta. Se for para o impulsionar, ela não deixa. Não vai. Ela Ela Ela precisa que seja seja um WhatsApp business daí. Entendi.
+
+[20:10]
+Então daí não dá, mas só que não é a gente pode e deve fazer agora, né? Essa Eu já até solicitei Artes para Artur referente a carrossel, ao produto para a gente botar na meta de novo. Que dá aí a gente Não, é o seguinte, velho, é assim, você se perdeu na programação e eu vou te falar uma coisa, você vai ficar puto comigo, você fez, fez, fez, mas você não me entregou.
+
+[20:34]
+Então assim, eu adoro seu trabalho, eu não vou te criticar, eu já te expliquei o que aconteceu, então vamos voltar, três casinhas, quatro casinhas, cinco casinhas e vamos fazer dinheiro. Show. E posso te passar, cara, aqui um assim, isso é E E outra coisa, eu sei Sei que não é má-fé, eu sei que você não vacilou, eu sei que não só não aconteceu. Por isso que a gente está tendo essa conversa. Então vamos voltar três casinhas e vamos continuar trabalhando. Tá.
+
+[21:01]
+O que que eu vou te passar aqui, a questão de, assim, da inteligência que nós podemos A gente, ó, resumindo é enxugar custo, otimizar tempo, tempo e tempo. falando de tempo. Eu tô falando de base Mano, você pode levar meu tempo inteiro, eu só preciso de dinheiro, viado. Assim, ó, digo que, qual qual que é a sacada?
+
+[21:22]
+A gente tem A gente já tem aí acessos a várias credenciais agora que vai a a por exemplo, o Google Ads. Eu vou até te passar que vai facilitar o teu jogo para puxar o relatório quando você quiser com a IA, que é a API do Google Ads ali, que daí ela puxa pelo ela ela não vai usar o navegador e ficar navegando e consumindo tua memória RAM e demorando uma eternidade para entregar. Ela vai te entregar sim, rapidão. Tá, eu quero que você me ajuda em outras coisas.
+
+[21:52]
+Aí, aí é uma coisa pessoal, por exemplo. Não, é, sim, mas sim, deixa só terminar com o polícia, senão me perde, por favor. Vai, vai, vai, vai, vai, vai. Porque assim, aí tem a pastinha do Google Ads, tem a pastinha do nosso servidor, que a gente pode subir lá em page, fazer o que quiser. É um computador nosso lá na Nube, né? A gente tem, eu tenho todas essas pastas e agora tem uma IA que fica acima dessas pastas e vai ser uma inteligência suprema nas estratégias da RZ. baseado em todos, Não de acesso a isso, cara.
+
+[22:22]
+Aí, aí que que a gente vai Aí eu vou puxar, cara, essa aí. Ah, aí qual que vai ser a grande sacada? A gente não Cara, não vou desenvolver mais eh eh chat útil, desenvolver, né? Vamos focar o tempo agora no no no Não, chat útil Então, ó, você gastou seis meses do nosso tempo e a gente podia meter um chat útil de R$ 200, mano. Só que é a mesma coisa, Rafael. Ia ser a mesma complexidade, porque aquele chat útil que, por exemplo, que tu me mostrou, ele é um forte um fork que que é?
+
+[22:51]
+É um clone, um clone do ChatGPT oficial modificado, né? Basicamente Só que você vai ter que programar ele inteiro, mano, ele ia estar pronto. Aí você mandar outro filho da puta se foder, entendeu? Uhum. É, só que a a usabilidade é a mesma. Então, eu ainda voto na de a gente pegar um CRM simples, porque a complexidade ela é mesmo a arquitetura do ChatGPT, mesma linguagem de programação, mesma complexidade e mesmos problemas.
+
+[23:20]
+Então a gente não iria para a frente, sabe? Então, pagar um CRM a parte simples, né? E esse CRM, esse CRM simples, a a grande maioria deles, eles têm o plano gratuito, você pode cadastrar já um vendedor. Mano, é isso eu fiz da questão que me você me incomoda um pouco. A questão não é o gratuito, mano. Eu não quero o gratuito, eu quero que funcione. Então, para exato, então a concluindo, né?
+
+[23:47]
+Concluindo a o curso em média é por colaborador, né? Então a gente vai ter a risco três é os vendedores Cinco, vai. Põe uma média de cinco. Uma média de cinco. Então é em média de R$ 80, 70, 80. Depende, depende da plataforma. Tem umas que é R$ 50, R$ 40 por vendedor. Não, mas ainda é válido, mano. Então a gente vai executar, né? E tipo faz total sentido, porque é mensal, né?
+
+[24:13]
+Aí, a gente contratando isso, eu não preciso esperar as credenciais da Trey para já cortar, por exemplo, a a reportando de vez, né? A reportando os e-mails já foi quase tudo liquidado lá, sabe? Deu só Cara, é o seguinte, mano. Johnny, a questão não é o dinheiro, mano. Eu queria que você entendesse. Vamos contratar o troço, então, tipo, O dinheiro é uma ferramenta, viado. O dinheiro é uma ferramenta.
+
+[24:43]
+Eu tenho uma O dinheiro é uma ferramenta. Se você falasse para mim: "Rafa, eu preciso de R$ 50.000 para fazer essa operação", e você me entregar 1 milhão, eu te dou R$ 100.000. Só que você tá me cobrando X e esse X não tá pagando 10% da operação. É onde eu estou batendo a tecla. Não é a questão do volume do dinheiro que você tá usando, a questão do resultado que você está me entregando. É isso, é basicamente isso.
+
+[25:09]
+Se você tiver entregando resultado, irmão, eu tô eu tava te pagando A minha proposta para você é comissão por porcentagem de crescimento. Crescimento da empresa pagar a comissão e ponto. Tá, então então agora chegou a um ponto importante.
+
+[25:24]
+Vamos vamos definir já um KPI para fixar ele qual vai ser a minha meta já com vocês para E assim, É só só para só para formalizar ou oficializar aqui, que é a nossa meta é, então a minha meta no caso é o crescimento geral. Aquele lado aí, OK? Não, sua meta é crescimento geral na mídia social.
+
+[25:48]
+Sua meta é crescimento geral em faturamento de de plataforma Não, de plataforma, tipo assim, ó, só que é o seguinte, por exemplo Aí que tá sendo uma uma um questionamento que isso tá me incomodando recentemente e eu vou vou compartilhar com você. Uhum.
+
+[26:09]
+Por exemplo, eu fiz um trabalho paralelo totalmente diferenciado de marketplace, de MercadoLivre e de Shopee, que tá entrando na sua meta.
+
+[26:24]
+Entende? Hum, entendi. Eh, E aí, como é que eu coloco isso na sua meta? É, só tu me fala falar quanto, se for a, só falar quanto por mês, só da loja, né? Só que você tem acesso aos números, irmão, tá lá. Eu tenho. O 100, o 100.000, tipo assim, ela é uma meta. Ó, 100.000 Vou te fazer, vou só te responder antes antes de você continuar, quando a gente sentou para conversar, eu te apresentei todos os números.
+
+[26:54]
+Se você pegar lá atrás, pode pode buscar, pode buscar. Isso aí eu não tô falando de boca para fora não. Quando eu te coloquei que a gente tava faturando a média de 50 75, 70.000, MercadoLivre, Shopee não dava cinco. Não dava cinco. Todo trabalho que você executou até hoje, você nunca executou nada em MercadoLivre, Shopee ou qualquer outro marketplace fora do do do do da nossa plataforma. Ou foi Google Ads ou Facebook ou Instagram. Concorda comigo?
+
+[27:24]
+Concordo, totalmente. Não tá Concordo. errado Hoje você tá fazendo somatória do seu faturamento da sua capacidade técnica e envolvendo marketplace que não foi envolvido no seu trabalho.
+
+[27:37]
+Que eu fiz paralelo com outros profissionais. Pode ler, pode ver os números. Eu te apresento riqueza de detalhes. Eu tô com eles aqui. Só, é, Pode ler, é, deixa eu ver. Não, sim, eu tô eu também eu eu vejo, cara, todo dia assim, sabe, os dados da loja. Não, e tá tá indo bem, a gente melhorou, entendeu? Mas assim, tá bem longe da nossa realidade, mano. Hum.
+
+[28:05]
+É, mas então assim, é, Já que você quer definir o padrão não tem não tem problema com a divisão, sabe? Eu não tenho problema a divisão de pegar e separar, né? Puxar aqui, separar só no caso, ó, as minhas vendas vão ser todas tagueadas pela loja. Não, e assim, ó, loja, loja, loja, loja Facebook. E eu já tô John, loja Google, John. Loja pesquisa online, Johnny.
+
+[28:34]
+Loja loja, Johnny. Isso aí para mim tá suave, mano. Não tem qualquer dúvida. Tá. Só que assim, fiz o todo um trabalho, reestruturei tudo, montei o sistema todinho no MercadoLivre, coloquei sistema full, validei loja, tal, tal, tal. Você Você foi comunicado sobre isso?
+
+[28:56]
+Eu recebo só notificações quando acontece algum problema. Mas você viu todo o trabalho que foi executado, Mercado Livre? Sim, eu entro, agora eu entro no Mercado Livre da no Tá, Mas você trabalhou em cima desse projeto? Não, não trabalhei em cima dele. Então, você acha é justo receber em cima dele? Não, mas tanto é que eu não estou recebendo. Eu não Eu não A Uma que a gente não tinha definido, né? Talvez foi um meio Não, nem Eu concordo, concordo, concordo. A gente não ter definido, né?
+
+[29:25]
+Esses tipo Não, não, concordo, a a a da abertura É que assim, a gente não tem A gente não definiu, porque também eu achei lá no lá atrás, aí é uma falha minha também, Johnny. E E cara, entenda uma coisa sobre mim, Johnny, eu não sou um cara que tipo vou ficar colocando empecilhos no processo. Esquece. Não vai acontecer. A partir do momento que você tiver dúvida de mim e tiver dúvida de você, eu vou chegar e falar: Johnny, quanto que eu te devo? Ah, te devo tanto.
+
+[29:53]
+Então vamos fechar aqui, segue daqui para frente. Então o prazer de trabalhar com você e acabou. E não vai ter dúvidas mais sobre isso. Mas assim, lá atrás eu achei que você ia gerenciar também essa parte das marketplace, tal, tal, tal, tal, tal. E a gente foi para outro caminho. E aí eu peguei outros profissionais. Não, para vários, para vários. Só que assim, aí eu peguei outros profissionais para curtir a marketplace e e trabalhar e tá dando o caminho paralelo.
+
+[30:22]
+E assim, o seu número tá diminuindo, ele não tá aumentando, porque quem tá fazendo o seu número é as marketplace que você não entrou. Entende onde eu tô pisando na tecla?
+
+[30:35]
+E eu lembro que eu Não, e aí só para falar, só para te te dar mérito também, eu entendi o fato da programação que você entrou e eu vou te falar, mano, a gente errou de ter seguido esse caminho. Erramos, ponto. O que que eu estou dizendo para você agora, Johnny, eu vou te dar. Nós estamos agora dia 17/04, eu vou te dar até dia 30/06, tá?
+
+[31:01]
+Para a gente Eu não vou mudar nada do do nosso trabalho, pelo contrário, eu vou mudar as nossas ações, agora valor, essas coisas, esquece, não vou mudar nada. A gente vai focar em marketing, a gente vai focar em Google Ads e Medição de demanda. Tá? E arrumar a porra de um API que funciona. Prático, eficiente. Eu preciso que o macaco alpere essa porra.
+
+[31:30]
+Ah, se for um macaco, a gente bota I A para entender essa Então, então me traz uma I A, mano. Pô, só que assim, vamos vamos definir então já, já, vamos entrar entrar num consenso. Então, é, eu sei que cada vendedor tem ali uma meta de média de 50 é 50.000 ou 55.000 Tá me por cabeça. Né? Cara, tem que ter que jogar uma meta dessa em cima de mim também, só da loja tirando os marketplace, cara. Aí faz sentido. De comissão você quer? Não, é para eu ter já uma meta.
+
+[31:58]
+Como é que funciona a comissão, o comissionamento dos vendedores? Eles passam Já te a explica agora. Passou da meta dos vendedores, eles quando passa da meta eles recebem comissão? Ou é para baseado na venda já? Não, eu te conto agora, filha. Ah, você quer falar de merda? Ah, meu Vou Vamos falar de dinheiro, veado. Não, vamos falar de dinheiro, por isso que Não, eu não não, não, não, vamos falar, ó. Funciona assim, ó. Deixa eu falar. Larga, vamos vamos esquecer de toda essa parte e focar na matemática da coisa, né? Vamos Tá.
+
+[32:26]
+falar o número É o seguinte, ó, a meta de vendedor é 50.000 por por mês. Sim. Tá? Se dobrar a meta, ganha mais R$ 500 de bônus, que é 100.000. É, a meta é a cada é 3% de comissão vendido à vista para material de equipamento de alto custo, então, por exemplo, tudo que é equipamento é 3% se você vender à vista ou em duas vezes.
+
+[32:58]
+Tá anotando? Tô. Tá. Aí Se você já vender na calculadora aberta aqui já Se você vender de três vezes até seis vezes é 2% de comissão. E se você vender acima disso é 1% de comissão. Tá, acima da Isso da meta é para equipamento, para equipamento. Beleza.
+
+[33:18]
+Material de consumo vai ser novidade, que eu vou lançar agora dia 29 para o dia 30, é 6% de comissão à vista para material de consumo, que é seringa, agulha, equipo e assim a porra toda. Tudo que é material, tudo que é descartável é 6% de comissão. Tá. Então assim, é isso aí, no caso, na venda à corrida. Não Não tem, digamos, não que ela só vale.
+
+[33:45]
+Não, vendeu, ganhou, vendeu, ganhou, vendeu, ganhou, vendeu, É ganhou isso também, porque daí eu vou eu eu já tô conseguindo rastrear e atribuir as vendas. Vendeu, ganhou, vendeu, ganhou. Não Não é a a assim, dobrou a meta, ganha bônus, mas é vendeu, ganhou, vendeu, ganhou. Aí o o o o fixo entra, no caso, o salário fixo deles, é Dois contos. para para para bater a meta, né, que é estipulada, né?
+
+[34:11]
+Então, é o fixo mais é o regime de fixo mais variável Eu já, eu já trabalhei nessa metodologia em no mercado imobiliário, então, cara, para mim tá tudo bem. Não, e eu tenho mais coisa, ó, que era algo para medir agora, né? E outra coisa que eu lancei agora, que eu vou lançar, é o seguinte, ó, é 6% do material de consumo, que eu quero fazer material de consumo rodar. Que é aquelas ataduras, tudo aquele material barato, né? Sim.
+
+[34:39]
+Se o cara vender 40.001, 40.001, se ele vender 40 40.000 ele não ganha, mas você vende é 40.000 e 0,1 por 1 real, né? 1 centavo de real. A comissão dele é aumentada para 10% de tudo que ele vendeu naquele mês.
+
+[34:58]
+Então, por exemplo, se o cara vendeu mas é é é aumentada naquele seguinte, o cara que vendeu a 6% vai para 10%, o cara que vendeu a 4% vai para 8%, o cara que vendeu a 3% vai para 6% automaticamente, entendeu? Toda a comissão dele já já aumenta, se ele vender 40.001. Hum, entendi por cara.
+
+[35:23]
+Para mim faz mais sentido que agora eu tenho um norte para eu olhar, um número para eu olhar, o número Entendeu? que eu corro atrás E cara, então assim, faz sentido a mesma meta dos vendedores para Mano, eu preciso, a loja não pode fazer menos de 60.000. Isso assim, espremendo. O ideal da loja saudável é sim. Tava nisso, cara. A gente tava nisso já.
+
+[35:47]
+É, mas assim, é que você tá dando uma desculpa de um de quatro dias que ficou sem cartão de crédito, mas Não, foi um ponto de você repetir isso. Oi, não. Tô ficando puto de você repetir isso. Foi quatro dias sem cartão de crédito, está me incomodando com isso. Não foi isso que travou o nosso sistema de faturamento. Me não me pare de repetir isso, me conte. Tá, eu não vou repetir. Tá, eu digo que foi, mas não vou repetir mais. Porque Não foi, cara. Não foi, com todo respeito, não foi. É só você pegar a progressão do de todo todos esses meses que a gente tá trabalhando.
+
+[36:16]
+Desculpa, não acredito, não é viável, não é aplicável e eu não gosto que você fique repetindo isso. Você não tá falando com um moleque, por favor. Tá. Eh, É.
+
+[36:31]
+Vamos vamos conversar outra hora. Tá? E eu não gosto quando começa a subir o sangue, tá? Não, eu não subi o sangue, cara, mas assim, eu aceito o argumento. Não bota carapanca de chefão para cima de mim. Fechou? Só isso que eu te peço também. Assim como você Eu Eu não entendo, é conversa de empresa para empresa, cara, eu estou nem aí. Tá? Eu não tinha Ó, viu? Ó, viu? Ó, viu? Ó, viu?
+
+[36:59]
+Saiu o faturamento por causa do cartão que você não avisou que tinha mudado. E E quatro dias Mas cara, quanto tempo esse cartão? quatro dias sem pagamento quatro dias, mano, mas o faturamento tá caindo nos últimos meses. Por mais de duas semanas a campanha derrubada. Quando mais de duas semanas a campanha é derrubada. Não, não tô falando que ela parou de rodar.
+
+[37:20]
+Ela continua, ela voltou quando você trocou o cartão, mas ela perdeu toda a inteligência que a gente já tinha acumulado Não comecei tanto é que eu não tô 100.000 mês passado, janeiro deu Eu já te puxa agora, deixa eu ver. fevereiro batimos também 60.000 março aconteceu a merda, cara, foi a merda. Não, cara, eu não vou te cobrar sobre questões que eu sei que é uma amplitude que não depende só de você, mano.
+
+[37:47]
+É aonde eu quero chegar para você, Johnny, que eu quero te explicar que eu não sou uma pessoa ignorante nesse nível. ganharia os, é, a comissão da venda do, daqueles monitor que fez 7.000 já, então? Eu não te ouvi, cara, desculpa. Por exemplo, aqui eu tô, não, você tava falando, tava fazendo conta. Deixa eu só fazer uma pergunta. Um um aparelho, um monitor de uma média de 7.000 e 100, quanto eu ganharia de comissão, se fosse para um produto desse?
+
+[38:17]
+Em média de 200 reais, 210. Ó, à vista, se você vender à vista, é 3%. 3%. Foi vendido uma à vista antes de ontem. Então. Agora você concorda comigo, cara, que eu entendo que você quer resultado, quer ver o dinheiro que tu tá botando aqui Não, mano, é que Johnny, a questão minha não é só ver dinheiro, velho.
+
+[38:39]
+Eu não sou uma pessoa que acorda de manhã e vai pegar uma chibata e vai pegar e ligar para o Johnny e vai agredir o Johnny por um problema. Eu você um corte unilateral pode não fazer diferença. Um corte de 0 Na verdade era R$1000. Não, cara. Se você meter dinheiro lá, se você quiser essa comissão Não, não quero saber.
+
+[39:03]
+Isso é o primeiro, ó, eu eu eu quero pra gente olhar porque houve uma quebra unilateral, cara, de contrato. Eu não tô te dizendo. Eu não tô acionando justiça aqui, nem vou acionar. Relaxa, não estou falando isso, mas eu digo que o que aconteceu. Cara, tu pegou e cortou.
+
+[39:24]
+Cortou ali o o o valor do do por conta de todos, cara, não é questão que eu vou ficar, eu vou bater nesse martelo porque foi o que aconteceu e foi isso, cara, que começou a desandar totalmente a partir de lá o faturamento da loja. E eu já provei, mandei relatório, tem prova atrás de prova que aí foi isso que aconteceu.
+
+[39:46]
+É, Johnny, se tá acontecendo uma coisa que eu quero, a gente vai a partir dessa reunião, a gente que a gente já entrou de acordo na questão aqui do que a gente a gente vai executar, né? A gente vai executar ali das campanhas e e também as nossas próximas atividades e também uma meta, uma meta ali que é totalmente plausível para mim, que é essa a mesma meta que os vendedores, né? Já que eu tô com o mesmo salário deles, né? Sim, exatamente o mesmo, literalmente.
+
+[40:15]
+Então, eh e cara, eh a gente, cara, eu quero um acordo. Quero um acordo que é o seguinte, a gente, ó, eu tô me comprometendo e botando uma meta em jogo. A meta, agora a gente vai responder para os números. Eu vou R$ 60.000 por mês só da loja. Beleza, concordo. Com os recursos, né, da do Ads que eu preciso, que você E já quais me são esses recursos? É o cara, já tem, já tá tendo.
+
+[40:44]
+Você já Você já autorizou que foi o último aumento de verba, que é o que tá fazendo E aumentei mais a merda que eu fiz sem você. Aumentei para dois pau e 1/2. E a campanha foi subindo. Não, cara, se você mexeu ali, cara, dependendo no que você mexeu, o cara tu pode ter fodido de novo. Por isso que eu mandei você olhar, caralho. Então, então eu por isso eu estou agora passando, né? O que que é o meu óculo, cara?
+
+[41:09]
+Assim, eu não esse mês, assim, ó, esquece comissão, não, não, não quero saber de comissão nem nada, não vamos Não, não tem nem como. está reestruturado, mas o que eu quero, eu quero que você vá lá no e-mail, abra o contrato, assine ele ao mesmo valor que está lá. Aí a gente pega e executa tá?
+
+[41:40]
+Tu pode, cara, pode mandar embora e fazer o que Mas vamos fazer certinho. Tá? Johnny, eu concordo parcialmente do que você tá dizendo. Os 2.500 de novo, cara, porque Não, não me pagaram. Olha o que eu pedi lá para a gente usa muito IA agora, né? Tá todo mundo usando IA e é, cara, é inevitável a gente ter que gastar com IA. Bem, não me veio a assinatura da da outra aula, eu pedi duas vezes. Johnny, é que é o seguinte, vamos lá. Tá.
+
+[42:10]
+É que você tá misturando poucas coisas, às às vezes você me cansa um pouco, diz com todo respeito, eu não quero te ofender. Qual que o que você quer a partir de agora pra gente seguir em frente? É preciso que você seja pontual, seja pontual. Só isso. Só peço Hã? meu contrato de Eu só peço Tá, o seu contrato Tá, envolve o quê? O seu contrato ele envolve eu te colocar uma meta trimestral, que se você não bater a meta de 60.000 mês em um trimestre, eu posso te mandar embora? Pode.
+
+[42:40]
+pode. É isso? É isso que eu O seu contrato tá escrito isso? O meu O contrato tá escrito que vocês podem encerrar apenas dando um aviso prévio de 30 dias Sim, mas cara, a questão não é essa. A questão é que você tá se pegando a um ponto e e eu vou vou te dar um conselho como amigo agora. Aí já esquece o profissional, tá? Vou te falar o conselho como amigo.
+
+[43:06]
+Se eu quisesse bater nesse ponto de contrato e agressão Não, de algum jeito, a gente já tava em outro caminho, a gente tava em outra realidade. Entendeu? Quando você fala de contrato para mim, isso não é um problema. Por exemplo, eu faço contrato com pessoas que eu não confio. Concordo com a sua necessidade do contrato, fique claro. Mas eu faço contrato com pessoas que eu tenho a necessidade de, tipo, travar porque eu sei que se der merda, eu tenho que comprar onde correr. Eu também não sou acostumado a pedir contrato, cara.
+
+[43:33]
+Mas o que eu tô querendo dizer, o que eu tô querendo te dizer a não ter que o combinado seja Então, o Mas a redução que eu fiz irmão, foi estritamente muito bem trabalhada e conversada com você sobre os motivos. Não foi uma questão do meu ego, algo no sentido falou: "Porra Dioni, não acordei feliz hoje, porque acordei triste hoje, vou prejudicar o Dioni".
+
+[43:57]
+É, todo o trabalho que foi feito e a situação que foi aplicada, o prejuízo foi aplicado também, então realmente não tivemos resultados. E Dioni, eu gosto de trabalhar com você, só que eu vejo que existe uma necessidade de gerenciamento maior é para trabalhar com você. E eu tô tentando da melhor forma possível que isso aconteça para ambos os lados. E assim, eu posso fazer um contrato perfeito. A minha mulher é advogada, cara. Eu contrato para mim é a coisa mais simples do mundo de ser executado. Eu acabei de acabei de fechar também. Entendeu?
+
+[44:27]
+Então eu tô indo para advocacia, tá ligado? Isso, é bem tranquilo. Hoje eu tô na Hoje eu tô seguindo, eu tô mudando da Mudando não, expandindo, eu tô em expansão. Uhum. Isso é ótimo. para advocacia, né? Hoje eu fechei com um escritório de 34 Eu anos tô expandindo também, eu tô expandindo a Eu vou abrir um posto de recarga, mano. Posto de recarga? De celular? De carro. Hã? Ah, recarga de carro. Nossa, que viajei, ó. É.
+
+[44:56]
+Envolvendo energia, é um investimento bem futuro, não sei se tá rodando bem agora, né? É, vai estar rodando. Vai estar rodando. Mas, cara, eu te falo assim, ó. Eu só Eu só pego O que que eu Não tô Não tô exigindo cobrança Não, cara, você quebrou contra Não, nada a ver. Daí eu falei: "Não tô te cobrando judicialmente". Eu não sou Eu não sou desse, sabe? Eu nunca me envolvi num processo na vida, né? Não, e eu tô bem, mano.
+
+[45:18]
+Tipo, se um dia você falar para mim que tô fazendo alguma coisa errada e eu tiver fazendo, eu vou eu vou me corrigir automaticamente e vou cumprir com o que eu prometi. E eu não fui, cara, assim, eu não fui atrás, eu falei: "É porque eu Sabe que eu tenho hiperfoco? Daí agora eu tô na área do direito também. Eu fechei com a escritório eh Gioia, tem 34 anos, São Paulo. Não sei se o viu falar no de São Paulo. É É um É um assim, uns cara pica mesmo, sabe?
+
+[45:44]
+Escritório grande, o cara Uhum foi advogado de até para clube de futebol, da televisão. Assim, cara, ali eu peguei um contrato, cara, bem, nossa, assim, um dos melhores, sabe? E aí eu, cara, eu eu agora eu tô muito envolvido nessa área de de de de de deixar tudo certinho, alinhado como deve ser. Eh, Concordo. Concordo.
+
+[46:08]
+Deixar ele, por exemplo, pô, a a gente ter uma um painelzinho, algum lugar que mostre todos os resultados eh de de Cara, sabe como você pode resolver isso de uma forma simples? Você tem meu e-mail? Tenho, tenho. Então manda um e-mail, cara. Por exemplo, termina essa reunião, manda por e-mail. E assim, eu vou dar um aceite para você, isso é um documento totalmente válido. Você quer um documento assinado? Eu assino.
+
+[46:33]
+Aonde eu quero chegar no ponto, Johnny, é que assim, a gente tá numa fase de adaptação. Eu sou uma pessoa de projetos. Então, por exemplo, por que que a gente tá tendo essa discussão? Porque o projeto não chegou ao ponto que era necessário. Então, a gente tá fazendo adaptações. Então, se eu assinar um contrato sobre algo que era necessário e algo que tá sendo deputado? Nós vamos para o jurídico direto e a gente para de trabalhar. É onde eu quero te explicar. Isso chama jurisprudência e blá, blá, blá, blá, blá. Entendeu? Então, esse é o ponto.
+
+[47:03]
+Por exemplo, você acabou de falar para mim, você falou: "Rafa, me dá aí, eu quero, ó, se eu receber 60 pau é dois conto por mês mais a comissão X Y Z. Moleque, manda esse contrato para mim eu assino agora com validade de três meses. Eu quero te pressionar desse jeito, te ligar todo dia 6 horas da manhã e falar: "Vai, veado, vai, veado, vai, veado, me entrega". entrega. É, eu também, É, eu quero na verdade, você tá me trazendo a melhor realização da minha vida. Se você tiver mais uns três cara que tá me fazendo essa proposta, eu assino também.
+
+[47:34]
+Entende? Só que aonde eu tô chegando com você, é, nós estamos Quanto tempo a gente tá junto, irmão? Cara, vai fazer 1 ano, o mês que vem. Então, e você não tá me entregando, cara.
+
+[47:50]
+E aí, se eu tivesse essa eh eh essa logística que você tá me pedindo, eu tava te processando agora. Entende onde eu quero chegar? Então tem pontos e pontos, entende? Cara, eu confio em você, eu acredito no seu potencial. Só que a gente tá e e eu sei que também tem falha minha no meio do caminho aí também, entendeu?
+
+[48:12]
+Te deixei solto, podia ter te orientado melhor também perante a operação da empresa, tem um monte de de de de delays ali no meio do rolê, entendeu? Então, tipo assim, aonde eu quero chegar. Quer assinar isso aí? Mano, assina agora, velho. Monta o contrato aí, manda para mim, assina aqui sem pensar É, não, é, tipo, a solicitação pro pai era só, né, que a gente pode ser até Eu vou ter Eu vou Eu vou refazer o contrato ali, agora com o escopo atualizado, com metas, KPI bonitinho.
+
+[48:41]
+Eh, mas assim, não que eu quero quero ter um contrato assinado com você. Não, o cara, eu só quero que o que já foi. Não, te dou referência, meu. O valor O que você entende, assim o que já foi E aí a partir Lembra quando a gente se conheceu e você falou, eu falei: "Vou te testar 6 meses". Sim. Aí testei, porra, teve potencial, tá, vamos testar mais um pouco, tal. Não era o que eu queria, mas eu falei: "Vamos testar mais um pouco, tal". Cara, você tem potencial.
+
+[49:07]
+Só que Johnny, você abre um monte de janela para mim, eu acho bom legal trabalhar com você, de verdade, velho, eu acho bom. Só que assim, eu preciso, eu sou empresário, mano, preciso de resultado, mano. Não tem como trabalhar sem resultado. Não tem. E se você me falar que você faz um contrato para mim que você vai faturar. O contrato é baseado em faturamento, o dia que eu não assinar isso pode dar um tiro na minha cabeça, na hora. Tô assinado. É, a gente pode dizer assim, ó, eu até onde já está bem definido.
+
+[49:35]
+Bom, cara, bota as a meta do comercial para mim. Não, eu até diminuo a meta para você, mano. Eu faço por 50, nem por 60, porque a meta do comercial é 60, faço para você por 50. Só que é o quê? É Facebook, Google e a loja, esses três. Não, claro, é o que está está tá? Tá dentro do Instagram. Aí, aí, aí, Instagram também, vai, deixa até passar Instagram. O que não pode é as outras marketplaces, é que é Uhum.
+
+[50:01]
+Shopee, Amazon e e MercadoLivre Esses aí É, o Instagram dá, a não ser que, a não ser as campanhas, né, do do, tipo, campanhas ali de tráfego que a gente executar agora, por exemplo, ah, o carrosel dos produtos, as estratégias que a gente executava no no ano passado, é Não, aí teve direcionamento, aí aquele cara a Rossel que você fez o trampo, direcionou, a gente soma. Sim, beleza. É só isso É só isso que eu queria Não, deixar aí sim, também eu concordo.
+
+[50:31]
+Aí você fez toda uma ação ali, pá, somou, tô dentro. E agora eu consigo. Agora você não pode pegar todo o trabalho do Instagram e querer puxar para você, entendeu? Daí eu vou puxar que com qual que daí qual que é como que a gente vai medir, tá? É bem simples, bem simples mesmo. Cara, se é é eu vou as campanhas que eu subi agora, cara, no O RL agora todas as plataformas, eu não tenho como mentir para você.
+
+[50:55]
+Aí eu eu vou eu vou subir todas as a estrutura, né, que eu sei que dá resultado já para trazer demanda, trazer, né? Tá, uma coisa que tá me incomodando já Aí sim, a partir a partir dessa data conversa de hoje, a gente aí já tá valendo ali cara aquela meta, no caso, tipo Só que aí, mano, eu vou falar, não é 2:30, é 2, mano, vamos travar no 2. Não, tá tranquilo.
+
+[51:19]
+Se for a gente avaliar a partir de hoje a questão de comissionamento mesma base comercial dos vendedores aí sim aí eu monto um painel até que tu vai ver o meu show de bola Pode escrever o contrato tô dentro quero validar ó faz um contrato de 6 meses com pré-aprovação de 3 meses em 3 meses não der certo a gente cancela cancela sem Você me entrega a operação que você tem, se der certo, renova por mais três seis, se der certo a gente renova por mais três seis, pode ser?
+
+[52:00]
+Cara, perfeito, cara. Eu acho Acho que depois de tanto Não, mano, mas é que você não sabe falar comigo, homem, porque para mim Não, não, é desculpa, ó, desculpa. Eu sou bem, é, não, não preciso explicar o porquê que eu sou isso ou aquilo. Não, tá, mas é assim, cara, eu sou assim e eu sou de resultado, mas aí traz resultado.
+
+[52:24]
+A advogada literalmente tá sentada na minha frente, ela vai ler o contrato, inclusive vai te favorecer, porque ela gosta de você. Vai fazer o contrato certinho. né, pô. É que ela desistiu, mano, porque ela foi contratada por uma empresa aí, aí Ah, ela tá na pena. escritório, né? Aham. Ah, não, não, então faz É que nós é otário, ela ganha dinheiro e a gente trabalha, entendeu? Ah, não. É, o pior que, cara, é, ele sabe, é, advogado sabe Tá, Johnny, vamos lá.
+
+[52:53]
+Deixa eu Deixa agora eu falar um pouquinho sobre essa essa operação. Já tá definido, monta a porra do contrato e segue. Podemos partir daí? Podemos, cara. Tá, cara. O que que eu preciso de você, irmão? Eu preciso muito. muito, muito, muito, muito, muito, muito. Analisa a porra do Google Ads completo. Muda tudo que tá sendo acontecendo. Pega um projeto de cada vez, se tem R$ 2.500 por mês, tá liberado, mas você não pode gastar R$ 1 a mais.
+
+[53:21]
+Se você gastar R$ 1 a mais, eu vou descontar de você. Tá. Ponto. O 2.500 só para o Google Ads ou o Google Ads Só para Google Ads. Tá. Perfeito. Tá? Meta, eu tô abandonando a meta por um período. Eu fazer alguns trabalhos paralelos, eu vou deixar a meta tá viciada. Eu vou fazer o Google Ads e a meta eu vou deixar quietinha por enquanto, eu tô procurando uma um profissional para fazer a parte de marketing mesmo, de se expor mesmo, sabe? Gestor de tráfego.
+
+[53:51]
+Não. Se expor mesmo, fazer videozinho, fazer Ah, pessoal tudo tá legal Porque aí o Não deu certo com aquela mulher, não deu certo com aquela menina lá? Cara, eu não tô com tempo, mano. Eu não tô com tempo, veado. Eu trabalho que nem um louco. Eu só tenho cara de de vagabundo, não paro de trabalhar. Tu precisa de alguém local aí, né, para gravar ou Mas eu preciso de alguém para cuidar disso, mano. Minha mulher, ela só quer meu dinheiro, ela não quer trabalhar. Tu tem Tá, mas assim, tu tem Tu precisa de alguém local, presencial, de Curitiba?
+
+[54:20]
+Porque assim, eu cara, eu eu conheço gente. Cara, eu preciso Mano, na verdade, eu preciso ter tempo para dar atenção para isso. Ponto. É isso. O dia que eu der atenção para isso, tem profissionais no mundo inteiro para gravar para mim. Uhum. E se você conseguir cuidar da porra do faturamento, faturamento dá dinheiro, eu consigo respirar e focar nessa outra área.
+
+[54:40]
+Cara, tu vai ver, eu vou assim, ó, agora agora um depois dessa conversa de alinhamento inteiro, me animou Só que é o seguinte, eu vou te dar, ó, ó, agora já anota aí que você tá ouvindo esse áudio aí, nós estamos 17/04, 17/05, 17/06, 17/07. Eu vou te dar até 17/07, vou te dar três meses contando a data de hoje. A anota nessa porra aí que eu vou anotar aqui. Em três meses eu preciso de prospecção viável.
+
+[55:11]
+Se você não der, você roda. Uhum. De acordo. Estamos conversados com dois pau e meio de Google Ads e toda a liberdade que você já tem até Dois hoje e meio do Google Ads agora vai dar para Espera, só espera agora para tu ver. Não, eu já tô esperando. 17/07. 17, 17/07. Tá. É sua data.
+
+[55:38]
+E cara, com todo o respeito, quando eu falar não para você, eu gostaria que você não brigasse comigo, é é isso e ponto. E acabou. Tá, perfeito. Com todo respeito. Dois contos por mês fixo, mais comissão paralela. E eu te mando depois as questões comissão.
+
+[55:58]
+Tudo é definido, eu te eu te eu eu tudo é definido por valor, porcentagem, E é uma tabela que eu ligo Tem, agora agora não que eu tô bêbado, mas depois eu te mando. Relaxa, pode me mandar outra Mas tem tabelinha e vai melhorar a tabela, que agora eu vou aumentar a porcentagem de comissão para material de consumo, porque é o que vale mais a pena para mim hoje. Entendeu? Então é o seguinte, irmão, é isso que eu tenho para te oferecer e mais nada.
+
+[56:27]
+E daqui para frente, Johnny, é para baixo, mano, ou para cima. Eu não vou ficar mais conversando com você não, agora é resultado. Perfeito. Eh, resolve meu chat ut, resolve meus e-mails, resolve meu meu a porra lá do reportana, tá? O site, larga o site, foda-se, tá rodando, entendeu? A única coisa que eu preciso do site que você fez com a CAIXA e não resolveu até agora é a porra do do do boleto, mano.
+
+[56:57]
+Essa porra não resolveu até hoje. A Zilar tá brava, a Zilar vai mandar você embora e aí eu não se a Zilar pedir sua cabeça eu não É termino controle sobre isso, tá? É, eu já sei, poucas ideia. Eu não tenho Eu não tenho controle sobre isso. Aí você não tem que Aí o seu contrato não é válido nesse rolê, tá ligado? Uhum. Não, mas se eu sei, você acha que eu não sei? Não, não mim tá muito agora tá mais claro que a água agora porque agora a gente tem Então pronto, mãe, então boa noite, a gente conversa depois. Tá.
+
+[57:27]
+E compõe as merda que eu fiz aí eu te mandei todo o material das alterações que eu fiz dá uma estudada me faz a devolutiva corrige o que tiver que corrigir. Tá, perfeito então. Boa noite. Boa noite, cara, com Deus.
+
+[57:47]
+3 9 1 2 0 0 0 0 0 0 0 0

@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório Q1 2026 — RZ VET</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --bg2: #1a1d27;
+      --bg3: #22263a;
+      --border: #2e3350;
+      --text: #e8eaf0;
+      --muted: #7c82a0;
+      --blue: #4f8ef7;
+      --green: #34d399;
+      --red: #f87171;
+      --yellow: #fbbf24;
+      --purple: #a78bfa;
+      --orange: #fb923c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* LAYOUT */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* HEADER */
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 40px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    .logo-text {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 16px 0 4px;
+      letter-spacing: -0.5px;
+    }
+
+    .header-meta {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .badge-red {
+      background: rgba(248, 113, 113, 0.15);
+      color: var(--red);
+      border: 1px solid rgba(248, 113, 113, 0.3);
+    }
+
+    .badge-green {
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+    }
+
+    .badge-yellow {
+      background: rgba(251, 191, 36, 0.15);
+      color: var(--yellow);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+    }
+
+    /* SECTION */
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    /* CALLOUT */
+    .callout {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--yellow);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .callout strong {
+      color: var(--text);
+    }
+
+    .callout-red {
+      border-left-color: var(--red);
+    }
+
+    .callout-green {
+      border-left-color: var(--green);
+    }
+
+    /* KPI CARDS */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .kpi-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+
+    .kpi-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .kpi-months {
+      display: flex;
+      gap: 16px;
+    }
+
+    .kpi-month {
+      flex: 1;
+    }
+
+    .kpi-month-label {
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .kpi-value {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .kpi-value.big {
+      font-size: 26px;
+    }
+
+    .kpi-delta {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    .delta-neg {
+      color: var(--red);
+    }
+
+    .delta-pos {
+      color: var(--green);
+    }
+
+    .delta-neu {
+      color: var(--muted);
+    }
+
+    /* CHARTS */
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .chart-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+
+      .chart-grid,
+      .chart-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .chart-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .chart-card.full {
+      grid-column: 1 / -1;
+    }
+
+    .chart-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .chart-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .chart-wrap {
+      position: relative;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      margin: 16px 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-date {
+      font-size: 12px;
+      color: var(--muted);
+      min-width: 100px;
+      padding-top: 2px;
+    }
+
+    .timeline-content {
+      flex: 1;
+      font-size: 13px;
+    }
+
+    .timeline-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    .icon-ok {
+      background: rgba(52, 211, 153, 0.2);
+      color: var(--green);
+    }
+
+    .icon-warn {
+      background: rgba(251, 191, 36, 0.2);
+      color: var(--yellow);
+    }
+
+    .icon-err {
+      background: rgba(248, 113, 113, 0.2);
+      color: var(--red);
+    }
+
+    .icon-fix {
+      background: rgba(79, 142, 247, 0.2);
+      color: var(--blue);
+    }
+
+    /* TABLE */
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 10px 14px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+
+    thead th:not(:first-child) {
+      text-align: right;
+    }
+
+    tbody td {
+      padding: 11px 14px;
+      border-bottom: 1px solid rgba(46, 51, 80, 0.5);
+    }
+
+    tbody td:not(:first-child) {
+      text-align: right;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover td {
+      background: rgba(79, 142, 247, 0.05);
+    }
+
+    .td-pos {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .td-neg {
+      color: var(--red);
+      font-weight: 600;
+    }
+
+    .td-muted {
+      color: var(--muted);
+    }
+
+    .td-strong {
+      font-weight: 700;
+    }
+
+    /* ACTION LIST */
+    .action-list {
+      list-style: none;
+    }
+
+    .action-item {
+      display: flex;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .action-item:last-child {
+      border-bottom: none;
+    }
+
+    .action-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--bg3);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .action-text {
+      font-size: 13px;
+    }
+
+    .action-text strong {
+      color: var(--text);
+    }
+
+    .action-text span {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    /* RECO */
+    .reco-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .reco-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .reco-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .reco-card h4 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .reco-card ul {
+      list-style: none;
+    }
+
+    .reco-card li {
+      padding: 6px 0;
+      font-size: 13px;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(46, 51, 80, 0.4);
+      display: flex;
+      gap: 8px;
+    }
+
+    .reco-card li:last-child {
+      border-bottom: none;
+    }
+
+    .reco-card li::before {
+      content: '→';
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    /* EXEC SUMMARY */
+    .exec-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+    }
+
+    .exec-box p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .exec-box p strong {
+      color: var(--text);
+    }
+
+    /* DIVIDER */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* MONTH LABELS */
+    .jan {
+      color: var(--green);
+    }
+
+    .fev {
+      color: var(--yellow);
+    }
+
+    .mar {
+      color: var(--red);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-top">
+        <div class="logo">
+          <div class="logo-dot"></div>
+          <div class="logo-text">RZ VET · Relatório Interno</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span class="badge badge-yellow">Q1 2026</span>
+          <span class="badge badge-red">Análise de Queda</span>
+        </div>
+      </div>
+      <h1>Performance Q1 2026</h1>
+      <div class="header-meta">Janeiro · Fevereiro · Março de 2026 &nbsp;·&nbsp; Gerado em 01/04/2026</div>
+    </div>
+
+    <!-- RESUMO EXECUTIVO -->
+    <div class="section">
+      <div class="section-title">Resumo Executivo</div>
+      <div class="exec-box">
+        <p>O Q1 2026 registrou queda de <strong>42,6% no faturamento</strong> entre janeiro (R$94k) e março (R$54k),
+          apesar do volume de pedidos ter crescido 25%. A causa raiz foi <strong>falha de pagamento no Google
+            Ads</strong>: o cartão principal (••••4026) foi recusado em 01/mar, deixando a conta inadimplente por 8 dias
+          e campanhas de alto valor retornarem ao aprendizado por 21 dias ao longo de fev/mar. O Smart Bidding perdeu
+          aprendizado nos termos que geravam vendas de equipamentos (ticket > R$1.000), resultando na migração do
+          tráfego para termos de baixo valor. O pagamento foi regularizado em 09/mar e ações corretivas foram aplicadas
+          em 01/04.</p>
+      </div>
+    </div>
+
+    <!-- KPIs PRINCIPAIS -->
+    <div class="section">
+      <div class="section-title">Visão Geral da Loja</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Faturamento</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">R$94k</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label fev">Fev</div>
+              <div class="kpi-value">R$81k</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">R$54k</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ 42,6% jan→mar</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Pedidos</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">177</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label fev">Fev</div>
+              <div class="kpi-value">166</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">221</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-pos">▲ +24,9% jan→mar</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Ticket Médio</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">R$532</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label fev">Fev</div>
+              <div class="kpi-value">R$491</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">R$244</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ 54,1% jan→mar</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Pedidos > R$1.000</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">12</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label fev">Fev</div>
+              <div class="kpi-value">14</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">2</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ 83% jan→mar</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Cancelamentos</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">3</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label fev">Fev</div>
+              <div class="kpi-value">11</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">16</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ +433% jan→mar</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">ROAS Google Ads</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">35,8x</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label fev">Fev</div>
+              <div class="kpi-value">30,7x</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">18,4x</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ 48,6% jan→mar</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Ponto crítico:</strong> o volume de pedidos <strong>aumentou</strong> em março (+25%), mas o faturamento
+        caiu quase pela metade. Os pedidos de alto valor (equipamentos, monitores) desapareceram — de 12–14 pedidos
+        acima de R$1.000 em jan/fev para <strong>apenas 2 em março</strong> (R$5.815 vs R$55.165 em janeiro).
+      </div>
+    </div>
+
+    <!-- GRÁFICOS FATURAMENTO -->
+    <div class="section">
+      <div class="section-title">Faturamento &amp; Pedidos</div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-title">Faturamento Mensal</div>
+          <div class="chart-sub">Total em R$ por canal</div>
+          <div class="chart-wrap"><canvas id="chartFaturamento" height="200"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Ticket Médio vs Volume de Pedidos</div>
+          <div class="chart-sub">Ticket (R$) e quantidade de pedidos</div>
+          <div class="chart-wrap"><canvas id="chartTicket" height="200"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CANAIS -->
+    <div class="section">
+      <div class="section-title">Performance por Canal</div>
+      <div class="chart-grid-3">
+        <div class="chart-card">
+          <div class="chart-title">Janeiro</div>
+          <div class="chart-sub">Mix de faturamento por canal</div>
+          <div class="chart-wrap"><canvas id="chartPieJan" height="180"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Fevereiro</div>
+          <div class="chart-sub">Mix de faturamento por canal</div>
+          <div class="chart-wrap"><canvas id="chartPieFev" height="180"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Março</div>
+          <div class="chart-sub">Loja Virtual caiu de 80% → 60%</div>
+          <div class="chart-wrap"><canvas id="chartPieMar" height="180"></canvas></div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Canal</th>
+              <th>Jan pedidos</th>
+              <th>Jan R$</th>
+              <th>Fev pedidos</th>
+              <th>Fev R$</th>
+              <th>Mar pedidos</th>
+              <th>Mar R$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-strong">Loja Virtual</td>
+              <td>91</td>
+              <td>R$75.959</td>
+              <td>104</td>
+              <td>R$69.640</td>
+              <td>95</td>
+              <td class="td-neg">R$32.563</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Mercado Livre</td>
+              <td>74</td>
+              <td>R$17.267</td>
+              <td>47</td>
+              <td>R$10.390</td>
+              <td>103</td>
+              <td>R$18.527</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Shopee</td>
+              <td>12</td>
+              <td>R$947</td>
+              <td>15</td>
+              <td>R$1.629</td>
+              <td>23</td>
+              <td>R$2.965</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout" style="margin-top:16px">
+        <strong>Mudança em março:</strong> Mercado Livre passou de 74 para 103 pedidos, mas com ticket médio muito
+        menor. A Loja Virtual caiu de 80,7% para 60,2% do faturamento — perdendo os pedidos de equipamentos que vinham
+        via Google Ads + busca orgânica.
+      </div>
+    </div>
+
+    <!-- GOOGLE ADS -->
+    <div class="section">
+      <div class="section-title">Google Ads — Performance</div>
+
+      <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="kpi-card">
+          <div class="kpi-label">Investimento</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">R$2.044</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">R$1.379</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ 32,5%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Receita Atribuída</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">R$73k</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">R$25k</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ 65,4%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Cliques</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">1.263</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">1.019</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-neg">▼ 19,3%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">CPC Médio</div>
+          <div class="kpi-months">
+            <div class="kpi-month">
+              <div class="kpi-month-label jan">Jan</div>
+              <div class="kpi-value">R$1,62</div>
+            </div>
+            <div class="kpi-month">
+              <div class="kpi-month-label mar">Mar</div>
+              <div class="kpi-value">R$1,35</div>
+            </div>
+          </div>
+          <div class="kpi-delta delta-pos">▼ 16,7% (menor custo)</div>
+        </div>
+      </div>
+
+      <div class="chart-grid" style="margin-top:20px">
+        <div class="chart-card">
+          <div class="chart-title">ROAS por Mês</div>
+          <div class="chart-sub">Retorno sobre investimento em Ads</div>
+          <div class="chart-wrap"><canvas id="chartRoas" height="200"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Receita Ads vs Investimento</div>
+          <div class="chart-sub">R$ gerado vs R$ gasto no Google Ads</div>
+          <div class="chart-wrap"><canvas id="chartAdsRoi" height="200"></canvas></div>
+        </div>
+      </div>
+
+      <div class="chart-card full" style="margin-bottom:20px">
+        <div class="chart-title">Receita por Campanha — Evolução Mensal</div>
+        <div class="chart-sub">Campanhas ativas: Institucional, Produtos, Concorrentes</div>
+        <div class="chart-wrap"><canvas id="chartCampanhas" height="160"></canvas></div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Campanha</th>
+              <th>Mês</th>
+              <th>Cliques</th>
+              <th>Custo</th>
+              <th>Conversões</th>
+              <th>Receita</th>
+              <th>ROAS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-strong">Institucional</td>
+              <td class="jan">Jan</td>
+              <td>473</td>
+              <td>R$195</td>
+              <td>222</td>
+              <td class="td-pos">R$46.307</td>
+              <td class="td-pos">236x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Institucional</td>
+              <td class="fev">Fev</td>
+              <td>216</td>
+              <td>R$107</td>
+              <td>89</td>
+              <td>R$34.268</td>
+              <td class="td-pos">319x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Institucional</td>
+              <td class="mar">Mar</td>
+              <td>351</td>
+              <td>R$125</td>
+              <td>74</td>
+              <td class="td-neg">R$15.687</td>
+              <td>125x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Produtos</td>
+              <td class="jan">Jan</td>
+              <td>700</td>
+              <td>R$1.604</td>
+              <td>81</td>
+              <td>R$26.708</td>
+              <td>16,6x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Produtos</td>
+              <td class="fev">Fev</td>
+              <td>613</td>
+              <td>R$1.213</td>
+              <td>97</td>
+              <td>R$11.182</td>
+              <td class="td-muted">9,2x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Produtos</td>
+              <td class="mar">Mar</td>
+              <td>629</td>
+              <td>R$1.232</td>
+              <td>92</td>
+              <td class="td-neg">R$9.303</td>
+              <td class="td-muted">7,6x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Concorrentes</td>
+              <td class="jan">Jan</td>
+              <td>90</td>
+              <td>R$243</td>
+              <td>6</td>
+              <td class="td-muted">R$150</td>
+              <td class="td-neg">0,6x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Concorrentes</td>
+              <td class="fev">Fev</td>
+              <td>60</td>
+              <td>R$160</td>
+              <td>0</td>
+              <td class="td-neg">R$0</td>
+              <td class="td-neg">0x</td>
+            </tr>
+            <tr>
+              <td class="td-strong">Concorrentes</td>
+              <td class="mar">Mar</td>
+              <td>22</td>
+              <td>R$10</td>
+              <td>8</td>
+              <td class="td-pos">R$343</td>
+              <td>31,5x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CAUSA RAIZ -->
+    <div class="section">
+      <div class="section-title">Causa Raiz — Falha de Faturamento</div>
+      <div class="callout callout-red" style="margin-bottom:24px">
+        <strong>A queda NÃO foi estratégica.</strong> Foi operacional: o cartão de pagamento automático do Google Ads
+        foi recusado em 01/mar, deixando a conta inadimplente por 8 dias e campanhas de alto valor em aprendizado por 21
+        dias
+        ao longo de fev/mar.
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon icon-ok">✓</div>
+          <div class="timeline-date">01/jan</div>
+          <div class="timeline-content">Cobrança mensal <strong>R$1.458</strong> via Mastercard ••••4026 — 3 campanhas
+            ativas normalmente</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon icon-ok">✓</div>
+          <div class="timeline-date">30/jan</div>
+          <div class="timeline-content">Cobrança limite <strong>R$2.000</strong> via ••••4026 — conta saudável</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon icon-warn">!</div>
+          <div class="timeline-date">07–15/fev</div>
+          <div class="timeline-content"><strong>Campanhas Institucional + Concorrentes pararam (9 dias)</strong> —
+            apenas Produtos rodou. Possível limite do cartão atingido.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon icon-warn">!</div>
+          <div class="timeline-date">24–28/fev</div>
+          <div class="timeline-content"><strong>Institucional + Concorrentes pararam de novo (5 dias)</strong> —
+            Produtos rodando sozinho.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon icon-err">✕</div>
+          <div class="timeline-date">01/mar</div>
+          <div class="timeline-content"><strong>COBRANÇA RECUSADA: R$1.481,37 — Mastercard ••••4026.</strong> "Nenhum
+            motivo fornecido por sua instituição financeira." — dia 01/mar: apenas R$0,85 gasto no Google Ads.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon icon-err">✕</div>
+          <div class="timeline-date">01–08/mar</div>
+          <div class="timeline-content">Conta inadimplente por <strong>8 dias seguidos</strong>. Smart Bidding perde
+            aprendizado dos termos de alto valor (monitores, equipamentos).</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon icon-fix">→</div>
+          <div class="timeline-date">09/mar</div>
+          <div class="timeline-content">Pagamento manual <strong>R$1.481,37</strong> via Mastercard ••••0369 (cartão
+            diferente). 3 campanhas restauradas no mesmo dia.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon icon-ok">✓</div>
+          <div class="timeline-date">09/mar →</div>
+          <div class="timeline-content">Campanhas normalizadas. Recuperação gradual do Smart Bidding ao longo das
+            últimas semanas de março.</div>
+        </div>
+      </div>
+
+      <div class="chart-card" style="margin-top:20px">
+        <div class="chart-title">Março — Evolução Semanal do Faturamento</div>
+        <div class="chart-sub">Impacto visível: semanas 1–4 deprimidas, recuperação na semana 5 após normalização das
+          campanhas</div>
+        <div class="chart-wrap"><canvas id="chartSemanas" height="160"></canvas></div>
+      </div>
+
+      <div class="table-wrap" style="margin-top:20px">
+        <table>
+          <thead>
+            <tr>
+              <th>Semana</th>
+              <th>Pedidos</th>
+              <th>Faturamento</th>
+              <th>Ticket Médio</th>
+              <th>Pedidos via Google Ads</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sem 1 (1–7) <span class="badge badge-red" style="margin-left:6px">conta inativa</span></td>
+              <td>56</td>
+              <td>R$14.822</td>
+              <td class="td-neg">R$264</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Sem 2 (8–14) <span class="badge badge-yellow" style="margin-left:6px">reativação 09/mar</span></td>
+              <td>55</td>
+              <td>R$10.432</td>
+              <td class="td-neg">R$189</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Sem 3 (15–21)</td>
+              <td>42</td>
+              <td>R$10.326</td>
+              <td class="td-neg">R$245</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Sem 4 (22–28)</td>
+              <td>41</td>
+              <td>R$8.108</td>
+              <td class="td-neg">R$197</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Sem 5 (29–31) <span class="badge badge-green" style="margin-left:6px">recuperação</span></td>
+              <td>27</td>
+              <td>R$10.366</td>
+              <td>R$383</td>
+              <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- AÇÕES CORRETIVAS -->
+    <div class="section">
+      <div class="section-title">Ações Corretivas Implementadas — 01/04/2026</div>
+      <ul class="action-list">
+        <li class="action-item">
+          <div class="action-num">1</div>
+          <div class="action-text">
+            <strong>Keywords de monitores adicionadas ao grupo Monitoramento (campanha Produtos)</strong>
+            <span>"monitores veterinários", "monitor veterinário", "monitor multiparamétrico veterinário", "monitor
+              multiparamétrico vet", "monitor veterinário portátil" — PHRASE match no grupo com R$29.770 de receita
+              acumulada (Smart Bidding calibrado)</span>
+          </div>
+        </li>
+        <li class="action-item">
+          <div class="action-num">2</div>
+          <div class="action-text">
+            <strong>Campanhas de Equipamentos revisadas e pausadas</strong>
+            <span>Sem histórico relevante em 2026. Keywords migradas para a campanha Produtos que já tem inteligência
+              acumulada.</span>
+          </div>
+        </li>
+        <li class="action-item">
+          <div class="action-num">3</div>
+          <div class="action-text">
+            <strong>Tracking corrigido (sessão anterior)</strong>
+            <span>Conversões WhatsApp e Carrinho rebaixadas para Secundário. Apenas GA4 purchase e Compra Rzvet Tray
+              como primárias. Tag de malware removida do GTM.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RECOMENDAÇÕES -->
+    <div class="section">
+      <div class="section-title">Recomendações</div>
+      <div class="reco-grid">
+        <div class="reco-card">
+          <h4>⚡ Curto Prazo — Abril</h4>
+          <ul>
+            <li>Trocar cartão padrão para ••••0369 (funcionou no pagamento manual)</li>
+            <li>Configurar alertas de pagamento no Google Ads</li>
+            <li>Aguardar 2–3 semanas para Smart Bidding recalibrar</li>
+            <li>Monitorar ticket médio semanalmente — meta R$400+</li>
+          </ul>
+        </div>
+        <div class="reco-card">
+          <h4>🎯 Médio Prazo — Q2</h4>
+          <ul>
+            <li>Cross-domain tracking via Tray (em andamento)</li>
+            <li>Revisão de orçamento: R$55,80/dia nas 3 campanhas ativas</li>
+            <li>Avaliar ativação gradual da campanha Concorrentes</li>
+            <li>Monitorar performance das novas keywords de monitores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const months = ['Janeiro', 'Fevereiro', 'Março'];
+    const colJan = '#34d399';
+    const colFev = '#fbbf24';
+    const colMar = '#f87171';
+    const colBlue = '#4f8ef7';
+    const colPurple = '#a78bfa';
+
+    Chart.defaults.color = '#7c82a0';
+    Chart.defaults.borderColor = '#2e3350';
+    Chart.defaults.font.family = "'Inter', -apple-system, sans-serif";
+    Chart.defaults.font.size = 12;
+
+    // 1. Faturamento por canal (stacked bar)
+    new Chart(document.getElementById('chartFaturamento'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [
+          { label: 'Loja Virtual', data: [75959, 69640, 32563], backgroundColor: colBlue, borderRadius: 4, borderSkipped: false },
+          { label: 'Mercado Livre', data: [17267, 10390, 18527], backgroundColor: colPurple, borderRadius: 4, borderSkipped: false },
+          { label: 'Shopee', data: [947, 1629, 2965], backgroundColor: '#fb923c', borderRadius: 4, borderSkipped: false },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: R$${ctx.raw.toLocaleString('pt-BR')}` } }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false } },
+          y: { stacked: true, ticks: { callback: v => 'R$' + (v / 1000).toFixed(0) + 'k' } }
+        }
+      }
+    });
+
+    // 2. Ticket médio + pedidos
+    new Chart(document.getElementById('chartTicket'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [
+          { label: 'Ticket Médio (R$)', data: [532, 491, 244], backgroundColor: [colJan, colFev, colMar], borderRadius: 6, order: 2 },
+          { label: 'Pedidos', data: [177, 166, 221], type: 'line', borderColor: colBlue, backgroundColor: 'rgba(79,142,247,0.1)', tension: 0.4, yAxisID: 'y1', pointRadius: 5, pointBackgroundColor: colBlue, order: 1 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } } },
+        scales: {
+          x: { grid: { display: false } },
+          y: { ticks: { callback: v => 'R$' + v }, grid: { color: 'rgba(46,51,80,0.5)' } },
+          y1: { position: 'right', grid: { display: false } }
+        }
+      }
+    });
+
+    // 3. Pie charts canais
+    const pieOpts = (title) => ({
+      responsive: true, maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 10, padding: 12, font: { size: 11 } } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed.toFixed(1)}%` } }
+      }
+    });
+    new Chart(document.getElementById('chartPieJan'), {
+      type: 'doughnut',
+      data: { labels: ['Loja Virtual', 'Mercado Livre', 'Shopee'], datasets: [{ data: [80.7, 18.3, 1.0], backgroundColor: [colBlue, colPurple, '#fb923c'], borderWidth: 0, hoverOffset: 6 }] },
+      options: pieOpts()
+    });
+    new Chart(document.getElementById('chartPieFev'), {
+      type: 'doughnut',
+      data: { labels: ['Loja Virtual', 'Mercado Livre', 'Shopee'], datasets: [{ data: [85.3, 12.7, 2.0], backgroundColor: [colBlue, colPurple, '#fb923c'], borderWidth: 0, hoverOffset: 6 }] },
+      options: pieOpts()
+    });
+    new Chart(document.getElementById('chartPieMar'), {
+      type: 'doughnut',
+      data: { labels: ['Loja Virtual', 'Mercado Livre', 'Shopee'], datasets: [{ data: [60.2, 34.3, 5.5], backgroundColor: [colBlue, colPurple, '#fb923c'], borderWidth: 0, hoverOffset: 6 }] },
+      options: pieOpts()
+    });
+
+    // 4. ROAS
+    new Chart(document.getElementById('chartRoas'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [{
+          label: 'ROAS',
+          data: [35.8, 30.7, 18.4],
+          backgroundColor: [colJan, colFev, colMar],
+          borderRadius: 8, borderSkipped: false
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ROAS: ${ctx.raw}x` } }
+        },
+        scales: {
+          x: { grid: { display: false } },
+          y: { ticks: { callback: v => v + 'x' }, grid: { color: 'rgba(46,51,80,0.5)' } }
+        }
+      }
+    });
+
+    // 5. Receita Ads vs Investimento
+    new Chart(document.getElementById('chartAdsRoi'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [
+          { label: 'Receita Atribuída', data: [73165, 45450, 25333], backgroundColor: [colJan, colFev, colMar], borderRadius: 4, borderSkipped: false },
+          { label: 'Investimento', data: [2044, 1481, 1379], backgroundColor: 'rgba(255,255,255,0.08)', borderRadius: 4, borderSkipped: false }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: R$${ctx.raw.toLocaleString('pt-BR')}` } }
+        },
+        scales: {
+          x: { grid: { display: false } },
+          y: { ticks: { callback: v => 'R$' + (v / 1000).toFixed(0) + 'k' }, grid: { color: 'rgba(46,51,80,0.5)' } }
+        }
+      }
+    });
+
+    // 6. Receita por campanha
+    new Chart(document.getElementById('chartCampanhas'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [
+          { label: 'Institucional', data: [46307, 34268, 15687], backgroundColor: colBlue, borderRadius: 4, borderSkipped: false },
+          { label: 'Produtos', data: [26708, 11182, 9303], backgroundColor: colPurple, borderRadius: 4, borderSkipped: false },
+          { label: 'Concorrentes', data: [150, 0, 343], backgroundColor: '#fb923c', borderRadius: 4, borderSkipped: false },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: R$${ctx.raw.toLocaleString('pt-BR')}` } }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false } },
+          y: { stacked: true, ticks: { callback: v => 'R$' + (v / 1000).toFixed(0) + 'k' }, grid: { color: 'rgba(46,51,80,0.5)' } }
+        }
+      }
+    });
+
+    // 7. Semanas março
+    new Chart(document.getElementById('chartSemanas'), {
+      type: 'bar',
+      data: {
+        labels: ['Sem 1\n(1–7)', 'Sem 2\n(8–14)', 'Sem 3\n(15–21)', 'Sem 4\n(22–28)', 'Sem 5\n(29–31)'],
+        datasets: [
+          {
+            label: 'Faturamento',
+            data: [14822, 10432, 10326, 8108, 10366],
+            backgroundColor: ['rgba(248,113,113,0.7)', 'rgba(248,113,113,0.5)', 'rgba(248,113,113,0.4)', 'rgba(248,113,113,0.3)', 'rgba(52,211,153,0.7)'],
+            borderRadius: 6, borderSkipped: false
+          },
+          {
+            label: 'Ticket Médio',
+            data: [264, 189, 245, 197, 383],
+            type: 'line', borderColor: colBlue, backgroundColor: 'rgba(79,142,247,0.1)',
+            tension: 0.4, yAxisID: 'y1', pointRadius: 5, pointBackgroundColor: colBlue, order: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, padding: 16 } },
+          annotation: {},
+          tooltip: {
+            callbacks: {
+              label: ctx => ctx.dataset.label === 'Ticket Médio'
+                ? ` Ticket: R$${ctx.raw}`
+                : ` Faturamento: R$${ctx.raw.toLocaleString('pt-BR')}`
+            }
+          }
+        },
+        scales: {
+          x: { grid: { display: false } },
+          y: { ticks: { callback: v => 'R$' + (v / 1000).toFixed(0) + 'k' }, grid: { color: 'rgba(46,51,80,0.5)' } },
+          y1: { position: 'right', grid: { display: false }, ticks: { callback: v => 'R$' + v } }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

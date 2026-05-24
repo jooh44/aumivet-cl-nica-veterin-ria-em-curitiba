@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contrato de Prestacao de Servicos Continuados - RZ Vet</title>
+    <style>
+      :root {
+        --ink: #1d1d1f;
+        --muted: #666;
+        --line: #d9d9dd;
+        --soft: #f6f6f8;
+        --accent: #0b4f6c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 14px;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        color: var(--ink);
+        background: #ececef;
+        line-height: 1.62;
+      }
+
+      .page-shell {
+        max-width: 960px;
+        margin: 24px auto;
+        padding: 24px;
+      }
+
+      .document {
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      .document-inner {
+        padding: 56px 64px 72px;
+      }
+
+      .eyebrow {
+        font: 600 0.79rem/1.4 Arial, Helvetica, sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 14px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        line-height: 1.16;
+        margin: 0 0 10px;
+      }
+
+      .subtitle {
+        margin: 0 0 26px;
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .notice {
+        margin: 0 0 28px;
+        padding: 14px 16px;
+        background: var(--soft);
+        border-left: 3px solid var(--accent);
+        color: #3f3f46;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .summary {
+        margin: 28px 0 34px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, #fcfcfd 0%, #f6f6f8 100%);
+      }
+
+      .summary h2 {
+        margin: 0;
+        padding: 14px 18px;
+        font: 700 0.9rem/1.4 Arial, Helvetica, sans-serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+      }
+
+      .summary-item {
+        padding: 14px 18px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .summary-item:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .summary-item strong {
+        display: block;
+        margin-bottom: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.84rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #4b5563;
+      }
+
+      .contract-title {
+        margin: 0 0 28px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      h2.section-title {
+        margin: 34px 0 12px;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        font-size: 1.16rem;
+      }
+
+      ul {
+        margin: 10px 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .signature-block {
+        margin-top: 48px;
+      }
+
+      .signature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 32px;
+        margin-top: 28px;
+      }
+
+      .signature-line {
+        padding-top: 34px;
+        border-top: 1px solid #444;
+        min-height: 64px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.92rem;
+      }
+
+      .page-break {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      @page {
+        size: A4;
+        margin: 18mm;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page-shell {
+          max-width: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .document {
+          border: 0;
+          box-shadow: none;
+        }
+
+        .document-inner {
+          padding: 0;
+        }
+
+        .summary,
+        .notice,
+        .summary-item,
+        h2.section-title,
+        .signature-block,
+        p,
+        ul,
+        li {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .page-shell {
+          padding: 0;
+          margin: 0;
+        }
+
+        .document-inner {
+          padding: 28px 22px 36px;
+        }
+
+        .summary-grid,
+        .signature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .summary-item {
+          border-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="document">
+        <div class="document-inner">
+          <p class="eyebrow">Minuta Contratual</p>
+          <h1>Contrato de Prestacao de Servicos Continuados</h1>
+          <p class="subtitle">
+            Gestao de performance, operacao de Google Ads e acompanhamento de
+            faturamento atribuido
+          </p>
+
+          <div class="notice">
+            Preencher qualificacao completa das partes, data de inicio,
+            vencimento, forma de pagamento e foro antes da assinatura.
+          </div>
+
+          <section class="summary">
+            <h2>Quadro-Resumo Comercial</h2>
+            <div class="summary-grid">
+              <div class="summary-item">
+                <strong>Fee mensal fixo</strong>
+                <span>R$ 2.000,00</span>
+              </div>
+              <div class="summary-item">
+                <strong>Prazo inicial</strong>
+                <span>3 meses, de 01/05/2026 a 31/07/2026</span>
+              </div>
+              <div class="summary-item">
+                <strong>Verba de Google Ads</strong>
+                <span>Ate R$ 2.500,00 por mes, paga separadamente</span>
+              </div>
+              <div class="summary-item">
+                <strong>Meta-base da operacao</strong>
+                <span>R$ 150.000,00 no periodo, com referencia de R$ 50.000,00 por mes em vendas da loja virtual propria, excluidos marketplaces</span>
+              </div>
+              <div class="summary-item">
+                <strong>Escopo de comissao</strong>
+                <span>Somente vendas da loja atribuidas ao Google Ads</span>
+              </div>
+              <div class="summary-item">
+                <strong>Marketplaces</strong>
+                <span>Expressamente excluidos da meta e da comissao</span>
+              </div>
+            </div>
+          </section>
+
+          <p class="contract-title">
+            Contrato de prestacao de servicos continuados de performance,
+            operacao de Google Ads e acompanhamento de resultado atribuido
+          </p>
+
+          <p>Pelo presente instrumento particular, de um lado:</p>
+          <p>
+            <strong>CONTRATANTE:</strong> [razao social completa], inscrita no
+            CNPJ sob n. [preencher], com sede em [preencher], neste ato
+            representada por [preencher].
+          </p>
+          <p>e, de outro lado:</p>
+          <p>
+            <strong>CONTRATADO:</strong> Johny [nome completo], CPF n.
+            [preencher], residente e domiciliado em [preencher].
+          </p>
+          <p>
+            As partes resolvem celebrar o presente Contrato de Prestacao de
+            Servicos Continuados de Performance, Operacao de Google Ads e
+            Acompanhamento de Resultado Atribuido, que se regera pelas clausulas
+            e condicoes abaixo.
+          </p>
+
+          <h2 class="section-title">1. Objeto</h2>
+          <p>
+            1.1. O presente contrato tem por objeto a prestacao continuada,
+            pelo CONTRATADO, de servicos de planejamento, operacao, otimizacao,
+            leitura de dados e acompanhamento de performance com foco principal
+            em <strong>Google Ads</strong> e nas vendas da loja virtual
+            atribuidas a essa operacao.
+          </p>
+          <p>
+            1.2. O objeto contempla a conducao tecnica da conta de Google Ads,
+            a leitura dos indicadores principais da operacao, a producao de
+            recomendacoes de ajuste e o apoio tatico necessario para sustentar o
+            crescimento da loja dentro do escopo mensal contratado, inclusive
+            apoio tecnico-operacional compativel com iniciativas aprovadas de
+            site, chat e migracao para ferramenta terceirizada de atendimento,
+            desde que sem desenvolvimento customizado fora do plano.
+          </p>
+          <p>
+            1.3. O detalhamento de escopo, limites, exclusoes, dinamica
+            operacional e itens extraordinarios consta do
+            <strong>Anexo de Escopo Operacional</strong>, que integra este
+            contrato para todos os fins. Na ausencia de escopo operacional
+            proprio enviado pela CONTRATANTE, prevalece o Anexo de Escopo
+            Operacional apresentado pelo CONTRATADO, observadas as exclusoes e
+            limites ali definidos.
+          </p>
+
+          <h2 class="section-title">2. Documentos Integrantes e Ordem de Prevalencia</h2>
+          <p>2.1. Integram este contrato:</p>
+          <ul>
+            <li>este instrumento principal</li>
+            <li>o Anexo de Escopo Operacional</li>
+            <li>
+              eventuais aprovacoes complementares por escrito, inclusive por
+              e-mail ou mensagem com aceite expresso
+            </li>
+            <li>
+              repositorio tecnico privado da operacao, quando disponibilizado
+              para consulta, versionamento e continuidade documental
+            </li>
+          </ul>
+          <p>
+            2.2. Em caso de divergencia entre este contrato e o anexo
+            operacional, prevalecera o anexo quanto a escopo, limites de
+            execucao e detalhes de medicao.
+          </p>
+          <p>
+            2.3. As partes reconhecem como repositorio tecnico privado da
+            operacao o endereco
+            <strong>https://github.com/jooh44/rz-vet</strong>, destinado a
+            centralizar documentacao, scripts, materiais tecnicos e historico
+            operacional relacionados a RZ Vet. O acesso ao repositorio depende
+            de convite a conta GitHub indicada pela CONTRATANTE.
+          </p>
+          <p>
+            2.4. O repositorio nao substitui cofre de senhas, rotacao de
+            credenciais nem transferencia formal de contas administrativas.
+            Credenciais pessoais, chaves de desenvolvedor, projetos de API,
+            apps de parceiro, tokens pessoais, prompts-base, frameworks,
+            scripts genericos e metodos reutilizaveis permanecem sujeitos as
+            regras de propriedade intelectual, sigilo e escopo deste contrato.
+          </p>
+          <p>
+            2.5. Para baixar uma copia local, a CONTRATANTE devera aceitar o
+            convite de acesso ao repositorio privado e executar:
+            <code>git clone https://github.com/jooh44/rz-vet.git</code>.
+            Para atualizar uma copia existente, devera executar:
+            <code>git pull origin main</code>.
+          </p>
+
+          <h2 class="section-title">3. Natureza da Operacao Mensal</h2>
+          <p>
+            3.1. O trabalho sera executado em regime de demanda continuada e
+            priorizacao mensal, e nao como pacote ilimitado de campanhas,
+            desenvolvimento, correcoes, integracoes ou suporte irrestrito.
+          </p>
+          <p>3.2. O fee mensal remunera, de forma integrada:</p>
+          <ul>
+            <li>reserva de agenda</li>
+            <li>leitura tecnica da conta e da operacao</li>
+            <li>planejamento e execucao de ajustes compativeis com o periodo</li>
+            <li>acompanhamento de indicadores e recomendacoes de rota</li>
+            <li>coordenacao geral da frente de performance contratada</li>
+          </ul>
+          <p>
+            3.3. As prioridades de cada ciclo serao definidas de comum acordo
+            entre as partes, considerando impacto comercial, verba disponivel,
+            qualidade dos ativos, dependencias de aprovacao e capacidade
+            operacional compativel com o plano contratado.
+          </p>
+
+          <h2 class="section-title">4. Obrigacoes do Contratado</h2>
+          <p>Compete ao CONTRATADO:</p>
+          <ul>
+            <li>
+              executar os servicos com zelo tecnico, criterio operacional e
+              boa-fe profissional
+            </li>
+            <li>
+              conduzir a operacao de Google Ads dentro da verba previamente
+              aprovada pela CONTRATANTE
+            </li>
+            <li>
+              monitorar campanhas, grupos de recursos, ativos, conversoes e
+              principais alavancas de performance no escopo contratado
+            </li>
+            <li>
+              produzir devolutivas tecnicas, leituras e recomendacoes compativeis
+              com o plano mensal
+            </li>
+            <li>
+              sinalizar riscos, dependencias, problemas de tracking,
+              limitacoes de plataforma e necessidade de correcoes externas
+            </li>
+            <li>
+              preservar o sigilo sobre informacoes nao publicas, acessos,
+              contas e dados compartilhados pela CONTRATANTE
+            </li>
+          </ul>
+          <p>
+            Paragrafo primeiro. O CONTRATADO podera utilizar ferramentas de IA,
+            automacao, scripts proprios, bibliotecas e apoio tecnico pontual de
+            parceiros como meios auxiliares de producao e analise, permanecendo
+            responsavel pela coordenacao geral, curadoria e revisao final.
+          </p>
+          <p>
+            Paragrafo segundo. O CONTRATADO atuara com autonomia tecnica e
+            organizacional, sem subordinacao funcional a rotina interna da
+            CONTRATANTE.
+          </p>
+
+          <h2 class="section-title">5. Obrigacoes da Contratante</h2>
+          <p>Compete a CONTRATANTE:</p>
+          <ul>
+            <li>
+              fornecer acessos, informacoes, criativos, catalogos, contas,
+              dados e validacoes necessarias para a boa execucao do trabalho
+            </li>
+            <li>
+              manter sob sua governanca, sempre que possivel, as contas de
+              anuncio, analytics, Merchant Center, loja, dominio e plataformas
+              relacionadas
+            </li>
+            <li>
+              aprovar ou reprovar ajustes em prazo razoavel, evitando travas
+              operacionais
+            </li>
+            <li>
+              suportar e custodiar a verba de Google Ads, plataformas e
+              ferramentas pagas de terceiros nao inclusas no fee
+            </li>
+            <li>
+              nao promover reducao unilateral do fee, da verba ou alteracao de
+              regras de comissionamento sem ajuste escrito entre as partes
+            </li>
+          </ul>
+          <p>
+            Paragrafo unico. Atrasos de aprovacao, liberacao de acessos,
+            retorno comercial, atualizacao de feed, correcoes da loja ou
+            validacoes internas por parte da CONTRATANTE deslocam
+            proporcionalmente os prazos e afetam a leitura de resultado, sem
+            descaracterizar a cobranca do fee do periodo.
+          </p>
+
+          <h2 class="section-title">6. Investimento Fixo, Vencimento e Reajuste</h2>
+          <p>
+            6.1. Pela prestacao dos servicos previstos neste contrato, a
+            CONTRATANTE pagara ao CONTRATADO o valor mensal fixo de
+            <strong>R$ 2.000,00 (dois mil reais)</strong>.
+          </p>
+          <p>
+            6.2. O vencimento ocorrera todo dia [preencher] de cada mes, por
+            meio de [PIX / transferencia / outro meio].
+          </p>
+          <p>6.3. O fee mensal nao se confunde com:</p>
+          <ul>
+            <li>verba de Google Ads</li>
+            <li>assinaturas de softwares, CRMs, conectores e ferramentas</li>
+            <li>custos de IA, integracoes ou infraestrutura de terceiros</li>
+            <li>servicos extraordinarios nao previstos no escopo recorrente</li>
+          </ul>
+          <p>6.4. Em caso de atraso no pagamento, incidirao:</p>
+          <ul>
+            <li>multa moratoria de 2%</li>
+            <li>juros de 1% ao mes, calculados pro rata die</li>
+          </ul>
+          <p>
+            6.5. Persistindo o inadimplemento por mais de 10 dias, o
+            CONTRATADO podera suspender novas execucoes ate a regularizacao,
+            sem prejuizo da exigibilidade dos valores vencidos.
+          </p>
+
+          <h2 class="section-title">7. Verba de Google Ads e Ferramentas</h2>
+          <p>
+            7.1. A CONTRATANTE aprova, para a presente fase, verba de ate
+            <strong>R$ 2.500,00 (dois mil e quinhentos reais) por mes</strong>
+            exclusivamente destinada a Google Ads.
+          </p>
+          <p>
+            7.2. A verba de Google Ads sera paga diretamente pela CONTRATANTE
+            nas plataformas ou antecipada/reembolsada na forma ajustada entre as
+            partes.
+          </p>
+          <p>
+            7.3. Ferramentas, plataformas, CRMs, servidores, automacoes,
+            bancos de imagem, servicos de IA ou quaisquer recursos pagos de
+            terceiros somente serao considerados incluidos mediante previsao
+            expressa.
+          </p>
+          <p>
+            7.4. O CONTRATADO nao podera exceder a verba mensal expressamente
+            aprovada sem autorizacao previa da CONTRATANTE.
+          </p>
+
+          <div class="page-break"></div>
+
+          <h2 class="section-title">8. Comissionamento Variavel</h2>
+          <p>
+            8.1. Alem do fee fixo, a CONTRATANTE pagara ao CONTRATADO comissao
+            variavel incidente <strong>somente</strong> sobre as vendas da loja
+            virtual que sejam razoavelmente rastreadas, medidas e atribuidas ao
+            trabalho de Google Ads sob sua gestao.
+          </p>
+          <p>8.2. Para fins deste contrato:</p>
+          <ul>
+            <li>
+              entram na base de comissao apenas vendas da loja virtual
+              atribuidas ao Google Ads
+            </li>
+            <li>
+              ficam fora da base de comissao Mercado Livre, Shopee, Amazon e
+              quaisquer outros marketplaces
+            </li>
+            <li>
+              ficam fora da base de comissao vendas sem lastro razoavel de
+              atribuicao ou vendas derivadas de canais alheios a operacao
+              contratada
+            </li>
+          </ul>
+          <p>
+            8.3. A atribuicao sera apurada com base no conjunto de evidencias
+            tecnicamente disponiveis no periodo, incluindo Google Ads, analytics,
+            UTMs, acompanhamento da jornada e demais sinais de medicao sob
+            governanca da operacao.
+          </p>
+          <p>
+            8.4. As partes reconhecem que a atribuicao digital pode envolver
+            assistencias, atrasos de plataforma, mudancas de janela e
+            limitacoes tecnicas. Por isso, eventual divergencia pontual sera
+            resolvida pela melhor leitura tecnica disponivel no periodo,
+            observada a boa-fe.
+          </p>
+          <p>
+            8.5. Para a presente fase, passa a valer a seguinte estrutura
+            comercial:
+          </p>
+          <ul>
+            <li>
+              3% para vendas de <strong>equipamentos</strong>, calculados sobre
+              o valor efetivamente recebido pela CONTRATANTE
+            </li>
+            <li>
+              6% para vendas de <strong>material de consumo</strong>,
+              descartaveis e itens correlatos, calculados sobre o valor
+              efetivamente recebido pela CONTRATANTE
+            </li>
+          </ul>
+          <p>
+            8.6. A comissao sera paga conforme o valor efetivamente recebido
+            pela CONTRATANTE, acompanhando o parcelamento da venda quando
+            aplicavel.
+          </p>
+          <p>
+            8.7. Eventual ajuste posterior de tabela de comissao somente tera
+            validade mediante aceite escrito entre as partes.
+          </p>
+
+          <h2 class="section-title">9. Meta Comercial e Revisao aos 3 Meses</h2>
+          <p>
+            9.1. Para esta nova fase, as partes adotam como meta comercial
+            acumulada <strong>R$ 150.000,00</strong> em vendas da loja virtual
+            da CONTRATANTE no periodo de <strong>01/05/2026 a 31/07/2026</strong>,
+            excluidos Mercado Livre, Shopee, Amazon e quaisquer outros marketplaces.
+          </p>
+          <p>
+            9.2. Como referencia operacional, as partes reconhecem o parametro
+            de <strong>R$ 50.000,00 por mes</strong> em vendas da loja virtual,
+            sem que isso descaracterize a leitura acumulada do periodo.
+          </p>
+          <p>
+            9.3. Ao final do periodo, em <strong>31/07/2026</strong>, as partes
+            avaliarao a viabilidade da operacao, a qualidade da prospeccao, a
+            consistencia das vendas atribuidas e a continuidade da relacao.
+          </p>
+          <p>
+            9.4. A meta e a avaliacao comercial nao constituem garantia absoluta
+            de faturamento, servindo como referencia de leitura da fase.
+          </p>
+
+          <h2 class="section-title">10. Demandas Extraordinarias e Escopo Complementar</h2>
+          <p>
+            10.1. Atividades fora do escopo recorrente poderao ser contratadas
+            a parte, mediante aprovacao expressa entre as partes.
+          </p>
+          <p>10.2. Exemplos tipicos de demanda extraordinaria:</p>
+          <ul>
+            <li>nova landing page estrutural</li>
+            <li>sprint tecnico de SEO ou automacao</li>
+            <li>CRM customizado ou integracoes profundas</li>
+            <li>desenvolvimento de software, bridge, bot ou infraestrutura</li>
+            <li>dashboard tecnico fora da rotina mensal</li>
+            <li>operacao reforcada de midia fora do plano contratado</li>
+          </ul>
+
+          <h2 class="section-title">11. Propriedade Intelectual e Uso dos Materiais</h2>
+          <p>
+            11.1. Uma vez adimplidos os valores devidos, a CONTRATANTE podera
+            utilizar os materiais finais produzidos no ambito deste contrato
+            para seus fins comerciais e institucionais.
+          </p>
+          <p>11.2. Permanecem sob titularidade do CONTRATADO:</p>
+          <ul>
+            <li>arquivos-fonte e estruturas internas de organizacao</li>
+            <li>scripts, templates e frameworks reutilizaveis</li>
+            <li>prompts, rotinas, automacoes e metodos auxiliares de trabalho</li>
+          </ul>
+          <p>
+            11.3. O CONTRATADO podera mencionar os trabalhos em portfolio ou
+            comunicacao profissional, apos sua publicacao, salvo restricao
+            expressa da CONTRATANTE por escrito.
+          </p>
+          <p>
+            11.4. Em caso de transicao, encerramento ou substituicao de
+            fornecedor, o CONTRATADO devera colaborar de forma razoavel com a
+            continuidade dos ativos finais da operacao da CONTRATANTE que
+            estejam sob sua guarda, incluindo orientacoes de uso, repositorio
+            tecnico disponibilizado e materiais finais pagos.
+          </p>
+          <p>
+            11.5. Essa colaboracao nao inclui a transferencia de senhas
+            pessoais, chaves privadas pessoais, credenciais de desenvolvedor,
+            projetos de API, apps de parceiro, tokens pessoais, ambientes
+            multi-cliente, prompts-base, frameworks, scripts genericos,
+            bibliotecas internas ou metodos reutilizaveis do CONTRATADO. Quando
+            uma credencial tecnica do CONTRATADO tiver sido usada como meio de
+            execucao, a transicao adequada sera a emissao de credencial propria
+            pela CONTRATANTE ou por terceiro por ela indicado.
+          </p>
+          <p>
+            11.6. O CONTRATADO nao devera excluir, degradar, bloquear ou
+            transferir indevidamente ativos digitais da CONTRATANTE. A
+            CONTRATANTE podera revogar permissoes concedidas ao CONTRATADO,
+            mas eventual revogacao, reducao ou indisponibilidade de acesso
+            suspendera proporcionalmente as obrigacoes tecnicas que dependam
+            desse acesso.
+          </p>
+
+          <h2 class="section-title">12. Sigilo, Confidencialidade e Dados</h2>
+          <p>
+            12.1. As partes comprometem-se a manter sigilo sobre informacoes
+            estrategicas, documentos internos, acessos, materiais ainda nao
+            publicados e quaisquer dados nao publicos compartilhados durante a
+            vigencia deste contrato.
+          </p>
+          <p>
+            12.2. O CONTRATADO compromete-se a utilizar os acessos e dados da
+            CONTRATANTE exclusivamente para execucao do objeto contratual.
+          </p>
+          <p>
+            12.3. Caso haja tratamento de dados pessoais em contexto
+            operacional, as partes se comprometem a observar a legislacao
+            aplicavel, inclusive a LGPD, dentro dos limites de sua atuacao.
+          </p>
+
+          <h2 class="section-title">13. Autonomia, Ausencia de Exclusividade e Inexistencia de Vinculo</h2>
+          <p>
+            13.1. O presente contrato nao gera sociedade, representacao
+            comercial, exclusividade nem vinculo empregaticio entre as partes.
+          </p>
+          <p>
+            13.2. O CONTRATADO podera atender outros clientes simultaneamente,
+            desde que isso nao inviabilize o cumprimento do escopo contratado.
+          </p>
+          <p>
+            13.3. Tributos, contribuicoes e obrigacoes pessoais do CONTRATADO
+            correrao por sua propria conta, na forma da lei, ressalvadas
+            eventuais retencoes obrigatorias legalmente impostas a CONTRATANTE.
+          </p>
+
+          <h2 class="section-title">14. Prazo, Vigencia e Revisao</h2>
+          <p>
+            14.1. O presente contrato entra em vigor em
+            <strong>01/05/2026</strong> e tera vigencia inicial de
+            <strong>3 (tres) meses</strong>, encerrando-se em
+            <strong>31/07/2026</strong>.
+          </p>
+          <p>
+            14.2. Ao final da vigencia inicial, as partes realizarao avaliacao
+            comercial e operacional para decidir sobre continuidade, renovacao
+            ou readequacao da relacao.
+          </p>
+          <p>
+            14.3. Eventual continuidade apos 31/07/2026 dependera de novo aceite
+            entre as partes, por escrito.
+          </p>
+
+          <h2 class="section-title">15. Rescisao</h2>
+          <p>
+            15.1. Durante a vigencia inicial, eventual encerramento antecipado
+            devera ser comunicado por escrito e nao afastara o pagamento do mes
+            ja iniciado, nem das demandas extraordinarias ja aprovadas.
+          </p>
+          <p>
+            15.2. Apos o prazo inicial, o contrato podera ser rescindido por
+            qualquer das partes mediante aviso previo minimo de 30 dias.
+          </p>
+          <p>15.3. Em caso de rescisao:</p>
+          <ul>
+            <li>
+              os materiais ja aprovados e pagos permanecerao disponiveis para
+              uso da CONTRATANTE
+            </li>
+            <li>
+              os acessos concedidos ao CONTRATADO poderao ser revogados pela
+              CONTRATANTE apos a conclusao da transicao
+            </li>
+            <li>
+              demandas em aberto serao tratadas conforme o estagio de execucao,
+              o adimplemento existente e o que tiver sido efetivamente aprovado
+            </li>
+          </ul>
+
+          <h2 class="section-title">16. Limites de Responsabilidade e Compliance</h2>
+          <p>
+            16.1. O CONTRATADO nao garante numero minimo de leads, faturamento,
+            aprovacao de anuncios, resultado absoluto de campanha ou superacao
+            automatica da meta comercial.
+          </p>
+          <p>16.2. Resultados dependem, entre outros fatores, de:</p>
+          <ul>
+            <li>verba de midia</li>
+            <li>qualidade do feed e da loja</li>
+            <li>estoque, precificacao e condicoes comerciais</li>
+            <li>capacidade de atendimento e fechamento da CONTRATANTE</li>
+            <li>desempenho das plataformas de terceiros</li>
+            <li>qualidade da medicao e dos dados disponiveis</li>
+          </ul>
+          <p>
+            16.3. O CONTRATADO nao responde por marketplace, comercial offline,
+            equipe de vendas, operacao de estoque, erro de cadastro, ruptura,
+            cancelamento, chargeback ou falhas estruturais da loja.
+          </p>
+
+          <h2 class="section-title">17. Disposicoes Gerais</h2>
+          <p>
+            17.1. Este contrato podera ser complementado por anexos, aditivos,
+            e-mails ou mensagens com aceite expresso, desde que relacionados ao
+            objeto contratual.
+          </p>
+          <p>
+            17.2. A eventual tolerancia de uma parte para com a outra nao
+            implicara renuncia de direito nem alteracao tacita das clausulas
+            aqui previstas.
+          </p>
+          <p>
+            17.3. A nulidade ou inexequibilidade de qualquer disposicao nao
+            prejudicara as demais clausulas do contrato.
+          </p>
+          <p>
+            17.4. As partes reconhecem a validade de assinatura fisica ou
+            eletronica, inclusive por plataforma digital apta a comprovar
+            autoria e integridade.
+          </p>
+
+          <h2 class="section-title">18. Foro</h2>
+          <p>
+            Fica eleito o foro da Comarca de [preencher], com renuncia a
+            qualquer outro, por mais privilegiado que seja, para dirimir
+            eventuais controversias oriundas deste contrato.
+          </p>
+
+          <section class="signature-block">
+            <p>[cidade], [data]</p>
+            <div class="signature-grid">
+              <div class="signature-line">CONTRATANTE</div>
+              <div class="signature-line">CONTRATADO</div>
+              <div class="signature-line">TESTEMUNHA 1</div>
+              <div class="signature-line">TESTEMUNHA 2</div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

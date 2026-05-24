@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anexo de Escopo Operacional - RZ Vet</title>
+    <style>
+      :root {
+        --ink: #1d1d1f;
+        --muted: #666;
+        --line: #d9d9dd;
+        --soft: #f6f6f8;
+        --accent: #0b4f6c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 14px;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Georgia", "Times New Roman", serif;
+        color: var(--ink);
+        background: #ececef;
+        line-height: 1.62;
+      }
+
+      .page-shell {
+        max-width: 960px;
+        margin: 24px auto;
+        padding: 24px;
+      }
+
+      .document {
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      .document-inner {
+        padding: 56px 64px 72px;
+      }
+
+      .eyebrow {
+        font: 600 0.79rem/1.4 Arial, Helvetica, sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 14px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        line-height: 1.16;
+        margin: 0 0 10px;
+      }
+
+      .subtitle {
+        margin: 0 0 26px;
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .notice {
+        margin: 0 0 28px;
+        padding: 14px 16px;
+        background: var(--soft);
+        border-left: 3px solid var(--accent);
+        color: #3f3f46;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .summary {
+        margin: 28px 0 34px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, #fcfcfd 0%, #f6f6f8 100%);
+      }
+
+      .summary h2 {
+        margin: 0;
+        padding: 14px 18px;
+        font: 700 0.9rem/1.4 Arial, Helvetica, sans-serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .summary-item {
+        padding: 14px 18px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .summary-item:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .summary-item strong {
+        display: block;
+        margin-bottom: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.84rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #4b5563;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      h2.section-title {
+        margin: 34px 0 12px;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        font-size: 1.16rem;
+      }
+
+      h3 {
+        margin: 20px 0 10px;
+        font-size: 1rem;
+      }
+
+      ul {
+        margin: 10px 0 16px 1.2rem;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .page-break {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      @page {
+        size: A4;
+        margin: 18mm;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page-shell {
+          max-width: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .document {
+          border: 0;
+          box-shadow: none;
+        }
+
+        .document-inner {
+          padding: 0;
+        }
+
+        .summary,
+        .notice,
+        .summary-item,
+        h2.section-title,
+        h3,
+        p,
+        ul,
+        li {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .page-shell {
+          padding: 0;
+          margin: 0;
+        }
+
+        .document-inner {
+          padding: 28px 22px 36px;
+        }
+
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .summary-item {
+          border-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="document">
+        <div class="document-inner">
+          <p class="eyebrow">Anexo Operacional</p>
+          <h1>Anexo de Escopo Operacional</h1>
+          <p class="subtitle">
+            Operacao mensal RZ Vet | Data-base: 2026-04-21
+          </p>
+
+          <div class="notice">
+            Este anexo integra o contrato principal de prestacao de servicos
+            continuados e foi estruturado conforme a fase atual da operacao da
+            RZ Vet.
+          </div>
+
+          <section class="summary">
+            <h2>Quadro-Resumo do Plano</h2>
+            <div class="summary-grid">
+              <div class="summary-item">
+                <strong>Fee mensal recorrente</strong>
+                <span>R$ 2.000,00</span>
+              </div>
+              <div class="summary-item">
+                <strong>Verba de Google Ads</strong>
+                <span>Ate R$ 2.500,00 por mes, paga separadamente</span>
+              </div>
+              <div class="summary-item">
+                <strong>Prazo inicial</strong>
+                <span>3 meses, de 01/05/2026 a 31/07/2026</span>
+              </div>
+              <div class="summary-item">
+                <strong>Revisao formal</strong>
+                <span>31/07/2026</span>
+              </div>
+              <div class="summary-item">
+                <strong>Meta-base da fase</strong>
+                <span>R$ 150.000,00 no periodo, com referencia de R$ 50.000,00 por mes em vendas da loja virtual propria, excluidos marketplaces</span>
+              </div>
+              <div class="summary-item">
+                <strong>Escopo principal</strong>
+                <span>Google Ads, medicao, leitura de dados, materiais de apoio comercial e apoio tecnico-operacional compativel com CRM terceirizado</span>
+              </div>
+            </div>
+          </section>
+
+          <h2 class="section-title">1. Objetivo da Assessoria</h2>
+          <p>
+            Esta assessoria mensal foi desenhada para concentrar a operacao da
+            RZ Vet em uma frente tecnicamente objetiva, com foco principal em
+            <strong>Google Ads</strong>, leitura de resultado atribuido e
+            sustentacao do faturamento da loja virtual.
+          </p>
+          <p>
+            Nao se trata de contrato ilimitado de desenvolvimento, automacao,
+            CRM customizado, atendimento comercial nem manutencao ampla de toda
+            a infraestrutura digital da empresa.
+          </p>
+
+          <h2 class="section-title">2. Logica de Operacao Mensal</h2>
+          <p>
+            A assessoria funciona por <strong>priorizacao mensal</strong>, e
+            nao por acumulacao irrestrita de pedidos.
+          </p>
+          <p>Na pratica, o desenho operacional contempla:</p>
+          <ul>
+            <li>1 alinhamento principal por ciclo</li>
+            <li>gestao da conta de Google Ads como frente prioritaria</li>
+            <li>acompanhamento de medicao e atribuicao da loja</li>
+            <li>ajustes compativeis com a fase e com a verba aprovada</li>
+            <li>trocas assincronas por mensagem, e-mail e call curta</li>
+          </ul>
+
+          <h2 class="section-title">3. O que Entra no Escopo Mensal</h2>
+          <p>
+            O escopo recorrente do plano atual pode contemplar, conforme a
+            prioridade do periodo:
+          </p>
+          <ul>
+            <li>planejamento e acompanhamento de Google Ads</li>
+            <li>ajuste de campanhas, budgets e ativos dentro da verba aprovada</li>
+            <li>revisao de termos de busca, grupos e distribuicao de verba</li>
+            <li>leitura tecnica de PMAX, Search, Shopping e Merchant Center</li>
+            <li>auditoria basica de tracking, conversoes e atribuicao</li>
+            <li>apoio tecnico para organizar relatorios e visao gerencial</li>
+            <li>
+              apoio tecnico-operacional compativel com a migracao da operacao
+              comercial para ferramenta terceirizada de CRM/atendimento, como
+              Datacrazy, sem desenvolvimento customizado de software nem
+              administracao integral da ferramenta
+            </li>
+            <li>
+              criacao ou refinamento de materiais de apoio comercial
+              diretamente conectados a operacao, como copies curtas, mensagens
+              ou direcionamentos taticos
+            </li>
+          </ul>
+
+          <h2 class="section-title">4. O que Nao Esta Incluido no Fee</h2>
+          <p>Salvo contratacao complementar, nao integram este fee mensal:</p>
+          <ul>
+            <li>desenvolvimento de software sob demanda</li>
+            <li>CRM proprio, bridge, bot ou integracao customizada</li>
+            <li>gestao completa de Chatwoot ou atendimento interno</li>
+            <li>reativacao, operacao ou manutencao de GOWA como stack propria</li>
+            <li>implantacao ou administracao completa de Datacrazy</li>
+            <li>
+              hospedagem, operacao ou suporte de Evolution, salvo apoio pontual
+              previamente aprovado como infraestrutura de ferramenta terceirizada
+            </li>
+            <li>resolucao irrestrita de e-mails, boletos ou suporte geral da empresa</li>
+            <li>operacao de marketplace</li>
+            <li>cadastro massivo de catalogo</li>
+            <li>community management diario</li>
+            <li>time comercial, fechamento ou pos-venda</li>
+            <li>promessa de numero minimo de vendas ou faturamento</li>
+          </ul>
+
+          <div class="page-break"></div>
+
+          <h2 class="section-title">5. Google Ads, Midia e Contas</h2>
+          <p>Quando houver ativacao de campanhas:</p>
+          <ul>
+            <li>
+              o fee cobre coordenacao tecnica, operacao compativel com o plano
+              e leitura dos principais sinais de performance
+            </li>
+            <li>a verba de Google Ads corre separadamente</li>
+            <li>
+              as contas de anuncio, Merchant Center, GA4, GTM e loja devem
+              permanecer sob governanca da CONTRATANTE, sempre que possivel
+            </li>
+          </ul>
+          <p>Nao estao incluidos no fee:</p>
+          <ul>
+            <li>investimento em Google Ads</li>
+            <li>creditos de plataforma</li>
+            <li>taxas, assinaturas ou custos de terceiros ligados a midia</li>
+            <li>
+              operacao paralela intensiva de Meta Ads, salvo nova ativacao
+              expressa e medivel
+            </li>
+          </ul>
+
+          <h2 class="section-title">6. Medicao, Atribuicao e Base de Comissao</h2>
+          <p>
+            Para fins de avaliacao comercial da fase, a meta-base considera o
+            faturamento geral da loja virtual da RZ Vet, excluidos Mercado
+            Livre, Shopee, Amazon e demais marketplaces.
+          </p>
+          <p>
+            Para fins de comissao, a base considerada sera composta
+            exclusivamente por <strong>vendas da loja virtual</strong> que
+            sejam razoavelmente rastreadas e atribuidas ao Google Ads.
+          </p>
+          <p>Ficam expressamente fora dessa base:</p>
+          <ul>
+            <li>Mercado Livre</li>
+            <li>Shopee</li>
+            <li>Amazon</li>
+            <li>demais marketplaces</li>
+            <li>vendas sem lastro tecnico minimo de atribuicao</li>
+          </ul>
+          <p>
+            A medicao podera usar, em conjunto, Google Ads, analytics, UTMs,
+            eventos de conversao, jornada assistida e demais evidencias
+            tecnicamente disponiveis no periodo.
+          </p>
+          <p>
+            As partes reconhecem que a atribuicao pode sofrer limitacoes de
+            plataforma, atraso de janela, assistencias cruzadas e variacoes de
+            medicao. Nesses casos, prevalecera a melhor leitura tecnica
+            disponivel, observada a boa-fe.
+          </p>
+
+          <h2 class="section-title">7. Comissionamento Informado Ate o Momento</h2>
+          <p>
+            Ate formalizacao final da tabela comercial em documento proprio,
+            passa a constar neste anexo a estrutura atualmente informada pela
+            CONTRATANTE:
+          </p>
+          <ul>
+            <li>
+              3% para vendas de <strong>equipamentos</strong>, calculados sobre
+              o valor efetivamente recebido pela CONTRATANTE
+            </li>
+            <li>
+              6% para vendas de <strong>material de consumo</strong>,
+              descartaveis e itens correlatos, calculados sobre o valor
+              efetivamente recebido pela CONTRATANTE
+            </li>
+          </ul>
+          <p>
+            O pagamento acompanha o valor efetivamente recebido pela
+            CONTRATANTE, inclusive quando houver parcelamento.
+          </p>
+
+          <h2 class="section-title">8. Revisoes, Limites e Mudanca de Escopo</h2>
+          <p>
+            Cada demanda contempla rodadas razoaveis de ajuste, compativeis com
+            o briefing aprovado e com a natureza do trabalho.
+          </p>
+          <p>Nao se consideram simples revisoes:</p>
+          <ul>
+            <li>reabrir frentes inteiras ja encerradas</li>
+            <li>transformar o contrato em manutencao geral da empresa</li>
+            <li>pedir nova stack tecnica fora da pauta do mes</li>
+            <li>reativar frentes de dev, CRM proprio ou infraestrutura custom</li>
+          </ul>
+          <p>Nesses casos, as partes poderao:</p>
+          <ul>
+            <li>reordenar a fila do mes</li>
+            <li>deslocar a demanda para o ciclo seguinte</li>
+            <li>aprovar escopo complementar</li>
+          </ul>
+
+          <h2 class="section-title">9. Prazos e Dependencias</h2>
+          <p>Os prazos serao definidos conforme:</p>
+          <ul>
+            <li>complexidade da demanda</li>
+            <li>fila real do mes</li>
+            <li>qualidade dos dados e dos ativos fornecidos</li>
+            <li>tempo de resposta e aprovacao da CONTRATANTE</li>
+            <li>acessos tecnicos liberados corretamente</li>
+          </ul>
+
+          <h2 class="section-title">10. Itens Extraordinarios e Adicionais Possiveis</h2>
+          <p>Podem ser contratados a parte, se necessario:</p>
+          <ul>
+            <li>sprint tecnico de tracking</li>
+            <li>nova estrutura de landing page</li>
+            <li>sprint de automacao ou CRM</li>
+            <li>desenvolvimento complementar</li>
+            <li>operacao reforcada de midia fora do plano</li>
+            <li>implantacao aprofundada de ferramenta terceirizada de atendimento/CRM fora da rotina do plano</li>
+            <li>implantacao tecnica de Evolution ou outra camada de WhatsApp fora da rotina do plano</li>
+          </ul>
+
+          <h2 class="section-title">11. Resumo Executivo do Plano</h2>
+          <h3>Base da fase atual</h3>
+          <ul>
+            <li>fee fixo: <strong>R$ 2.000,00 / mes</strong></li>
+            <li>Google Ads: <strong>ate R$ 2.500,00 / mes</strong></li>
+            <li>meta-base: <strong>R$ 150.000,00 no periodo, com referencia de R$ 50.000,00 por mes em vendas da loja virtual propria, excluidos marketplaces</strong></li>
+            <li>avaliacao da fase: <strong>31/07/2026</strong></li>
+          </ul>
+
+          <h3>Tese operacional</h3>
+          <p>
+            O plano atual foi desenhado para concentrar a atuacao naquilo que
+            efetivamente pode ser medido, defendido tecnicamente e associado ao
+            resultado da loja: Google Ads, leitura de atribuicao e crescimento
+            do faturamento rastreavel.
+          </p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

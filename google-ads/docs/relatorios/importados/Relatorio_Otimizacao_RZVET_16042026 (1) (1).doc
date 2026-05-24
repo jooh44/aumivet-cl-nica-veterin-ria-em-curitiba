@@ -1,0 +1,77 @@
+﻿<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head><meta charset='UTF-8'><meta name=ProgId content=Word.Document>
+<style>
+body{font-family:Arial,sans-serif;font-size:12pt;margin:2cm}
+h1{font-size:18pt;color:#1a56a0;text-align:center;font-weight:bold;margin-bottom:5pt}
+h2{font-size:13pt;color:#1a56a0;font-weight:bold;margin-top:18pt;border-bottom:1pt solid #1a56a0;padding-bottom:2pt}
+p{margin:5pt 0;line-height:1.4;font-size:11pt}
+table{border-collapse:collapse;width:100%;margin:8pt 0;font-size:10pt}
+th{background-color:#1a56a0;color:white;padding:5pt;text-align:left;border:1pt solid #999}
+td{padding:4pt 5pt;border:1pt solid #ccc}
+.alt{background-color:#f2f2f2}
+.total{background-color:#d4edda;font-weight:bold}
+ul{margin:4pt 0;padding-left:18pt}
+li{font-size:11pt;margin:2pt 0}
+.box{background:#fff3cd;border-left:4pt solid #f39c12;padding:8pt 10pt;margin:8pt 0}
+.footer{margin-top:25pt;text-align:center;color:#999;font-size:8pt;border-top:1pt solid #ddd;padding-top:6pt}
+</style></head>
+<body>
+<h1>Relat&oacute;rio de Otimiza&ccedil;&atilde;o das Campanhas &mdash; RZVET</h1>
+<p style="text-align:center;color:#555;font-size:9pt"><b>Data das Altera&ccedil;&otilde;es:</b> 16/04/2026 &nbsp;|&nbsp; <b>Conta:</b> 241-989-8793 RZVET &nbsp;|&nbsp; <b>Usu&aacute;rio:</b> rasouza.rrs@gmail.com &nbsp;|&nbsp; <b>Gerado em:</b> 17/04/2026</p>
+
+<h2>1. Resumo das Altera&ccedil;&otilde;es Realizadas</h2>
+<p>No dia 16/04/2026 foram feitas <b>10 altera&ccedil;&otilde;es</b> na conta pelo usu&aacute;rio <b>rasouza.rrs@gmail.com</b> via Cliente da Web (manual). As a&ccedil;&otilde;es focaram em dois objetivos: <b>redistribui&ccedil;&atilde;o de or&ccedil;amentos</b> para otimizar o retorno e <b>pausamento de palavras-chave</b> de baixa efici&ecirc;ncia para reduzir desperd&iacute;cio.</p>
+
+<h2>2. Altera&ccedil;&otilde;es de Or&ccedil;amento</h2>
+<table>
+<tr><th>Campanha</th><th>Or&ccedil;. Anterior</th><th>Or&ccedil;. Ap&oacute;s</th><th>Varia&ccedil;&atilde;o</th><th>Justificativa</th></tr>
+<tr><td>[Search] RZVet - Produtos</td><td>R$ 64,50/dia</td><td><b>R$ 6,00/dia</b></td><td style="color:red;font-weight:bold">&#9660; -90,7%</td><td>0 convers&otilde;es com CPC alto (R$2,62) &mdash; maior foco de desperd&iacute;cio</td></tr>
+<tr class="alt"><td>[PMAX] TODOS OS PRODUTOS I FORMA&Ccedil;&Atilde;O</td><td>R$ 12,00/dia</td><td><b>R$ 20,00/dia</b></td><td style="color:green;font-weight:bold">&#9650; +66,7%</td><td>Melhor performance: 2 convers&otilde;es a R$0,35/clique</td></tr>
+<tr><td>[Search] RZVet - Institucional</td><td>R$ 7,00/dia</td><td><b>R$ 55,00/dia</b></td><td style="color:green;font-weight:bold">&#9650; +685,7%</td><td>CTR de 45,28% e custo/conv. eficiente &mdash; campanha subinvestida</td></tr>
+</table>
+<p><b>Impacto na distribui&ccedil;&atilde;o:</b> O or&ccedil;amento foi retirado da campanha problem&aacute;tica e realocado para as de maior retorno. Or&ccedil;amento total: de ~R$ 83,50/dia para R$ 81,00/dia (redu&ccedil;&atilde;o de R$2,50, mas distribui&ccedil;&atilde;o muito mais eficiente).</p>
+
+<h2>3. Palavras-chave Pausadas na [Search] RZVet - Produtos</h2>
+<p>Foram pausadas <b>9 palavras-chave de correspond&ecirc;ncia de frase</b> que geravam tr&aacute;fego n&atilde;o qualificado sem gerar convers&otilde;es:</p>
+<table>
+<tr><th>#</th><th>Palavra-chave Pausada</th><th>Grupo de An&uacute;ncios</th><th>Hor&aacute;rio da Altera&ccedil;&atilde;o</th></tr>
+<tr><td>1</td><td>"ultrassom veterinario"</td><td>Produtos Gerais</td><td>16:20:35</td></tr>
+<tr class="alt"><td>2</td><td>"bomba de seringa veterin&aacute;ria"</td><td>Anestesia e Respirat&oacute;rio</td><td>16:20:35</td></tr>
+<tr><td>3</td><td>"instrumentos cirurgicos veterinarios"</td><td>Produtos Gerais</td><td>16:19:12</td></tr>
+<tr class="alt"><td>4</td><td>"seringa veterinaria"</td><td>Insumos Diversos</td><td>16:19:12</td></tr>
+<tr><td>5</td><td>"aparelho anestesia inalatoria veterin&aacute;ria"</td><td>Anestesia e Respirat&oacute;rio</td><td>16:19:12</td></tr>
+<tr class="alt"><td>6</td><td>"ventilador mecanico veterinario"</td><td>Anestesia e Respirat&oacute;rio</td><td>16:19:12</td></tr>
+<tr><td>7</td><td>"cateter venoso central"</td><td>Cateteres e Acesso</td><td>16:19:12</td></tr>
+<tr class="alt"><td>8</td><td>"doppler veterin&aacute;rio"</td><td>Monitoramento</td><td>16:19:12</td></tr>
+<tr><td>9</td><td>"monitor rz"</td><td>Monitoramento</td><td>16:19:12</td></tr>
+</table>
+<p><b>Crit&eacute;rio adotado:</b> Palavras-chave gen&eacute;ricas com tráfego de baixa inten&ccedil;&atilde;o de compra que elevavam o CPC m&eacute;dio da campanha para R$ 2,62 (mais alto da conta) sem gerar convers&otilde;es. Ao remov&ecirc;-las, o investimento restante (R$ 6,00/dia) fica direcionado a termos com maior potencial de convers&atilde;o.</p>
+
+<h2>4. Estado das Campanhas: Antes x Depois (16/04/2026)</h2>
+<table>
+<tr><th>Campanha</th><th>Or&ccedil;. Antes</th><th>Or&ccedil;. Depois</th><th>Conv.</th><th>Impr.</th><th>Cliques</th><th>CPC</th><th>CTR</th><th>Custo/dia</th></tr>
+<tr><td>[PMAX] - TODOS OS PRODUTOS I FORMA&Ccedil;&Atilde;O</td><td>R$ 12,00/dia</td><td><b>R$ 20,00/dia</b></td><td>2,00</td><td>871</td><td>26</td><td>R$ 0,35</td><td>2,99%</td><td>R$ 9,15</td></tr>
+<tr class="alt"><td>[Search] RZVet - Institucional</td><td>R$ 7,00/dia</td><td><b>R$ 55,00/dia</b></td><td>1,50</td><td>53</td><td>24</td><td>R$ 0,42</td><td><b>45,28%</b></td><td>R$ 9,97</td></tr>
+<tr><td>[Search] RZVet - Produtos</td><td>R$ 64,50/dia</td><td><b>R$ 6,00/dia</b></td><td style="color:red">0,00</td><td>372</td><td>27</td><td>R$ 2,62</td><td>7,26%</td><td>R$ 70,74</td></tr>
+<tr class="total"><td>TOTAL DA CONTA</td><td>~R$ 83,50/dia</td><td>R$ 81,00/dia</td><td>3,50</td><td>1.296</td><td>77</td><td>R$ 1,17</td><td>5,94%</td><td>R$ 89,87</td></tr>
+</table>
+
+<h2>5. An&aacute;lise e Impacto Esperado</h2>
+<p><b>Problemas identificados antes das altera&ccedil;&otilde;es:</b></p>
+<ul>
+<li>A campanha [Search] RZVet - Produtos concentrava <b>77% do or&ccedil;amento total</b> (R$ 64,50 de ~R$ 83,50) gerando <b>zero convers&otilde;es</b>, com custo di&aacute;rio de R$ 70,74 &mdash; principal fonte de desperd&iacute;cio da conta.</li>
+<li>A campanha [Search] RZVet - Institucional, com <b>CTR de 45,28%</b> e boa efici&ecirc;ncia de convers&atilde;o, estava operando com apenas R$ 7,00/dia &mdash; severamente subfinanciada.</li>
+<li>A campanha [PMAX] tinha potencial comprovado (2 convers&otilde;es a R$0,35/clique) mas com or&ccedil;amento limitado de R$ 12,00/dia.</li>
+<li>9 palavras-chave gen&eacute;ricas de correspond&ecirc;ncia de frase inflavam o volume de tr&aacute;fego sem qualidade.</li>
+</ul>
+<p><b>Melhorias aplicadas:</b></p>
+<ul>
+<li><b>Redu&ccedil;&atilde;o do desperd&iacute;cio:</b> Campanha Produtos perdeu ~R$ 58,50/dia de or&ccedil;amento (de R$64,50 para R$6,00).</li>
+<li><b>Realoca&ccedil;&atilde;o eficiente:</b> PMAX (+R$8,00/dia) e Institucional (+R$48,00/dia) receberam mais verba.</li>
+<li><b>Qualidade do tr&aacute;fego:</b> 9 palavras-chave sem retorno foram pausadas, elevando o potencial de convers&atilde;o das palavras restantes.</li>
+</ul>
+<div class="box">
+<b>&#9888; Ponto de Aten&ccedil;&atilde;o:</b> A campanha [Search] RZVet - Produtos ficou com or&ccedil;amento muito restrito (R$ 6,00/dia) e pontua&ccedil;&atilde;o de qualidade de 71,8% com alerta de "qualidade do an&uacute;ncio baixa". Recomenda-se: (1) monitorar o desempenho nos pr&oacute;ximos 7 dias; (2) se houver convers&otilde;es, aumentar gradualmente o or&ccedil;amento; (3) se n&atilde;o houver melhora, considerar pausar temporariamente a campanha e revisar os an&uacute;ncios antes de reativar.
+</div>
+<p class="footer">Relat&oacute;rio gerado automaticamente em 17/04/2026 &mdash; Conta Google Ads: 241-989-8793 RZVET &mdash; rasouza.rrs@gmail.com</p>
+</body></html>

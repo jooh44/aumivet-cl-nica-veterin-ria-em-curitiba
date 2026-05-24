@@ -1,0 +1,84 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Times New Roman;}}
+\f0\fs24
+
+{\b\fs32 RZVET Google Ads API Tool - Design Document\par}
+\par
+{\b Company:} RZVET (rzvet.com.br)\par
+{\b Tool Name:} RZVET Ads Manager\par
+{\b Date:} March 2026\par
+{\b Developer:} Johny Oliveira - joohxd123@gmail.com\par
+\par
+
+{\b\fs28 1. Tool Overview\par}
+\par
+RZVET Ads Manager is an internal Python-based automation tool designed to manage and optimize Google Ads campaigns for the RZVET veterinary e-commerce store. The tool is used exclusively to manage a single Google Ads account (Customer ID: 241-989-8793) under the RZVET Gerencial MCC (474-609-3100).\par
+\par
+The primary goal is to maximize ROAS (Return on Ad Spend) by programmatically reallocating budget and adjusting bids toward high-ticket veterinary products, such as multiparametric patient monitors, veterinary blood pressure cuffs, and veterinary ventilators.\par
+\par
+
+{\b\fs28 2. Tool Architecture\par}
+\par
+{\b Language:} Python 3.12\par
+{\b Library:} google-ads (official Python client library v25+)\par
+{\b Authentication:} OAuth 2.0 with refresh token stored in local .env file\par
+{\b Execution:} Scheduled via cron job or run manually by administrator\par
+{\b Access:} Internal only - single developer/administrator\par
+\par
+
+{\b\fs28 3. API Calls and Features\par}
+\par
+The tool uses the following Google Ads API services:\par
+\par
+{\b 3.1 Reporting (Read-only)\par}
+- GoogleAdsService.SearchStream: Retrieve campaign performance metrics (impressions, clicks, cost, conversions, ROAS) per campaign and ad group\par
+- GoogleAdsService.SearchStream: Retrieve keyword-level performance data\par
+\par
+{\b 3.2 Bid Management (Write)\par}
+- AdGroupCriterionService.MutateAdGroupCriteria: Adjust CPC bids on specific ad group criteria (keywords) based on performance thresholds\par
+- CampaignService.MutateCampaigns: Update daily budget allocation per campaign\par
+\par
+{\b 3.3 Campaign Management (Write)\par}
+- AdGroupCriterionService.MutateAdGroupCriteria: Pause underperforming keywords (status = PAUSED) that exceed cost threshold without generating conversions\par
+\par
+
+{\b\fs28 4. Business Logic\par}
+\par
+The tool applies the following automated rules:\par
+\par
+Rule 1 - Bid Increase: If a keyword in a high-ticket ad group (Monitors, Manguitos, Ventilators) has an impression share below 60% and ROAS above target, increase CPC bid by 15%.\par
+\par
+Rule 2 - Bid Decrease: If a keyword has a CPA above 3x the target CPA and zero conversions in the last 14 days, decrease CPC bid by 20%.\par
+\par
+Rule 3 - Keyword Pause: If a keyword has spent more than R$50 in the last 30 days with zero conversions, pause it.\par
+\par
+Rule 4 - Budget Reallocation: Reduce daily budget on the Competitors campaign (which targets competitor brand terms) and reallocate to the main Products campaign.\par
+\par
+
+{\b\fs28 5. Safety Controls\par}
+\par
+- All changes are logged to a local file before execution\par
+- Maximum bid change per execution: 25% (hard cap)\par
+- Minimum CPC floor: R$0.30 (no bid can go below this)\par
+- The tool runs at most once per day\par
+- No automated campaign or ad group creation - only modifications to existing structures\par
+- Administrator must review logs and can roll back changes manually\par
+\par
+
+{\b\fs28 6. Data Handling\par}
+\par
+- All API credentials are stored locally in a .env file not committed to version control\par
+- No customer data is stored or transmitted to third parties\par
+- API calls are made only to Google\'92s official endpoints\par
+- The tool does not access any data outside the authorized RZVET account\par
+\par
+
+{\b\fs28 7. Scope Limitations\par}
+\par
+This tool will NOT:\par
+- Create new campaigns, ad groups, or ads\par
+- Manage multiple client accounts (single account only)\par
+- Be distributed or sold to third parties\par
+- Perform any bulk account creation or white-label operations\par
+\par
+}

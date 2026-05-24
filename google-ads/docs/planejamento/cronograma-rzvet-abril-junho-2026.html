@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma RZ VET — Abril a Junho 2026</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 15px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a2e;
+      line-height: 1.65;
+    }
+
+    /* === LAYOUT === */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      background: #1a1a2e;
+      color: #c8c8d4;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 0 0 40px 0;
+      z-index: 100;
+    }
+
+    .sidebar-header {
+      padding: 28px 20px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      margin-bottom: 8px;
+    }
+
+    .sidebar-header .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .sidebar-header .sub {
+      font-size: .7rem;
+      color: #6c6c80;
+      margin-top: 2px;
+      letter-spacing: .04em;
+    }
+
+    .nav-label {
+      font-size: .6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #4a4a5e;
+      padding: 14px 20px 4px;
+    }
+
+    .nav-item {
+      display: block;
+      padding: 8px 20px;
+      color: #9898ab;
+      text-decoration: none;
+      font-size: .85rem;
+      border-left: 3px solid transparent;
+      transition: all .15s;
+    }
+
+    .nav-item:hover {
+      background: rgba(255, 255, 255, .05);
+      color: #fff;
+    }
+
+    .nav-item.active {
+      color: #4fc3f7;
+      border-left-color: #4fc3f7;
+      background: rgba(79, 195, 247, .08);
+    }
+
+    .main {
+      margin-left: 260px;
+      flex: 1;
+      padding: 0;
+    }
+
+    /* === HERO === */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      padding: 56px 56px 44px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(79, 195, 247, .15);
+      border: 1px solid rgba(79, 195, 247, .3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: #4fc3f7;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      opacity: .8;
+      max-width: 560px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 32px;
+      margin-top: 24px;
+      font-size: .8rem;
+      opacity: .6;
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* === CONTENT === */
+    .content {
+      padding: 44px 56px;
+      max-width: 920px;
+    }
+
+    .section {
+      margin-bottom: 56px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .section-num {
+      background: #0f3460;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+
+    .section-head h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 24px 0 10px;
+    }
+
+    /* === INFO BOXES === */
+    .info {
+      background: #eef6ff;
+      border-left: 4px solid #4fc3f7;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: .88rem;
+    }
+
+    .info.warn {
+      background: #fff8e6;
+      border-left-color: #f59e0b;
+    }
+
+    .info.urgent {
+      background: #fef2f2;
+      border-left-color: #ef4444;
+    }
+
+    .info.success {
+      background: #f0fdf4;
+      border-left-color: #22c55e;
+    }
+
+    .info strong {
+      font-weight: 700;
+    }
+
+    /* === TABLES === */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 20px;
+      font-size: .85rem;
+    }
+
+    thead th {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    tbody td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e8ecf0;
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: #f1f5f9;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* === STATUS BADGES === */
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      white-space: nowrap;
+    }
+
+    .badge.active {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .badge.progress {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .badge.pending {
+      background: #f3f4f6;
+      color: #4b5563;
+    }
+
+    .badge.done {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .badge.urgent {
+      background: #fef2f2;
+      color: #dc2626;
+      font-weight: 700;
+    }
+
+    .badge.fixing {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    /* === TIMELINE === */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      margin: 16px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: #d1d5db;
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #4fc3f7;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #d1d5db;
+    }
+
+    .tl-item.highlight::before {
+      background: #ef4444;
+      box-shadow: 0 0 0 2px #fecaca;
+    }
+
+    .tl-date {
+      font-size: .75rem;
+      font-weight: 700;
+      color: #6b7280;
+      margin-bottom: 2px;
+    }
+
+    .tl-content {
+      font-size: .88rem;
+    }
+
+    .tl-content strong {
+      color: #1a1a2e;
+    }
+
+    /* === METRICS === */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .metric-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .metric-card .label {
+      font-size: .7rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+
+    .metric-card .baseline {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #dc2626;
+    }
+
+    .metric-card .target {
+      font-size: .8rem;
+      color: #059669;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* === REMOVED SCOPE === */
+    .removed {
+      opacity: .6;
+    }
+
+    .removed td {
+      text-decoration: line-through;
+      text-decoration-color: #d1d5db;
+    }
+
+    .removed td:last-child {
+      text-decoration: none;
+      font-style: italic;
+    }
+
+    /* === FOOTER === */
+    .doc-footer {
+      background: #1a1a2e;
+      color: #6c6c80;
+      padding: 24px 56px;
+      margin-left: 260px;
+      font-size: .78rem;
+      text-align: center;
+    }
+
+    /* === PRINT === */
+    @media print {
+      .sidebar {
+        display: none;
+      }
+
+      .main,
+      .doc-footer {
+        margin-left: 0;
+      }
+
+      .hero {
+        padding: 30px;
+      }
+
+      .content {
+        padding: 20px 30px;
+      }
+
+      body {
+        font-size: 12px;
+      }
+    }
+
+    /* === MOBILE === */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .main,
+      .doc-footer {
+        margin-left: 0;
+      }
+
+      .hero {
+        padding: 32px 20px 28px;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .content {
+        padding: 24px 20px;
+      }
+
+      .hero-meta {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand">RZ VET</div>
+      <div class="sub">Cronograma Abr–Jun 2026</div>
+    </div>
+    <div class="nav-label">Planejamento</div>
+    <a href="#visao" class="nav-item active">Visao Geral</a>
+    <a href="#tema" class="nav-item">1. Tema Tray</a>
+    <a href="#ads" class="nav-item">2. Google Ads</a>
+    <a href="#chatwoot" class="nav-item">3. Chatwoot + API Tray</a>
+    <a href="#merchant" class="nav-item">4. Merchant Center</a>
+    <a href="#seo" class="nav-item">5. SEO + AIO</a>
+    <a href="#comercial" class="nav-item">6. Operacional</a>
+    <div class="nav-label">Execucao</div>
+    <a href="#cronograma" class="nav-item">Cronograma Semanal</a>
+    <a href="#metricas" class="nav-item">Metricas</a>
+    <a href="#removidos" class="nav-item">Fora do Escopo</a>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-badge">DOCUMENTO OPERACIONAL</div>
+      <h1>Cronograma de Atividades<br>Abril a Junho 2026</h1>
+      <p>Todas as atividades pendentes e em andamento, organizadas por area e prioridade. Foco em resultado direto no
+        faturamento.</p>
+      <div class="hero-meta">
+        <span>Data: 09/04/2026</span>
+        <span>Johny Oliveira</span>
+        <span>Para: Rafael — RZ Vet</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- VISAO GERAL -->
+      <section class="section" id="visao">
+        <div class="section-head">
+          <div class="section-num">&bull;</div>
+          <h2>Visao Geral</h2>
+        </div>
+        <p>Este documento consolida todas as atividades pendentes e em andamento. O foco e <strong>resultado direto no
+            faturamento</strong>: tema da loja rodando 100%, Google Ads otimizado, API Tray integrada ao Chatwoot,
+          catalogo Merchant Center completo e SEO/AIO do e-commerce.</p>
+        <div class="info">
+          <strong>ZOR Importadora:</strong> retirada do escopo conforme alinhado em 08/03. Toda a metodologia
+          desenvolvida para a ZOR (SEO, GMN, AIO) sera aplicada na RZ Vet primeiro. Quando a RZ estiver consolidada,
+          replica-se para a ZOR.
+        </div>
+      </section>
+
+      <!-- 1. TEMA -->
+      <section class="section" id="tema">
+        <div class="section-head">
+          <div class="section-num">1</div>
+          <h2>Tema da Loja Tray — Prioridade Maxima</h2>
+        </div>
+        <div class="info urgent">
+          <strong>Deadline: 20/04/2026</strong> — Tema novo otimizado no ar, rodando 100%, sem bugs. O prazo de 20/04 e
+          especificamente para o tema otimizado. As demais atividades seguem o cronograma geral.
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Atividade</th>
+              <th>Status</th>
+              <th>Detalhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.1</td>
+              <td>Implementar layout planejado sobre tema base da Tray</td>
+              <td><span class="badge progress">Em andamento</span></td>
+              <td>Codigo limpo, sem divida tecnica da DevRocket</td>
+            </tr>
+            <tr>
+              <td>1.2</td>
+              <td>Migrar customizacoes visuais dos layouts HTML salvos</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Aproveitar os layouts ja prontos em HTML</td>
+            </tr>
+            <tr>
+              <td>1.3</td>
+              <td>Testar todas as paginas na loja teste da Tray</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Ambiente teste liberado pela Tray esta semana</td>
+            </tr>
+            <tr>
+              <td>1.4</td>
+              <td>Validar responsividade (mobile/tablet/desktop)</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>1.5</td>
+              <td>Testar fluxo completo: navegacao &rarr; produto &rarr; carrinho &rarr; checkout &rarr; pagamento</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Zero bugs antes de subir</td>
+            </tr>
+            <tr>
+              <td>1.6</td>
+              <td>Validar integracao com meios de pagamento</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>1.7</td>
+              <td>Subir tema otimizado na loja de producao</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>So apos todos os testes passarem</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 2. GOOGLE ADS -->
+      <section class="section" id="ads">
+        <div class="section-head">
+          <div class="section-num">2</div>
+          <h2>Google Ads — Otimizacao Continua</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Atividade</th>
+              <th>Status</th>
+              <th>Detalhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2.1</td>
+              <td>Monitoramento semanal via API Python</td>
+              <td><span class="badge active">Ativo</span></td>
+              <td>Scripts core/ ja construidos e funcionando</td>
+            </tr>
+            <tr>
+              <td>2.2</td>
+              <td>Aguardar recalibracao do Smart Bidding</td>
+              <td><span class="badge progress">Em andamento</span></td>
+              <td>2-3 semanas apos ativacao (01/04). Avaliar em ~15/04</td>
+            </tr>
+            <tr>
+              <td>2.3</td>
+              <td>Trocar cartao de pagamento padrao</td>
+              <td><span class="badge urgent">URGENTE</span></td>
+              <td>Usar cartao ••••0369 como padrao para evitar nova recusa</td>
+            </tr>
+            <tr>
+              <td>2.4</td>
+              <td>Configurar alertas de pagamento no Google Ads</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Para nunca mais ter campanha parada por falta de pagamento</td>
+            </tr>
+            <tr>
+              <td>2.5</td>
+              <td>Revisao de budget apos dados limpos (meta: abril)</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Budget atual R$55,80/dia — avaliar aumento apos ticket medio recuperar</td>
+            </tr>
+            <tr>
+              <td>2.6</td>
+              <td>Relatorio mensal abril com comparativo vs. marco</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Entregar ate 05/05</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info warn">
+          <strong>Contexto:</strong> A queda de faturamento em marco (R$94k &rarr; R$54k) foi causada por falha de
+          pagamento do cartao ••••4026 que deixou campanhas off e em aprendizado por 21 dias. Pagamento regularizado em
+          09/mar com cartao ••••0369. Keywords de monitores (alto ticket) reativadas em 01/04. Aguardando recalibracao.
+        </div>
+      </section>
+
+      <!-- 3. CHATWOOT + API TRAY -->
+      <section class="section" id="chatwoot">
+        <div class="section-head">
+          <div class="section-num">3</div>
+          <h2>Chatwoot + API Tray — Integracao</h2>
+        </div>
+        <div class="info">
+          <strong>Dependencia:</strong> Homologacao da integracao na Tray. Acesso a loja teste ja funcional; apos
+          homologacao, chaves oficiais da RZ Vet serao liberadas.
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Atividade</th>
+              <th>Status</th>
+              <th>Detalhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3.1</td>
+              <td>Homologacao da integracao API Tray</td>
+              <td><span class="badge progress">Em andamento</span></td>
+              <td>Acesso a loja teste funcional; apos aprovacao, chaves oficiais da RZ Vet serao liberadas</td>
+            </tr>
+            <tr>
+              <td>3.2</td>
+              <td>Implementar consulta de pedidos via API Tray</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Endpoint: buscar pedido por nome/CPF/numero</td>
+            </tr>
+            <tr>
+              <td>3.3</td>
+              <td>Integrar consulta no fluxo do DataCrazy</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Cliente pergunta "cade meu pedido?" &rarr; DataCrazy aciona integracao Tray &rarr; responde automaticamente</td>
+            </tr>
+            <tr>
+              <td>3.4</td>
+              <td>Implementar consulta de rastreio via API Tray</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Puxar codigo de rastreio + transportadora + status (a confirmar disponibilidade do endpoint)</td>
+            </tr>
+            <tr>
+              <td>3.5</td>
+              <td>Automacao de confirmacao de pedido</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Novo pedido na Tray &rarr; template Meta automatico para o cliente</td>
+            </tr>
+            <tr>
+              <td>3.6</td>
+              <td>Automacao de atualizacao de rastreio</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Status muda na Tray &rarr; template Meta com codigo de rastreio</td>
+            </tr>
+            <tr>
+              <td>3.7</td>
+              <td>Widget do Chatwoot no site da loja</td>
+              <td><span class="badge urgent">Pendente</span></td>
+              <td>Era pra ter sido implementado antes — ficou atrasado pelos problemas com a Meta</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info success">
+          <strong>Impacto esperado:</strong> Vendedores param de enviar rastreio manualmente. Clientes consultam pedidos
+          direto pelo WhatsApp oficial. Libera tempo da equipe para prospeccao ativa (conforme ata de 16/03).
+        </div>
+      </section>
+
+      <!-- 4. MERCHANT CENTER -->
+      <section class="section" id="merchant">
+        <div class="section-head">
+          <div class="section-num">4</div>
+          <h2>Google Merchant Center — Catalogo</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Atividade</th>
+              <th>Status</th>
+              <th>Detalhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4.1</td>
+              <td>Auditar feed de produtos atual</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Verificar titulos, descricoes, GTINs, imagens, categorias</td>
+            </tr>
+            <tr>
+              <td>4.2</td>
+              <td>Otimizar titulos de produtos para busca</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Incluir marca + tipo + especificacao (ex: "Monitor Multiparametrico Veterinario Portatil")</td>
+            </tr>
+            <tr>
+              <td>4.3</td>
+              <td>Corrigir imagens que nao atendem requisitos</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Fundo branco, sem texto sobreposto, resolucao minima</td>
+            </tr>
+            <tr>
+              <td>4.4</td>
+              <td>Completar atributos obrigatorios faltantes</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>GTIN, MPN, brand, condition, availability</td>
+            </tr>
+            <tr>
+              <td>4.5</td>
+              <td>Ativar avaliacoes de produto (se elegivel)</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Usar tag GTM "Google Avaliacoes - Variaveis" que ja extrai GTINs</td>
+            </tr>
+            <tr>
+              <td>4.6</td>
+              <td>Revisar Shopping campaigns vinculadas ao Ads</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Apos feed otimizado</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 5. SEO + AIO -->
+      <section class="section" id="seo">
+        <div class="section-head">
+          <div class="section-num">5</div>
+          <h2>SEO + AIO do E-commerce</h2>
+        </div>
+        <div class="info">
+          <strong>Contexto:</strong> Mesmo sendo PHP/Twig (Tray), a RZ Vet ja tem autoridade de dominio. Com o tema
+          novo, vamos otimizar.
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Atividade</th>
+              <th>Status</th>
+              <th>Detalhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5.1</td>
+              <td>Estrutura de headings (H1/H2/H3) no tema novo</td>
+              <td><span class="badge progress">No tema</span></td>
+              <td>Implementar junto com o layout</td>
+            </tr>
+            <tr>
+              <td>5.2</td>
+              <td>Meta titles e descriptions otimizados por categoria</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Templates com keyword + marca + diferencial</td>
+            </tr>
+            <tr>
+              <td>5.3</td>
+              <td>Schema markup de produtos (Product, Offer, Review)</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Structured data para rich snippets no Google</td>
+            </tr>
+            <tr>
+              <td>5.4</td>
+              <td>Schema markup da organizacao (LocalBusiness)</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>NAP consistente</td>
+            </tr>
+            <tr>
+              <td>5.5</td>
+              <td>Otimizar URLs de categorias e produtos</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Verificar o que a Tray permite customizar</td>
+            </tr>
+            <tr>
+              <td>5.6</td>
+              <td>Alt text de imagens de produtos</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Descritivo, com keyword natural</td>
+            </tr>
+            <tr>
+              <td>5.7</td>
+              <td>Velocidade de carregamento (Core Web Vitals)</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>Tema base da Tray tende a ser mais leve que DevRocket customizado</td>
+            </tr>
+            <tr>
+              <td>5.8</td>
+              <td>Conteudo AIO: FAQ de produto com perguntas reais</td>
+              <td><span class="badge pending">Pendente</span></td>
+              <td>"Qual monitor veterinario comprar?", "Diferenca entre monitor X e Y" — pra IAs citarem</td>
+            </tr>
+            <tr>
+              <td>5.9</td>
+              <td>Breadcrumbs estruturados</td>
+              <td><span class="badge progress">No tema</span></td>
+              <td>Implementar no layout</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 6. OPERACIONAL -->
+      <section class="section" id="comercial">
+        <div class="section-head">
+          <div class="section-num">6</div>
+          <h2>Operacional Comercial — Status Atual</h2>
+        </div>
+        <p style="margin-bottom:12px;">Sistemas ja implementados e em funcionamento. Manutencao continua.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Sistema</th>
+              <th>Status</th>
+              <th>Detalhe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>6.1</td>
+              <td>Chatwoot + Bridge Meta (API oficial)</td>
+              <td><span class="badge active">Ativo</span></td>
+              <td>Porta 3500, inboxes Vendas/Assistencia/ADM/Financeiro</td>
+            </tr>
+            <tr>
+              <td>6.2</td>
+              <td>Templates Meta (rastreio, confirmacao, entrega, reativacao)</td>
+              <td><span class="badge fixing">Em correcao</span></td>
+              <td>Correcao aplicada + testes internos realizados. Testes com a equipe agendados para 10/04</td>
+            </tr>
+            <tr>
+              <td>6.3</td>
+              <td>Bridge GOWA (WhatsApp vendedores)</td>
+              <td><span class="badge progress">Ativo parcial</span></td>
+              <td>Inbox testes OK. Lucas como piloto pendente conexao</td>
+            </tr>
+            <tr>
+              <td>6.4</td>
+              <td>Fluxo inicial no DataCrazy</td>
+              <td><span class="badge active">Ativo</span></td>
+              <td>Funcionando no canal Meta oficial</td>
+            </tr>
+            <tr>
+              <td>6.5</td>
+              <td>Manual de atendimento</td>
+              <td><span class="badge active">Ativo</span></td>
+              <td>Publicado em rzequipamentos.com.br</td>
+            </tr>
+            <tr>
+              <td>6.6</td>
+              <td>Sistema de etiquetas do funil</td>
+              <td><span class="badge done">Implementado</span></td>
+              <td>lead-novo &rarr; qualificado &rarr; negociacao &rarr; proposta &rarr; fechamento &rarr; venda/perdido
+              </td>
+            </tr>
+            <tr>
+              <td>6.7</td>
+              <td>Automacao de encerramento (24h sem resposta)</td>
+              <td><span class="badge active">Ativo</span></td>
+              <td>Resolve conversa + mensagem de reativacao automatica</td>
+            </tr>
+            <tr>
+              <td>6.8</td>
+              <td>Regra dos 10 dias para propostas</td>
+              <td><span class="badge done">Definido</span></td>
+              <td>Conforme reuniao 25/03 — apos 10 dias sem evolucao, resolver e voltar pra fila</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="info">
+          <strong>Decisao reuniao 08/03:</strong> Deixar sistema como esta. Equipe continua recebendo pelo Chatwoot.
+          Rastreios vao pelo WhatsApp individual de cada vendedor ate a API Tray estar integrada. Bug de envio proativo
+          para contatos frios &rarr; engavetado (limitacao da Meta, nao do sistema).
+        </div>
+      </section>
+
+      <!-- CRONOGRAMA -->
+      <section class="section" id="cronograma">
+        <div class="section-head">
+          <div class="section-num">&rarr;</div>
+          <h2>Cronograma Semanal</h2>
+        </div>
+
+        <h3>Abril 2026</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">07–13 Abril</div>
+            <div class="tl-content"><strong>Tema Tray:</strong> layout + testes loja teste. Layout migrado, testes em
+              andamento.</div>
+          </div>
+          <div class="tl-item highlight">
+            <div class="tl-date">14–20 Abril &mdash; DEADLINE TEMA</div>
+            <div class="tl-content"><strong>Tema Tray:</strong> finalizar + subir producao. Tema novo otimizado no ar.
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">21–27 Abril</div>
+            <div class="tl-content"><strong>Google Ads:</strong> avaliar recalibracao Smart Bidding + <strong>Widget
+                Chatwoot no site.</strong> Relatorio de performance + widget ativo.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">28 Abr – 04 Mai</div>
+            <div class="tl-content"><strong>API Tray:</strong> consulta de pedidos. MVP consulta de pedido funcionando.
+            </div>
+          </div>
+        </div>
+
+        <h3>Maio 2026</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">05–11 Maio</div>
+            <div class="tl-content"><strong>API Tray:</strong> rastreio + integracao DataCrazy. Consulta de pedido/rastreio
+              no fluxo do DataCrazy.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">12–18 Maio</div>
+            <div class="tl-content"><strong>Automacoes de confirmacao/rastreio via templates Meta.</strong> Fluxo
+              automatizado ativo.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">19–25 Maio</div>
+            <div class="tl-content"><strong>SEO do tema novo:</strong> schema, headings, metas. Structured data
+              implementado.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">26 Mai – 01 Jun</div>
+            <div class="tl-content"><strong>Google Ads:</strong> relatorio maio + otimizacoes. Relatorio comparativo
+              mar&rarr;abr&rarr;mai.</div>
+          </div>
+        </div>
+
+        <h3>Junho 2026</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">02–08 Junho</div>
+            <div class="tl-content"><strong>Merchant Center:</strong> auditoria de feed. Feed auditado + correcoes
+              iniciadas.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">09–15 Junho</div>
+            <div class="tl-content"><strong>Merchant Center:</strong> otimizacao titulos/imagens/atributos. Feed
+              otimizado completo.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">16–22 Junho</div>
+            <div class="tl-content"><strong>AIO + Shopping campaigns.</strong> Conteudo publicado + campanhas Shopping
+              ativas.</div>
+          </div>
+          <div class="tl-item highlight">
+            <div class="tl-date">23–30 Junho &mdash; ENTREGA FINAL</div>
+            <div class="tl-content"><strong>Entrega final + relatorio consolidado.</strong> Documento de tudo entregue e
+              funcionando.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- METRICAS -->
+      <section class="section" id="metricas">
+        <div class="section-head">
+          <div class="section-num">#</div>
+          <h2>Metricas de Acompanhamento</h2>
+        </div>
+        <p style="margin-bottom:14px;">Baseline de marco 2026 e metas progressivas.</p>
+        <div class="metrics">
+          <div class="metric-card">
+            <div class="label">Faturamento Loja</div>
+            <div class="baseline">R$54k</div>
+            <div class="target">Meta Jun: R$90k+</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Ticket Medio</div>
+            <div class="baseline">R$244</div>
+            <div class="target">Meta Jun: R$450+</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Pedidos &gt; R$1.000</div>
+            <div class="baseline">2</div>
+            <div class="target">Meta Jun: 10+</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">ROAS Google Ads</div>
+            <div class="baseline">18,4x</div>
+            <div class="target">Meta Jun: 30x+</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Receita Atribuida Ads</div>
+            <div class="baseline">R$25k</div>
+            <div class="target">Meta Jun: R$60k+</div>
+          </div>
+        </div>
+        <table style="margin-top:16px;">
+          <thead>
+            <tr>
+              <th>Metrica</th>
+              <th>Marco (baseline)</th>
+              <th>Meta Abril</th>
+              <th>Meta Junho</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Faturamento loja</td>
+              <td>R$54.056</td>
+              <td>R$70.000+</td>
+              <td>R$90.000+</td>
+            </tr>
+            <tr>
+              <td>Ticket medio</td>
+              <td>R$244</td>
+              <td>R$350+</td>
+              <td>R$450+</td>
+            </tr>
+            <tr>
+              <td>Pedidos > R$1.000</td>
+              <td>2</td>
+              <td>6+</td>
+              <td>10+</td>
+            </tr>
+            <tr>
+              <td>ROAS Google Ads</td>
+              <td>18,4x</td>
+              <td>25x+</td>
+              <td>30x+</td>
+            </tr>
+            <tr>
+              <td>Receita atribuida Ads</td>
+              <td>R$25.333</td>
+              <td>R$40.000+</td>
+              <td>R$60.000+</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- REMOVIDOS -->
+      <section class="section" id="removidos">
+        <div class="section-head">
+          <div class="section-num">&times;</div>
+          <h2>Itens Removidos do Escopo</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Motivo</th>
+              <th>Quando retomar</th>
+            </tr>
+          </thead>
+          <tbody class="removed">
+            <tr>
+              <td>ZOR Importadora (GMN, SEO, site)</td>
+              <td>Foco total na RZ Vet primeiro</td>
+              <td style="font-style:italic;">Apos RZ consolidada (Q3 2026)</td>
+            </tr>
+            <tr>
+              <td>GOWA rollout vendedores</td>
+              <td>Sistema estavel; nao gera faturamento direto agora</td>
+              <td style="font-style:italic;">Apos API Tray funcional</td>
+            </tr>
+            <tr>
+              <td>Bug envio proativo Meta (contatos frios)</td>
+              <td>Limitacao da Meta, nao do sistema</td>
+              <td style="font-style:italic;">Monitorar atualizacoes da Meta</td>
+            </tr>
+            <tr>
+              <td>IP fixo do telefone comercial</td>
+              <td>Desativar conforme solicitado por Rafael</td>
+              <td style="font-style:italic;">Imediato</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="doc-footer">
+    Documento gerado em 09/04/2026 &mdash; Johny Oliveira, Digital Dog / RZ Vet
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-item[href^="#"]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navItems.forEach(item => item.classList.remove('active'));
+          const active = document.querySelector(`.nav-item[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+
+</html>

@@ -5,12 +5,33 @@ import CookieConsent from '../components/CookieConsent.astro';
 type Props = {
   title?: string;
   description?: string;
+  canonicalPath?: string;
+  image?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
 };
 
 const {
-  title = 'Aumivet - Clínica Veterinária em Curitiba',
-  description = 'Aumivet: atendimento veterinário acolhedor em Curitiba, com consultas, vacinas, exames, odontologia, adestramento e cirurgias especializadas.',
+  title = 'Aumivet Clínica Veterinária em Curitiba | Rebouças',
+  description = 'Aumivet é uma clínica veterinária em Curitiba, no Rebouças, com consultas, vacinas, exames, odontologia veterinária, cirurgias especializadas e atendimento humanizado para cães e gatos.',
+  canonicalPath,
+  image = '/images/redesign/hero-bento-desktop.webp',
+  schema,
 } = Astro.props;
+
+const siteUrl = Astro.site ?? new URL('https://aumivet.com.br');
+const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, siteUrl).toString();
+const imageUrl = new URL(image, siteUrl).toString();
+const graphSchema = schema
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': Array.isArray(schema) ? schema : [schema],
+    }
+  : null;
+
+const googleTagId = import.meta.env.PUBLIC_GOOGLE_TAG_ID;
+const waConversionLabel = import.meta.env.PUBLIC_WA_CONVERSION_LABEL;
+const phoneConversionLabel = import.meta.env.PUBLIC_PHONE_CONVERSION_LABEL;
+const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <!doctype html>
@@ -19,21 +40,89 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Aumivet Clínica Veterinária" />
+    <meta name="application-name" content="Aumivet" />
     <meta name="theme-color" content="#FAF8F5" />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aumivet" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content="Aumivet Clínica Veterinária em Curitiba" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,45..100&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Style+Script&display=swap"
       rel="stylesheet"
     />
+    {graphSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(graphSchema)} />}
+
+    {/* Google Tag (Analytics & Ads) */}
+    {(googleTagId || gaId) && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId || gaId}`}></script>
+        <script is:inline define:vars={{ googleTagId, gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function gtag(){dataLayer.push(arguments);}
+          window.gtag('js', new Date());
+
+          if (googleTagId) {
+            window.gtag('config', googleTagId);
+          }
+          if (gaId) {
+            window.gtag('config', gaId);
+          }
+        </script>
+      </>
+    )}
   </head>
   <body>
     <slot />
     <CookieConsent />
+
+    {/* Rastreamento de conversão para Google Ads (WhatsApp e telefone) */}
+    {googleTagId && (
+      <script is:inline define:vars={{ googleTagId, waConversionLabel, phoneConversionLabel }}>
+        document.addEventListener('click', (event) => {
+          const target = event.target.closest('a');
+          if (!target) return;
+
+          const href = target.getAttribute('href') || '';
+
+          // Rastreio do WhatsApp
+          if (href.includes('wa.me') || href.includes('api.whatsapp.com')) {
+            if (window.gtag && waConversionLabel) {
+              window.gtag('event', 'conversion', {
+                'send_to': `${googleTagId}/${waConversionLabel}`
+              });
+              console.log(`[Google Ads] Conversão WhatsApp disparada: ${googleTagId}/${waConversionLabel}`);
+            }
+          }
+
+          // Rastreio de Telefone (ligações diretas)
+          if (href.startsWith('tel:')) {
+            if (window.gtag && phoneConversionLabel) {
+              window.gtag('event', 'conversion', {
+                'send_to': `${googleTagId}/${phoneConversionLabel}`
+              });
+              console.log(`[Google Ads] Conversão Telefone disparada: ${googleTagId}/${phoneConversionLabel}`);
+            }
+          }
+        });
+      </script>
+    )}
   </body>
 </html>

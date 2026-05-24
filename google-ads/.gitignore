@@ -1,0 +1,18 @@
+# Sensitive credential files
+.env.ads
+.env.tray
+service_account.json
+
+# Local Python virtual environment
+.venv_ads/
+__pycache__/
+*.pyc
+
+# Local runtime data and snapshots
+memory/
+data/
+runtime/
+imports/
+*.json
+!package.json
+!package-lock.json
