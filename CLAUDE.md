@@ -5,18 +5,18 @@ Leia primeiro `project-context.md`. Ele e a fonte atual da retomada, proposta co
 ## Estado rapido
 
 - Aumivet e uma clinica veterinaria em Curitiba, cliente antigo em retomada.
-- O repo tem landing estatica na raiz (`index.html`, `styles.css`, `images/`) e app Next em `frontend/`.
+- O repo tem landing estatica na raiz (`index.html`, `styles.css`, `images/`) e app Astro em `frontend/`.
 - O projeto nao usa CMS no estado atual.
-- Strapi/CMS legado foi removido nesta retomada; nao reintroduzir sem decisao explicita.
-- A proposta comercial mais atual esta em `docs/proposta-comercial-aumivet.html`.
+- Strapi/CMS legado foi removido nesta retomada.
+- Rastreamento do Google Ads implementado e API configurada para a conta da Aumivet (`9838845707`). Tudo pronto para lançamento (falta apenas atualizar a galeria com as novas fotos quando o cliente as enviar).
 
 ## Comandos do frontend
 
 ```bash
 cd frontend
-npm ci
-npm run build
-npm run dev
+pnpm install
+pnpm build
+pnpm preview
 ```
 
 ## Cuidados comerciais

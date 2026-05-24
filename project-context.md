@@ -1,6 +1,6 @@
 # Project Context - Aumivet
 
-Ultima atualizacao: 2026-05-23
+Ultima atualizacao: 2026-05-24
 
 Este arquivo e a fonte rapida para agentes continuarem a retomada da Aumivet sem reconstruir contexto.
 
@@ -209,6 +209,15 @@ Foram removidos ou ajustados os pontos ligados a Strapi:
 - `.env.example`, `frontend/.env.example`, `frontend/README.md` e `CLAUDE.md`.
 
 Nao reintroduzir CMS, Strapi ou revalidate webhook sem decisao explicita.
+
+## Integração Google Ads (Tracking e API) — 2026-05-24
+
+O rastreamento do Google Ads foi configurado dinamicamente no site Astro (`frontend/src/layouts/BaseLayout.astro`) e as ferramentas locais de gerenciamento de campanhas via API foram estruturadas em `google-ads/`.
+
+- **Google Tag (gtag.js)**: Configurada no cabeçalho do `BaseLayout.astro`. Carrega e inicializa a tag se a variável de ambiente `PUBLIC_GOOGLE_TAG_ID` estiver definida no ambiente.
+- **Rastreamento de Conversões**: Cliques em links do WhatsApp (`wa.me` ou `api.whatsapp.com`) e Telefone (`tel:`) são capturados de forma automática e enviam eventos de conversão de leads usando as labels configuradas no ambiente (`PUBLIC_WA_CONVERSION_LABEL` e `PUBLIC_PHONE_CONVERSION_LABEL`).
+- **Gerenciador de Campanhas Local**: Pasta `google-ads/` configurada. Contém `rzads.py` e scripts herdados. As credenciais em `google-ads/.env.ads` estão configuradas para interagir diretamente com a conta da Aumivet (Customer ID: `9838845707`). O arquivo de credenciais está ignorado no Git para segurança.
+- **Launch Readiness**: O site está pronto para lançamento e deploy de produção na Vercel (as variáveis de ambiente reais do Ads já foram configuradas no arquivo local `.env` e as conversões criadas via API). Resta apenas o usuário atualizar a galeria com as novas fotos quando desejar.
 
 ## Cuidados para o proximo agente
 
