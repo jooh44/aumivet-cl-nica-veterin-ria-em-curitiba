@@ -5,50 +5,34 @@ const photos = [
   {
     src: '/images/gallery/aumivet-galeria-recepcao.webp',
     alt: 'Recepção da Aumivet Clínica Veterinária em Curitiba com tapete da marca e ambiente acolhedor',
-    label: 'Recepção Aumivet',
-    tag: 'Infraestrutura',
   },
   {
     src: '/images/gallery/aumivet-galeria-consultorio.webp',
     alt: 'Consultório veterinário da Aumivet preparado para atendimento clínico de cães e gatos',
-    label: 'Consultório Clínico',
-    tag: 'Consultório',
   },
   {
     src: '/images/gallery/aumivet-galeria-centro-cirurgico.webp',
     alt: 'Centro cirúrgico veterinário da Aumivet com mesa e equipamentos de monitoramento',
-    label: 'Centro Cirúrgico',
-    tag: 'Cirurgia',
   },
   {
     src: '/images/gallery/aumivet-galeria-internacao.webp',
     alt: 'Área de internação da Aumivet com baias individuais para pets em acompanhamento',
-    label: 'Internação',
-    tag: 'Infraestrutura',
   },
   {
     src: '/images/gallery/aumivet-galeria-internacao-felina.webp',
     alt: 'Espaço de internação felina da Aumivet com baias e ambiente reservado',
-    label: 'Internação Felina',
-    tag: 'Cuidado',
   },
   {
     src: '/images/gallery/aumivet-galeria-sala-atendimento.webp',
     alt: 'Sala de atendimento veterinário da Aumivet com bancada, mesa e iluminação natural',
-    label: 'Sala de Atendimento',
-    tag: 'Consultório',
   },
   {
     src: '/images/gallery/aumivet-galeria-area-apoio.webp',
     alt: 'Área de apoio da Aumivet Clínica Veterinária com bancada e acesso à sala técnica',
-    label: 'Área de Apoio',
-    tag: 'Estrutura',
   },
   {
     src: '/images/gallery/aumivet-galeria-paciente.webp',
     alt: 'Paciente canino atendido pela Aumivet em ambiente seguro e acolhedor',
-    label: 'Paciente Acolhido',
-    tag: 'Cuidado',
   },
 ];
 
@@ -131,10 +115,6 @@ const differentials = [
               loading="lazy"
             />
             <div class="gallery-main-overlay">
-              <div class="gallery-main-info">
-                <span class="gallery-main-tag" id="gallery-main-tag">{photos[0].tag}</span>
-                <h4 id="gallery-main-label">{photos[0].label}</h4>
-              </div>
               <div class="gallery-expand-icon">
                 <Maximize2 size={16} />
               </div>
@@ -149,9 +129,7 @@ const differentials = [
                 data-gallery-idx={String(i)}
                 data-src={photo.src}
                 data-alt={photo.alt}
-                data-label={photo.label}
-                data-tag={photo.tag}
-                aria-label={`Ver foto: ${photo.label}`}
+                aria-label={`Ver foto ${i + 1} da galeria da Aumivet`}
               >
                 <img src={photo.src} alt={photo.alt} loading="lazy" />
               </button>
@@ -178,7 +156,6 @@ const differentials = [
 
       <div class="lightbox-img-container">
         <img id="lightbox-img" src="" alt="" />
-        <div class="lightbox-caption" id="lightbox-caption"></div>
         <div class="lightbox-counter" id="lightbox-counter"></div>
       </div>
 
@@ -192,8 +169,6 @@ const differentials = [
 <script define:vars={{ photos }}>
   // Gallery e-commerce logic
   const mainImg = document.getElementById('gallery-main-img');
-  const mainLabel = document.getElementById('gallery-main-label');
-  const mainTag = document.getElementById('gallery-main-tag');
   const thumbs = document.querySelectorAll('.gallery-thumb');
   let currentGalleryIdx = 0;
 
@@ -204,8 +179,6 @@ const differentials = [
 
     mainImg.src = photo.src;
     mainImg.alt = photo.alt;
-    if (mainLabel) mainLabel.textContent = photo.label;
-    if (mainTag) mainTag.textContent = photo.tag;
 
     thumbs.forEach((t, i) => {
       t.classList.toggle('active', i === idx);
@@ -221,7 +194,6 @@ const differentials = [
   // Lightbox
   const dialog = document.getElementById('lightbox-modal');
   const dialogImg = document.getElementById('lightbox-img');
-  const dialogCaption = document.getElementById('lightbox-caption');
   const dialogCounter = document.getElementById('lightbox-counter');
   const closeBtn = document.getElementById('lightbox-close');
   const prevBtn = document.getElementById('lightbox-prev');
@@ -232,7 +204,6 @@ const differentials = [
     if (!p || !dialogImg) return;
     dialogImg.src = p.src;
     dialogImg.alt = p.alt;
-    if (dialogCaption) dialogCaption.textContent = p.alt;
     if (dialogCounter) dialogCounter.textContent = `${currentGalleryIdx + 1} de ${photos.length}`;
   }
 

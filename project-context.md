@@ -225,6 +225,7 @@ A galeria atual do Astro usa 8 fotos novas baixadas do Drive do usuário, otimiz
 
 - Arquivo fonte do componente: `frontend/src/components/About.astro`.
 - Layout: foto principal 4:3 com thumbnails em grade 2 colunas no desktop e scroll horizontal no mobile.
+- Rótulos e legendas visíveis da galeria foram removidos em 2026-05-25 porque alguns nomes de ambientes ainda precisam de validação manual. Os textos `alt` permanecem para acessibilidade.
 - Fotos antigas de baixa resolução removidas do `frontend/public/images/`: `aumivet-clinica-veterinaria-em-curitiba (1).jpg` a `(4).jpg`.
 - O schema da home em `frontend/src/pages/index.astro` foi atualizado para apontar a nova imagem de recepção.
 - Validado com `cd frontend && pnpm build`.
@@ -238,15 +239,18 @@ Estado verificado via API:
 - Conta Aumivet: `CUSTOMER_ID=9838845707`.
 - A conta é acessível diretamente pelo OAuth atual; não usar `MANAGER_CUSTOMER_ID` como `login_customer_id` para Aumivet, salvo se `LOGIN_CUSTOMER_ID` for explicitamente configurado.
 - Existe uma campanha antiga pausada: `SEARCH v0.5` (`22634313741`), budget `R$10/dia`. Não ativar como está: ela mistura adestramento, banho e tosa, atendimento domiciliar, termos genéricos amplos e copy antiga.
-- A campanha nova preferida deve ser criada limpa e pausada pelo script `google-ads/scripts/ads/create_aumivet_search_cirurgias.py`.
-- O script é `dry-run` por padrão; `--apply` cria a campanha pausada `Search | Cirurgias Curitiba | Aumivet | 2026-05` com grupos de cirurgia geral, catarata Petlove e odontologia.
+- Campanha nova criada via API em 2026-05-25: `Search | Cirurgias Curitiba | Aumivet | 2026-05` (`23882431819`), status `PAUSED`, budget `R$16,50/dia`, CPC manual `R$2,50`, Curitiba + português, 38 negativas de campanha.
+- Grupos criados: `Cirurgia Geral` (8 keywords, 1 RSA), `Catarata Petlove` (6 keywords, 1 RSA) e `Odontologia Veterinaria` (5 keywords, 1 RSA).
+- Anúncios e keywords ficaram habilitados dentro da campanha pausada, em revisão (`REVIEW_IN_PROGRESS` / `UNDER_REVIEW`) após a criação. Não há gasto enquanto a campanha permanecer pausada.
+- O script `google-ads/scripts/ads/create_aumivet_search_cirurgias.py` foi atualizado para usar a URL canônica `https://aumivet.com.br/` e reaplicar isenções de política marcadas pela API como `is_exemptible`.
 - Conversões encontradas: `WhatsApp Click (Aumivet)` label `vfMFCJLy7rIcENLey94_`; `Phone Click (Aumivet)` label `FIwuCI_-17IcENLey94_`; também há `Clique de saída whatsapp` codeless, que deve ser revisada para evitar duplicidade/otimização no sinal errado.
 - Site ao vivo em `https://www.aumivet.com.br/` retorna 200 e contém `AW-17109806930`.
-- Em 2026-05-25, as rotas `/servicos/cirurgias`, `/servicos/cirurgia-catarata` e `/servicos/odontologia` retornavam 404 no site ao vivo. Não ativar tráfego para essas URLs até existirem; se for rodar antes, usar a home como destino provisório com aprovação explícita.
+- A tentativa inicial com `https://www.aumivet.com.br/` foi rejeitada pela API como `DESTINATION_NOT_WORKING`; a URL canônica `https://aumivet.com.br/` foi aceita para os RSAs.
+- Em 2026-05-25, as rotas `/servicos/cirurgias`, `/servicos/cirurgia-catarata` e `/servicos/odontologia` retornavam 404 no site ao vivo. Não ativar tráfego para essas URLs até existirem; a campanha criada usa a home como destino provisório.
 
 ## Cuidados para o proximo agente
 
-- Antes de editar, verificar `git status --short`; ha muitas alteracoes nao commitadas desta retomada.
+- Antes de editar, verificar `git status --short`.
 - Nao reverter delecoes de Strapi/CMS.
 - Se for alterar proposta, editar diretamente `docs/proposta-comercial-aumivet.html`.
 - Se for criar planejamento para Claude, usar este arquivo como fonte e manter a proposta final sem jargao tecnico.

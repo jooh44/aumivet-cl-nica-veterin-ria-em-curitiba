@@ -12,6 +12,8 @@ import os
 import sys
 from dataclasses import dataclass
 
+from google.ads.googleads.errors import GoogleAdsException
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
 from core.client import CUSTOMER_ID, get_client
@@ -33,7 +35,7 @@ class AdGroupPlan:
 AD_GROUPS = [
     AdGroupPlan(
         name="Cirurgia Geral",
-        final_url="https://www.aumivet.com.br/",
+        final_url="https://aumivet.com.br/",
         headlines=[
             "Cirurgia Vet em Curitiba",
             "Aumivet Reboucas",
@@ -64,7 +66,7 @@ AD_GROUPS = [
     ),
     AdGroupPlan(
         name="Catarata Petlove",
-        final_url="https://www.aumivet.com.br/",
+        final_url="https://aumivet.com.br/",
         headlines=[
             "Catarata Petlove PR",
             "Cirurgia de Catarata",
@@ -93,7 +95,7 @@ AD_GROUPS = [
     ),
     AdGroupPlan(
         name="Odontologia Veterinaria",
-        final_url="https://www.aumivet.com.br/",
+        final_url="https://aumivet.com.br/",
         headlines=[
             "Odontologia Veterinaria",
             "Limpeza Dental Pet",
@@ -187,6 +189,67 @@ def print_plan(args: argparse.Namespace) -> None:
         print(f"  final_url={ad_group.final_url}")
         print(f"  headlines={len(ad_group.headlines)} descriptions={len(ad_group.descriptions)} keywords={len(ad_group.keywords)}")
     print(f"\nnegative_keywords={len(NEGATIVE_KEYWORDS)}")
+
+
+def _operation_index(error) -> int:
+    for element in error.location.field_path_elements:
+        if element.field_name == "operations":
+            return element.index
+    return 0
+
+
+def _apply_exemptible_keyword_policy_keys(ops, exception: GoogleAdsException) -> bool:
+    applied = False
+    for error in exception.failure.errors:
+        details = error.details.policy_violation_details
+        if not details or not details.is_exemptible:
+            continue
+        idx = _operation_index(error)
+        ops[idx].exempt_policy_violation_keys.append(details.key)
+        applied = True
+    return applied
+
+
+def _apply_exemptible_ad_policy_keys(ops, exception: GoogleAdsException) -> bool:
+    applied = False
+    for error in exception.failure.errors:
+        details = error.details.policy_violation_details
+        if not details or not details.is_exemptible:
+            continue
+        idx = _operation_index(error)
+        ops[idx].policy_validation_parameter.exempt_policy_violation_keys.append(details.key)
+        applied = True
+    return applied
+
+
+def mutate_keywords_with_policy_exemptions(service, operations) -> None:
+    try:
+        service.mutate_ad_group_criteria(
+            customer_id=CUSTOMER_ID,
+            operations=operations,
+        )
+    except GoogleAdsException as exception:
+        if not _apply_exemptible_keyword_policy_keys(operations, exception):
+            raise
+        service.mutate_ad_group_criteria(
+            customer_id=CUSTOMER_ID,
+            operations=operations,
+        )
+
+
+def mutate_ads_with_policy_exemptions(service, operations) -> None:
+    try:
+        service.mutate_ad_group_ads(
+            customer_id=CUSTOMER_ID,
+            operations=operations,
+        )
+    except GoogleAdsException as exception:
+        if not _apply_exemptible_ad_policy_keys(operations, exception):
+            raise
+        service.mutate_ad_group_ads(
+            customer_id=CUSTOMER_ID,
+            operations=operations,
+        )
 
 
 def create_campaign(args: argparse.Namespace) -> None:
@@ -291,10 +354,7 @@ def create_campaign(args: argparse.Namespace) -> None:
             criterion.keyword.text = text
             criterion.keyword.match_type = client.enums.KeywordMatchTypeEnum[match_type]
             keyword_ops.append(op)
-        ad_group_criterion_service.mutate_ad_group_criteria(
-            customer_id=CUSTOMER_ID,
-            operations=keyword_ops,
-        )
+        mutate_keywords_with_policy_exemptions(ad_group_criterion_service, keyword_ops)
         print(f"  Added keywords: {len(keyword_ops)}")
 
         ad_op = client.get_type("AdGroupAdOperation")
@@ -310,10 +370,7 @@ def create_campaign(args: argparse.Namespace) -> None:
             text_asset = client.get_type("AdTextAsset")
             text_asset.text = description
             ad_group_ad.ad.responsive_search_ad.descriptions.append(text_asset)
-        ad_group_ad_service.mutate_ad_group_ads(
-            customer_id=CUSTOMER_ID,
-            operations=[ad_op],
-        )
+        mutate_ads_with_policy_exemptions(ad_group_ad_service, [ad_op])
         print("  Added RSA: 1")
 
     print(f"\nDone. Campaign remains PAUSED: {campaign_id}")
