@@ -217,7 +217,32 @@ O rastreamento do Google Ads foi configurado dinamicamente no site Astro (`front
 - **Google Tag (gtag.js)**: Configurada no cabeçalho do `BaseLayout.astro`. Carrega e inicializa a tag se a variável de ambiente `PUBLIC_GOOGLE_TAG_ID` estiver definida no ambiente.
 - **Rastreamento de Conversões**: Cliques em links do WhatsApp (`wa.me` ou `api.whatsapp.com`) e Telefone (`tel:`) são capturados de forma automática e enviam eventos de conversão de leads usando as labels configuradas no ambiente (`PUBLIC_WA_CONVERSION_LABEL` e `PUBLIC_PHONE_CONVERSION_LABEL`).
 - **Gerenciador de Campanhas Local**: Pasta `google-ads/` configurada. Contém `rzads.py` e scripts herdados. As credenciais em `google-ads/.env.ads` estão configuradas para interagir diretamente com a conta da Aumivet (Customer ID: `9838845707`). O arquivo de credenciais está ignorado no Git para segurança.
-- **Launch Readiness**: O site está pronto para lançamento e deploy de produção na Vercel (as variáveis de ambiente reais do Ads já foram configuradas no arquivo local `.env` e as conversões criadas via API). Resta apenas o usuário atualizar a galeria com as novas fotos quando desejar.
+- **Launch Readiness**: O site está pronto para lançamento e deploy de produção na Vercel (as variáveis de ambiente reais do Ads já foram configuradas no arquivo local `.env` e as conversões criadas via API). A galeria da seção "Conheça a Aumivet" foi atualizada com novas fotos em WebP em 2026-05-25.
+
+## Galeria do site — 2026-05-25
+
+A galeria atual do Astro usa 8 fotos novas baixadas do Drive do usuário, otimizadas para WebP em `frontend/public/images/gallery/`.
+
+- Arquivo fonte do componente: `frontend/src/components/About.astro`.
+- Layout: foto principal 4:3 com thumbnails em grade 2 colunas no desktop e scroll horizontal no mobile.
+- Fotos antigas de baixa resolução removidas do `frontend/public/images/`: `aumivet-clinica-veterinaria-em-curitiba (1).jpg` a `(4).jpg`.
+- O schema da home em `frontend/src/pages/index.astro` foi atualizado para apontar a nova imagem de recepção.
+- Validado com `cd frontend && pnpm build`.
+
+## Operação Google Ads — 2026-05-25
+
+Foi criada a skill local `.agents/skills/aumivet-google-ads/SKILL.md` para orientar futuras sessões de Ads sem reaproveitar premissas da RZ Vet por engano.
+
+Estado verificado via API:
+
+- Conta Aumivet: `CUSTOMER_ID=9838845707`.
+- A conta é acessível diretamente pelo OAuth atual; não usar `MANAGER_CUSTOMER_ID` como `login_customer_id` para Aumivet, salvo se `LOGIN_CUSTOMER_ID` for explicitamente configurado.
+- Existe uma campanha antiga pausada: `SEARCH v0.5` (`22634313741`), budget `R$10/dia`. Não ativar como está: ela mistura adestramento, banho e tosa, atendimento domiciliar, termos genéricos amplos e copy antiga.
+- A campanha nova preferida deve ser criada limpa e pausada pelo script `google-ads/scripts/ads/create_aumivet_search_cirurgias.py`.
+- O script é `dry-run` por padrão; `--apply` cria a campanha pausada `Search | Cirurgias Curitiba | Aumivet | 2026-05` com grupos de cirurgia geral, catarata Petlove e odontologia.
+- Conversões encontradas: `WhatsApp Click (Aumivet)` label `vfMFCJLy7rIcENLey94_`; `Phone Click (Aumivet)` label `FIwuCI_-17IcENLey94_`; também há `Clique de saída whatsapp` codeless, que deve ser revisada para evitar duplicidade/otimização no sinal errado.
+- Site ao vivo em `https://www.aumivet.com.br/` retorna 200 e contém `AW-17109806930`.
+- Em 2026-05-25, as rotas `/servicos/cirurgias`, `/servicos/cirurgia-catarata` e `/servicos/odontologia` retornavam 404 no site ao vivo. Não ativar tráfego para essas URLs até existirem; se for rodar antes, usar a home como destino provisório com aprovação explícita.
 
 ## Cuidados para o proximo agente
 

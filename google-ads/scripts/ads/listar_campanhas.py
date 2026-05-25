@@ -16,7 +16,11 @@ with open(ENV_PATH, "r") as f:
             # Remove inline comments
             if "#" in val:
                 val = val.split("#")[0]
-            credentials[key.strip()] = val.strip()
+            credentials[key.strip()] = val.strip().strip('"').strip("'")
+
+
+def clean_customer_id(value: str) -> str:
+    return value.replace("-", "").strip()
 
 def main():
     googleads_config = {
@@ -25,15 +29,16 @@ def main():
         "client_secret": credentials["CLIENT_SECRET"],
         "refresh_token": credentials["REFRESH_TOKEN"],
         "use_proto_plus": True,
-        "login_customer_id": credentials["MANAGER_CUSTOMER_ID"],
     }
+    login_customer_id = clean_customer_id(credentials.get("LOGIN_CUSTOMER_ID", ""))
+    if login_customer_id:
+        googleads_config["login_customer_id"] = login_customer_id
 
     try:
         client = GoogleAdsClient.load_from_dict(googleads_config)
         googleads_service = client.get_service("GoogleAdsService")
-        customer_id = credentials["CUSTOMER_ID"]
-        # In Google Ads API, customer IDs should be just numbers, no hyphens
-        customer_id = customer_id.replace("-", "")
+        # In Google Ads API, customer IDs should be just numbers, no hyphens.
+        customer_id = clean_customer_id(credentials["CUSTOMER_ID"])
 
         print(f"Buscando Campanhas para o Customer ID: {customer_id}...\n")
 

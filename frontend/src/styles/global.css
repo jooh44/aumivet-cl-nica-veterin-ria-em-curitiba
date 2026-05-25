@@ -2420,8 +2420,8 @@ a {
 
 .gallery-ecommerce {
   display: grid;
-  grid-template-columns: 1fr 90px;
-  gap: 10px;
+  grid-template-columns: 1fr minmax(132px, 150px);
+  gap: 12px;
   align-items: start;
 }
 
@@ -2507,9 +2507,10 @@ a {
 
 /* Thumbnails (coluna direita) */
 .gallery-thumbs {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
+  align-content: start;
 }
 
 .gallery-thumb {
@@ -3045,6 +3046,7 @@ a {
   }
 
   .gallery-thumbs {
+    display: flex;
     flex-direction: row;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
